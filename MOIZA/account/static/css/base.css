@@ -1,0 +1,41 @@
+html {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  max-width: 700px;
+  display: inline-block;
+  width: 80%;
+  height: 50vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.login-title {
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.form-container {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.action-button {
+  text-align: center;
+  background-color: #707070;
+  color: #efefef;
+  margin: 6px 0;
+  width: 100%;
+  height: 46px;
+  border-radius: 2px;
+  border: 1px solid rgba(0, 0, 0, .7);
+}
