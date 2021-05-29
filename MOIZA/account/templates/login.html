@@ -1,5 +1,22 @@
-{% extends 'account/base.html' %}
+{% extends 'base.html' %}
 
 {% block content %}
-Hello
+<div class="container">
+  <div class="login-title">Login</div>
+  <div class="form-container">
+    <form method="POST" action="">
+      {% csrf_token %}
+      <input class="login-input" type="text" placeholder="아이디 입력">
+      <input class="login-input" type="password" placeholder="비밀번호 입력">
+      <input class="action-button" type="button" value="로그인">
+    </form>
+  </div>
+  <div class="login-nav">
+    <ul>
+      <li>아이디 찾기</li>
+      <li>비밀번호 찾기</li>
+      <li>회원가입</li>
+    </ul>
+  </div>
+</div>
 {% endblock %}
