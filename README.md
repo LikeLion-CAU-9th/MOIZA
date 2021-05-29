@@ -15,7 +15,7 @@
     <td align="center"><a href="https://github.com/youngkwon02"><img src="https://avatars.githubusercontent.com/u/39653584?v=4?s=200" width="200px;" alt=""/><br /><sub><b>Youngkwon Kim</b></sub></a><br />Developer</td>
     <td align="center"><a href="https://github.com/rineeee"><img src="https://avatars.githubusercontent.com/u/62981406?v=4?s=200" width="200px;" alt=""/><br /><sub><b>Harin Kim</b></sub></a><br />Developer</td>
     <td align="center"><a href="https://github.com/Seojisoo20191941"><img src="https://avatars.githubusercontent.com/u/76681519?v=4?s=200" width="200px;" alt=""/><br /><sub><b>Jisoo Seo</b></sub></a><br />Developer</td>
-    <td align="center"><a href="https://github.com/yunseonyeong"><img src="https://avatars.githubusercontent.com/u/64634970?v=4?s=200" width="200px;" alt=""/><br /><sub><b>Jisoo Seo</b></sub></a><br />Developer</td>
+    <td align="center"><a href="https://github.com/yunseonyeong"><img src="https://avatars.githubusercontent.com/u/64634970?v=4?s=200" width="200px;" alt=""/><br /><sub><b>Seonyeong Yun</b></sub></a><br />Developer</td>
     <td align="center"><a href="https://github.com/jjanggyu"><img src="https://avatars.githubusercontent.com/u/59885351?v=4?s=200" width="200px;" alt=""/><br /><sub><b>Changyu Lee</b></sub></a><br />Professor</td>
   </tr>
 </table>
