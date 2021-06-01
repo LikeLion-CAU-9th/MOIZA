@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="head-section">
+  <div>모의자에 오신걸 환영합니다!</div>
+</section>
+<div class="container">
+  <form class="signup-form">
+    {% csrf_token %}
+    <div>
+      <div class="signup-list">이름 : </div>
+      <input class="signup-input" type="text" name="user_name">
+    </div>
+    <div>
+      <div class="signup-list">아이디 : </div>
+      <input class="signup-input" type="text" name="user_id">
+    </div>
+    <div>
+      <div class="signup-list">비밀번호 : </div>
+      <input class="signup-input" type="password" name="user_pw">
+    </div>
+    <div>
+      <div class="signup-list">비밀번호 확인 : </div>
+      <input class="signup-input" type="password" name="pw_ckeck">
+    </div>
+    <div>
+      <div class="signup-list" id="email-list">E-mail : </div>
+      <input id="email-input" class="signup-input" type="email" name="user_email">
+    </div>
+    <div class="submit-div">
+      <input type="submit" value="가입하기">
+    </div>
+  </form>
+</div>
+{% endblock %}
