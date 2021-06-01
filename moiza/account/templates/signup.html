@@ -21,6 +21,9 @@
       <div class="signup-list">아이디 : </div>
       <input class="signup-input" type="text" name="user_id">
     </div>
+    {% if msg_id %}
+      <strong style="color: red;">{{msg_id}}</strong>
+    {% endif %}
     <div>
       <div class="signup-list">비밀번호 : </div>
       <input class="signup-input" type="password" name="user_pw">
@@ -29,13 +32,16 @@
       <div class="signup-list">비밀번호 확인 : </div>
       <input class="signup-input" type="password" name="user_pwck">
     </div>
-    {% if msg %}
-      <strong style="color: red;">{{msg}}</strong>
+    {% if msg_pw %}
+      <strong style="color: red;">{{msg_pw}}</strong>
     {% endif %}
     <div>
       <div class="signup-list" id="email-list">E-mail : </div>
       <input id="email-input" class="signup-input" type="email" name="user_email">
     </div>
+    {% if msg_mail %}
+      <strong style="color: red;">{{msg_mail}}</strong>
+    {% endif %}
     <div class="submit-div">
       <input type="submit" value="가입하기">
     </div>
