@@ -1,12 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
-</head>
-<body>
-  
-</body>
-</html>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block headblock %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+<title>모의자 - 로그인</title>
+{% endblock %}
+{% block content %}
+<div class="container">
+  <div class="login-title">Login</div>
+  <div class="form-container">
+    <form method="POST" action="">
+      {% csrf_token %}
+      <input class="login-input" type="text" placeholder="아이디 입력">
+      <input class="login-input" type="password" placeholder="비밀번호 입력">
+      <input class="action-button" type="button" value="로그인">
+    </form>
+  </div>
+  <div class="login-nav">
+    <span>
+      계정을 잊어버리셨나요?
+    </span>
+    <!-- <ul>
+      <li>아이디 찾기</li>
+      <li>비밀번호 찾기</li>
+      <li>회원가입</li>
+    </ul> -->
+  </div>
+</div>
+{% endblock %}
