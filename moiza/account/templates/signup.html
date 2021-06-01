@@ -1,4 +1,10 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block headblock %}
+<link rel="stylesheet" href="{% static 'css/signup.css' %}">
+<title>모의자 - 회원가입</title>
+{% endblock %}
 
 {% block content %}
 <section class="head-section">
