@@ -17,10 +17,18 @@ body {
   transform: translate(-50%, -50%);
 }
 
+.login-nav {
+  font-family: 'AppleNeoM';
+  color: #707070;
+  text-align: center;
+}
+
 .login-title {
+  font-family: 'AppleNeoB';
   font-size: 2em;
   font-weight: bold;
   text-align: center;
+  color: #8E54F8;
   margin: 20px 0;
 }
 
@@ -30,12 +38,29 @@ body {
 }
 
 .action-button {
+  font-family: 'AppleNeoM';
   text-align: center;
-  background-color: #707070;
+  background: linear-gradient(90deg, #A86BD7, #8D85DF);
   color: #efefef;
   margin: 6px 0;
   width: 100%;
   height: 46px;
+  border: none;
   border-radius: 2px;
-  border: 1px solid rgba(0, 0, 0, .7);
+}
+
+
+@font-face {
+  font-family: 'AppleNeoB';
+  src: url('../font/AppleSDGothicNeoB.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: 'AppleNeoL';
+  src: url('../AppleSDGothicNeoL.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: 'AppleNeoM';
+  src: url('../AppleSDGothicNeoM.ttf') format("truetype");
 }
