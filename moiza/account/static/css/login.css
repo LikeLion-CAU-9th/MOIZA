@@ -1,0 +1,30 @@
+.login-input {
+  width: calc(100% - 8px);
+  text-align: left;
+  margin: 6px 0;
+  height: 40px;
+  border: 1pt solid #A86BD7;
+}
+
+.login-nav ul {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.login-nav ul li {
+  display: inline-block;
+  width: 23%;
+  color: grey;
+  font-size: .8em;
+}
+
+.login-nav ul li:first-child {
+  width: 34%;
+}
+
+.login-nav ul li:nth-child(2) {
+  width: 38%;
+  border-left: 2px solid grey;
+  border-right: 2px solid grey;
+}
