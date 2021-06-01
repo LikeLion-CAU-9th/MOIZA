@@ -11,7 +11,7 @@ def signup_view(request):
   return render(request, 'signup.html')
 
 
-def signup_aciton(request):
+def signup_action(request):
   if request.method != "POST":
     return HttpResponseBadRequest('This view can not handle method {0}'.format(request.method), status=405)
   data = request.POST
