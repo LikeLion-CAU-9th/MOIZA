@@ -22,7 +22,7 @@ def login_action(request):
   login_success = is_login_available(request, data.get('input_id', False), data.get('input_pw', False))
   
   if login_success == False:
-    return render(request, 'login.html', {'msg_loginFail': '그런 정보 없는데유??'})
+    return render(request, 'login.html', {'msg_loginFail': '잘못된 로그인 정보입니다!'})
   is_session_success = session_attach(request, data.get('input_id', False))
   if is_session_success == False:
     return HttpResponseBadRequest('Session is not attached!', status=500)
