@@ -33,13 +33,13 @@ body {
 }
 
 .desktop-sub-title {
-  font-family: 'AppleNeoR';
-  font-size: 72px;
+  font-family: 'BMjua';
+  font-size: 64px;
 }
 
 .desktop-content-footer {
-  font-family: 'AppleNeoR';
-  font-size: 28px;
+  font-family: 'AppleNeoM';
+  font-size: 22px;
 }
 
 .purple-text {
@@ -169,4 +169,9 @@ body {
 @font-face {
   font-family: 'AppleNeoM';
   src: url('../font/AppleSDGothicNeoM.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: 'BMjua';
+  src: url('../font/BMjua.ttf') format("truetype");
 }
