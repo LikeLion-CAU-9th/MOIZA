@@ -6,25 +6,44 @@
 <title>모의자 - 로그인</title>
 {% endblock %}
 {% block content %}
+<section class="mobile-head-section">
+  <div class="head-section-text">Sign in</div>
+</section>
 <div class="container">
-  <div class="login-title">Login</div>
-  <div class="form-container">
-    <form method="POST" action="">
-      {% csrf_token %}
-      <input class="login-input" type="text" placeholder="아이디 입력">
-      <input class="login-input" type="password" placeholder="비밀번호 입력">
-      <input class="action-button" type="button" value="로그인">
-    </form>
-  </div>
-  <div class="login-nav">
-    <span>
-      계정을 잊어버리셨나요?
-    </span>
-    <!-- <ul>
-      <li>아이디 찾기</li>
-      <li>비밀번호 찾기</li>
-      <li>회원가입</li>
-    </ul> -->
+  <section class="desktop-head-section">
+    <div class="head-section-text">Sign in</div>
+  </section>
+  <div class="desktop-container">
+    <div class="login-title">Login</div>
+    <div class="form-container">
+      <form method="POST" action="/login-action/">
+        {% csrf_token %}
+        <input class="login-input" type="text" name="input_id" placeholder="아이디 입력">
+        <input class="login-input" type="password" name="input_pw" placeholder="비밀번호 입력">
+        {% if msg_loginFail %}
+          <strong style="color: red;">{{msg_loginFail}}</strong>
+        {% endif %}
+        <input class="action-button" type="submit" value="로그인">
+      </form>
+    </div>
+    <div class="login-nav">
+      <div>
+        <a href="/signup">
+          회원가입
+        </a>
+      </div>
+      <br>
+      <div>
+        <a href="#">
+          계정을 잊어버리셨나요?
+        </a>
+      </div>
+      <!-- <ul>
+        <li>아이디 찾기</li>
+        <li>비밀번호 찾기</li>
+        <li>회원가입</li>
+      </ul> -->
+    </div>
   </div>
 </div>
 {% endblock %}
