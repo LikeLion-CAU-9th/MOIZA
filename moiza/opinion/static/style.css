@@ -1,0 +1,74 @@
+@font-face {
+    font-family: 'icomoon';
+    src:  url('fonts/icomoon.eot?3deb4j');
+    src:  url('fonts/icomoon.eot?3deb4j#iefix') format('embedded-opentype'),
+      url('fonts/icomoon.ttf?3deb4j') format('truetype'),
+      url('fonts/icomoon.woff?3deb4j') format('woff'),
+      url('fonts/icomoon.svg?3deb4j#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  * {
+    box-sizing: border-box;
+    font-family: Georgia;
+  }
+  input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0px;
+    font-size: 13px;
+    border-radius:8px;
+    border:1.5px solid #7e7e7e;
+  }
+  .myButton {
+  width: 100%;
+  background-color:#7150e7;
+  border-radius:42px;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:17px;
+  padding: 10px 10px;
+  text-decoration:none;
+  text-align : center;
+  }
+
+  .myButton:active {
+  position:relative;
+  top:1px;
+  }
+  .content_plus {
+    width: 100%;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:linear-gradient(to bottom, #ffffff 5%, #ffffff 100%);
+	background-color:#ffffff;
+	border-radius:8px;
+	border:1.5px solid #7e7e7e;
+	display:inline-block;
+	cursor:pointer;
+	color:#000000;
+	font-family:Arial;
+	font-size:13px;
+	padding: 8px 10px;
+  margin: 10px 0px;
+	text-decoration:none;
+	text-shadow:0px 0px 0px #ffffff;
+}
+
+.content_plus:active {
+	position:relative;
+	top:1px;
+}
+  .container {
+max-width: 700px;
+display: inline-block;
+width: 80%;
+height: 50vh;
+position: absolute;
+top: 40%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
