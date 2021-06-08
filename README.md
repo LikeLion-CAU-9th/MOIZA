@@ -3,6 +3,12 @@
 * Each decision steps will be preserved until the end of the development.
 ---
 
+## 🚦 Checkpoint (Suspenped until June 21)
+![스크린샷 2021-06-09 오전 12 23 22](https://user-images.githubusercontent.com/39653584/121214050-bff5e400-c8b9-11eb-9978-f5f04498e9fc.png)
+
+
+---
+
 ## 🖥 Prototype
 <a href="https://xd.adobe.com/view/f6c95b3c-9155-4a84-bcf1-a35431bc0d64-a39a/">LINK</a>
 ---
