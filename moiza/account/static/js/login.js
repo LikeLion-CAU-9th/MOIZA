@@ -7,4 +7,5 @@ const loginAction = () => {
   if(result) {
     location.href = "../success/";
   }
+  modal_on('login-fail');
 }
