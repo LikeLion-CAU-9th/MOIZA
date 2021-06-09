@@ -16,17 +16,15 @@ def success_view(request):
 
 
 def login_action(request):
-  if request.method != "POST":
-    return HttpResponseBadRequest('This view can not handle method {0}'.format(request.method), status=405)
-  data = request.POST
-  login_success = is_login_available(request, data.get('input_id', False), data.get('input_pw', False))
+  data = request.GET
+  login_success = is_login_available(request, data.get('id', False), data.get('pw', False))
   
   if login_success == False:
-    return render(request, 'login.html', {'msg_loginFail': '잘못된 로그인 정보입니다!'})
+    return HttpResponse("False")
   is_session_success = session_attach(request, data.get('input_id', False))
   if is_session_success == False:
     return HttpResponseBadRequest('Session is not attached!', status=500)
-  return redirect('success')
+  return HttpResponse("True")
   
 
 def is_login_available(request, id, raw_pw):
