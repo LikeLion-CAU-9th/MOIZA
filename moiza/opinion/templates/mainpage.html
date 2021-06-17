@@ -1,3 +1,4 @@
+{%load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,28 +11,64 @@
 
 </head>
 <body>
-        <section class="head-section">
-            <div>모의자에 오신걸 환영합니다!</div>
-        </section>
-        <div class="all">
-            <h1 style="font-size:20px;float:left">논의에 참여해주세요!</h1> 
-            <a href="#" class="more"style="float:right;">더보기></a>
-            <div class="ask">
+    <div class="desktop-layer"></div>
+  <div class="desktop-content">
+    <div class="logo-container">
+      <img class="logo-img" src="{% static 'images/logo.png' %}" style="height:24px"><span class="desktop-logo-title">모의자</span><br><br><br><br>
+    </div>
+    <div class="desktop-sub-title">
+      <span class="purple-text">모</span>두의 
+      <span class="purple-text">의</span>견을 
+      <span class="purple-text">자</span>유롭게
+    </div><br><br><br>
+    <div class="desktop-content-footer">
+      <div class="desktop-content-footer-title">
+        의사결정이 필요할 땐, <span class="purple-text">모의자</span>로 모이자!
+      </div><br>
+      회의부터 일상생활까지,<br>
+      다양한 의사결정을 모의자에서 해결해 보세요.
+    </div>
+  </div>
+<div class="container">
+  <section class="desktop-head-section">
+    <div class="head-section-text">모의자에 오신걸 환영합니다!</div>
+  </section>
+  <div class="desktop-container">
+      
+    <section class="head-section">
+        <div>모의자에 오신걸 환영합니다!</div>
+    </section>
+    <div class="all">
+        <h1 style="font-size:20px;float:left">논의에 참여해주세요!</h1> 
+        <a href="#" class="more"style="float:right;">더보기></a>
+        <div class="ask">
+            <div>
+                <input placeholder="어떤 아이디어로 진행할까요?">
                 <div>
-                    <input placeholder="어떤 아이디어로 진행할까요?">
-                    <div>
-                    <a href="#" class="participate" style="margin-bottom:1%;">참여하기</a>
-                    </div>
+                <a href="#" class="participate" style="margin-bottom:1%;">참여하기</a>
                 </div>
             </div>
-            <h2 style="margin-top:10%;font-size:20px;">그룹</h2>
-            <div class="width">
-            <a href="#" class="newgroup">⊕ 새 그룹 생성</a></div>
-            <!--<div style="border:1px dotted #8665c2; border-radius:10px;padding:10px; color:#8665c2;">새 그룹 생성</div>
-            --><!--<a href="#" class="myButton"><div class="new_group">새그룹 생성</div></a>-->
-            
-            
         </div>
+        <h2 style="margin-top:10%;font-size:20px;">그룹</h2>
+        <div class="width">
+        <a href="#" class="newgroup">⊕ 새 그룹 생성</a></div>
+        <!--<div style="border:1px dotted #8665c2; border-radius:10px;padding:10px; color:#8665c2;">새 그룹 생성</div>
+        --><!--<a href="#" class="myButton"><div class="new_group">새그룹 생성</div></a>-->
+        
+        
+    </div>
+
+  </div>
+  <div id="login-fail" class="modal-container">
+    <div class="modal-content">
+      <div style="margin-top: 28px; font-size: 20px;"><strong>로그인</strong></div>
+      <div style="margin-top: 28px; border-bottom: 1px solid #CFCFCF; padding-bottom: 28px;">아이디 혹은 비밀번호가 잘못되었습니다.</div>
+      <div style="margin-top: 16px; color: #7150E7; cursor: pointer;" onclick="modal_off('login-fail')">확인</div>
+    </div>
+  </div>
+
+</div>
+       
 
 </body>
 </html>
