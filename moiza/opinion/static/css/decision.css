@@ -1,0 +1,16 @@
+.content_select {
+    width: 100%;
+	background-color:#ffffff;
+	border-radius:8px;
+	border:1.5px solid #7e7e7e;
+	display:inline-block;
+	cursor:pointer;
+	color:#000000;
+	font-family:Arial;
+	font-size:13px;
+	padding: 8px 10px;
+    margin: 1px 0px;
+}
+
+.content_select:hover, .content_select.purple { background-color: #f0edff; }
+  

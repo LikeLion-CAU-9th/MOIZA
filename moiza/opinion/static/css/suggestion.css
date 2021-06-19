@@ -18,16 +18,12 @@
   cursor:pointer;
   color:#ffffff;
   font-family:Arial;
-  font-size:17px;
+  font-size:18.5px;
   padding: 10px 10px;
   text-decoration:none;
   text-align : center;
   }
 
-  .myButton:active {
-  position:relative;
-  top:1px;
-  }
   .content_plus {
     width: 100%;
 	box-shadow:inset 0px 1px 0px 0px #ffffff;
@@ -46,10 +42,6 @@
 	text-shadow:0px 0px 0px #ffffff;
 }
 
-.content_plus:active {
-	position:relative;
-	top:1px;
-}
   .mob_container {
 max-width: 700px;
 display: inline-block;
