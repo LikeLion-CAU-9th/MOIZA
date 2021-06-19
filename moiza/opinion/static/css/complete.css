@@ -1,0 +1,46 @@
+.layer {
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        font-size: 19.5px;
+        margin: 60.5px 0px 0;
+}
+.layer .content {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 19.5px;
+    font-family: 'AppleNeoB';
+}
+
+.layer .content2 {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 17.5px;
+    font-family: 'AppleNeoM';
+}
+
+.layer .blank {
+    display: inline-block;
+    width: 0;
+    height: 100%;
+    vertical-align: middle;
+    font-size: 19px;
+}
+
+.myButton2 {
+    width: 100%;
+    background-color:#7150e7;
+    border-radius:42px;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-size: 18.5px;
+    font-family: 'AppleNeoM';
+    padding: 10px 10px;
+    margin: 70px 0px 0;
+    text-decoration:none;
+    text-align : center;
+}
