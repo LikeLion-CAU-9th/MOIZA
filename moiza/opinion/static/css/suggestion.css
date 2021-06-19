@@ -1,14 +1,11 @@
-    * {
-    box-sizing: border-box;
-    font-family: Georgia;
-  }
   input {
     width: 100%;
-    padding: 10px;
+    padding: 6px 10px;
     margin: 1px 0px;
-    font-size: 13px;
     border-radius:8px;
-    border:1.5px solid #7e7e7e;
+    font-size: 17.5px;
+    font-family: 'AppleNeoL';
+    border:1.5px solid #919191;
   }
   .myButton {
   width: 100%;
@@ -17,9 +14,10 @@
   display:inline-block;
   cursor:pointer;
   color:#ffffff;
-  font-family:Arial;
-  font-size:18.5px;
+  font-size: 18.5px;
+  font-family: 'AppleNeoM';
   padding: 10px 10px;
+  margin: 20px 0px;
   text-decoration:none;
   text-align : center;
   }
@@ -34,9 +32,9 @@
 	display:inline-block;
 	cursor:pointer;
 	color:#000000;
-	font-family:Arial;
-	font-size:13px;
-	padding: 8px 10px;
+	font-size: 17.5px;
+  font-family: 'AppleNeoL';
+	padding: 6px 10px;
   margin: 1px 0px;
 	text-decoration:none;
 	text-shadow:0px 0px 0px #ffffff;
@@ -64,11 +62,21 @@ transform: translate(-50%, -50%);
 	display:inline-block;
 	cursor:pointer;
 	color:#5e585e;
-	font-family:Arial;
-	font-size:13px;
-	font-weight:bold;
-  padding: 8px 10px;
+	font-size: 17.5px;
+  font-family: 'AppleNeoL';
+  padding: 6px 10px;
   margin: 1px 0px;
 	text-decoration:none;
 	text-shadow:0px -1px 0px #f0edff;
+}
+
+.head_name{
+  font-family: 'AppleNeoB';
+	font-size:19.5px;
+}
+
+.center_name{
+  font-family: 'AppleNeoM';
+	font-size:18.5px;
+  line-height: 2.2;
 }

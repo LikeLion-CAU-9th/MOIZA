@@ -12,12 +12,14 @@
     display: inline-block;
     vertical-align: middle;
     font-size: 19.5px;
+    font-family: 'AppleNeoB';
 }
 
 .layer .content2 {
     display: inline-block;
     vertical-align: middle;
     font-size: 17.5px;
+    font-family: 'AppleNeoM';
 }
 
 .layer .blank {
@@ -28,7 +30,6 @@
     font-size: 19px;
 }
 
-
 .myButton2 {
     width: 100%;
     background-color:#7150e7;
@@ -36,15 +37,10 @@
     display:inline-block;
     cursor:pointer;
     color:#ffffff;
-    font-family:Arial;
-    font-size:18.5px;
+    font-size: 18.5px;
+    font-family: 'AppleNeoM';
     padding: 10px 10px;
-    margin: 90px 0px 0;
+    margin: 70px 0px 0;
     text-decoration:none;
     text-align : center;
-}
-  
-.myButton2:active {
-    position:relative;
-    top:1px;
 }

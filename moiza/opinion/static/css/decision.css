@@ -12,5 +12,7 @@
     margin: 1px 0px;
 }
 
-.content_select:hover, .content_select.purple { background-color: #f0edff; }
+.content_select:hover, .content_select.purple { 
+	background-color: #f0edff;
+ }
   

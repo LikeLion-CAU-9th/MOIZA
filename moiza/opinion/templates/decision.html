@@ -6,12 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Decision page</title>
     <link rel="stylesheet" href="../static/css/base.css">
-    <link rel="stylesheet" href="../static/css/suggestion.css">
-    <link rel="stylesheet" href="../static/css/decision.css">
+    <link rel="stylesheet" href="../static/css/suggestion.css"> 
+  <link rel="stylesheet" href="../static/css/decision.css">
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
 </head>
 
 <body>
-
   <div class="desktop-layer"></div>
   <div class="desktop-content">
     <div class="logo-container">
@@ -35,10 +38,10 @@
       <form action="action" method="post">
         
       <div class=mob_container>
-      <img src="../static/images/arrow.svg" >
-      <p style="text-align:center; font-size : 19.5px" >OO님의 의견을 선택해주세요!</p>
+      <a href="#"><img src="../static/images/arrow.svg" ></a>
+      <p style="text-align:center; " class="head_name" >OO님의 의견을 선택해주세요!</p>
      
-      <p>어떤 아이디어로 진행할까요?</p>        
+      <a class="center_name">어떤 아이디어로 진행할까요?</a>        
        
       <a class="content_select" >1번</a>
       <a class="content_select" >2번</a>
