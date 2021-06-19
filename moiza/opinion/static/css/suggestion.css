@@ -1,11 +1,11 @@
   input {
     width: 100%;
     padding: 6px 10px;
-    margin: 1px 0px;
-    border-radius:8px;
+    margin: 3.5px 0px;
+    border-radius:3.5px;
     font-size: 17.5px;
     font-family: 'AppleNeoL';
-    border:1.5px solid #919191;
+    border:0.5px solid #707070;
   }
   .myButton {
   width: 100%;
@@ -27,15 +27,15 @@
 	box-shadow:inset 0px 1px 0px 0px #ffffff;
 	background:linear-gradient(to bottom, #ffffff 5%, #ffffff 100%);
 	background-color:#ffffff;
-	border-radius:8px;
-	border:1.5px solid #7e7e7e;
+	border-radius:3.5px;
+  border:0.5px solid #707070;
 	display:inline-block;
 	cursor:pointer;
-	color:#000000;
+	color: #464646;
 	font-size: 17.5px;
   font-family: 'AppleNeoL';
 	padding: 6px 10px;
-  margin: 1px 0px;
+  margin: 3.5px 0px;
 	text-decoration:none;
 	text-shadow:0px 0px 0px #ffffff;
 }
@@ -57,15 +57,15 @@ transform: translate(-50%, -50%);
 	box-shadow:inset 0px 1px 0px 0px #f0edff;
 	background:linear-gradient(to bottom, #f0edff 5%, #f0edff 100%);
 	background-color:#f0edff;
-	border-radius:8px;
-	border:1.5px solid #7e7e7e;
+	border-radius:3.5px;
+	border:0.5px solid #707070;
 	display:inline-block;
 	cursor:pointer;
-	color:#5e585e;
+	color:#464646;
 	font-size: 17.5px;
   font-family: 'AppleNeoL';
   padding: 6px 10px;
-  margin: 1px 0px;
+  margin: 3.5px 0px;
 	text-decoration:none;
 	text-shadow:0px -1px 0px #f0edff;
 }
@@ -79,4 +79,9 @@ transform: translate(-50%, -50%);
   font-family: 'AppleNeoM';
 	font-size:18.5px;
   line-height: 2.2;
+}
+
+hr{
+  width: 103.5%;
+  background-color: d6d4d9;
 }
