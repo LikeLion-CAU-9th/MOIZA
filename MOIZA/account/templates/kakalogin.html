@@ -7,20 +7,21 @@
 {% endblock %}
 {% block content %}
 <div class="container">
-  <div class="login-title">모의자</div>
-  <div class="moiza-login">회원가입 없이 간편하게 모일 수 있어요.</div>
-  <div class="kakao-login-image">
-    <img src='../static/image/kakao_login_large_wide.png' alt="kakao login yellow logo">
+  <div class ="desktop-container">
+    <div class="login-title">모의자</div>
+    <div class="moiza-login">회원가입 없이 간편하게 모일 수 있어요.</div>
+    <div class="kakao-login-image">
+      <img src='../static/image/kakao_login_large_wide.png' alt="kakao login yellow logo">
+    </div>
+    <div class = "move-account-login">
+      <a href="/login">모의자 계정 로그인</a>
+    </div>
+    <div class = "first-login" style="text-align: center">
+      <span class = "text-first-login">혹시, 모의자가 처음이신가요?</span>
+      <span class="sign-up-link">
+          <a href="">회원가입</a>
+      </span>
+    </div>
   </div>
-  <div class = "move-account-login">
-    <a href="/login">모의자 계정 로그인</a>
-  </div>
-  <div class = "first-login" style="text-align: center">
-    <span class = "text-first-login">혹시, 모의자가 처음이신가요?</span>
-    <span class="sign-up-link">
-        <a href="">회원가입s</a>
-    </span>
-  </div>
-  
 </div>
 {% endblock %}
