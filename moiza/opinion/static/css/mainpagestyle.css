@@ -1,3 +1,16 @@
+@font-face{
+  font-family: 'BMJUA';
+  src:url(BMJUA_ttf)
+}
+@font-face{
+  font-family: 'AppleSDGothicNeoB';
+  src:url(AppleSDGothicNeoB)
+}
+@font-face{
+  font-family: 'AppleSDGothicNeoM';
+  src:url(AppleSDGothicNeoM)
+}
+
 html {
   margin: 0;
 }
@@ -76,6 +89,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index:2;
 }
 
 /* IPad Pro device width: 1024px */
@@ -162,8 +176,9 @@ body {
   }
 
   .participate {
+    margin-bottom:1%;
       position:absolute;
-      height:9.5px;
+      width:27px;
       right: 0;
       bottom: 0;      
       background-color:#ffffff;
@@ -174,7 +189,7 @@ body {
       color:#7150e7;
       font-family:Arial;
       font-size:16.5px;      
-      /*padding:16px 31px;*/
+      padding:9.5px 27px;
       text-decoration:none;
       text-shadow:0px 1px 0px #ffffff;      
       line-height: 20px;
@@ -203,6 +218,7 @@ body {
 	/*padding:16px 31px;*/
 	text-decoration:none;
 	text-shadow:0px 1px 0px #ffffff;
+  float:right; 
 }
 .more:hover {
 	background-color:#ffffff;
@@ -268,4 +284,78 @@ background-color:#ffffff;
 .group:active {
 position:relative;
 top:1px;
+}
+
+.newgroup {    
+  text-align:left;
+box-shadow:inset 0px 1px 0px 0px #ffffff;
+background:linear-gradient(to bottom, #ffffff 5%, #ffffff 100%);
+background-color:#ffffff;
+border-radius:10px;
+border:1px dashed #7150e7;
+display:block;
+cursor:pointer;
+color:#7150e7;
+font-family:Arial;
+font-size:17px;
+font-weight:bold;
+/*padding:17px 76px;*/
+text-decoration:none;
+text-shadow:0px 1px 0px #ffffff;
+}
+.newgroup:hover {
+background:linear-gradient(to bottom, #ffffff 5%, #ffffff 100%);
+background-color:#ffffff;
+}
+.newgroup:active {
+position:relative;
+top:1px;
+}
+
+.box {    
+text-align:left;
+box-shadow:inset 0px 1px 0px 0px #ffffff;
+background:linear-gradient(to bottom, #ffffff 5%, #ffffff 100%);
+background-color:#ffffff;
+border-radius:10px;
+border:1px black;
+display:block;
+cursor:pointer;
+color:black;
+font-family:Arial;
+font-size:17px;
+font-weight:bold;
+/*padding:17px 76px;*/
+text-decoration:none;
+text-shadow:0px 1px 0px #ffffff;
+z-index:1;
+}
+.box:hover {
+background:linear-gradient(to bottom, #ffffff 5%, #ffffff 100%);
+background-color:#ffffff;
+}
+.box:active {
+position:relative;
+top:1px;
+}
+
+.suggest {
+	background-color:#7050e7;
+	border-radius:25px;
+	border:1px solid #7050e7;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:19px;
+	padding:22.5px 132px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #7050e7;
+}
+.suggest:hover {
+	background-color:#7050e7;
+}
+.suggest:active {
+	position:relative;
+	top:1px;
 }
