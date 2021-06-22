@@ -62,7 +62,7 @@ body {
   left: 0;
   width: 100%;
   height: 240px;
-  background: linear-gradient(149deg, #A86BD7, #724FE724, #FFFFFF3B);
+  background: linear-gradient(149deg, rgba(168, 107, 215, .68), rgba(114, 79, 231, .0952), rgba(255, 255, 255, 0.1564));
 }
 
 .head-section-text {
