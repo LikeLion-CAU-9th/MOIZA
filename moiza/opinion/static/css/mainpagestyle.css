@@ -29,16 +29,16 @@ body {
   margin-left: 20px;
   color: #7150E7;
   font-size: 45px;
-  font-family: 'AppleNeoB';
+  font-family: 'AppleSDGothicNeoB';
 }
 
 .desktop-sub-title {
-  font-family: 'BMjua';
+  font-family: 'BMJUA';
   font-size: 64px;
 }
 
 .desktop-content-footer {
-  font-family: 'AppleNeoM';
+  font-family: 'AppleSDGothicNeoM';
   font-size: 22px;
 }
 
@@ -59,7 +59,7 @@ body {
 }
 
 .head-section-text {
-  font-family: 'AppleNeoB';
+  font-family: 'AppleSDGothicNeoB';
   position: absolute;
   left: 30px;
   bottom: 30px;
@@ -118,10 +118,10 @@ body {
   }
 }
 
-.all{
-    max-width: 700px;
+.all
+{
     display: inline-block;
-    width: 80%;
+    width:195px;
     height: 50vh;
     position: absolute;
     top: 60%;
@@ -140,7 +140,7 @@ body {
 }
 
 .head-section div {
-  font-family: 'AppleNeoB';
+  font-family: 'AppleSDGothicNeoB';
   position: absolute;
   left: 30px;
   bottom: 30px;
@@ -163,7 +163,7 @@ body {
 
   .participate {
       position:absolute;
-      height:20px;
+      height:9.5px;
       right: 0;
       bottom: 0;      
       background-color:#ffffff;
@@ -173,8 +173,8 @@ body {
       cursor:pointer;
       color:#7150e7;
       font-family:Arial;
-      font-size:17px;      
-      padding:16px 31px;
+      font-size:16.5px;      
+      /*padding:16px 31px;*/
       text-decoration:none;
       text-shadow:0px 1px 0px #ffffff;      
       line-height: 20px;
@@ -199,8 +199,8 @@ body {
 	cursor:pointer;
 	color:#a4a4a4;
 	font-family:Arial;
-	font-size:17px;
-	padding:16px 31px;
+	font-size:16.5px;
+	/*padding:16px 31px;*/
 	text-decoration:none;
 	text-shadow:0px 1px 0px #ffffff;
 }
@@ -227,7 +227,7 @@ body {
 	font-family:Arial;
 	font-size:17px;
 	font-weight:bold;
-	padding:17px 76px;
+	/*padding:17px 76px;*/
 	text-decoration:none;
 	text-shadow:0px 1px 0px #ffffff;
 }
@@ -242,4 +242,30 @@ body {
 
 .width{
     width:160px;
+}
+
+.group {    
+  text-align:left;
+box-shadow:inset 0px 1px 0px 0px #ffffff;
+background:linear-gradient(to bottom, #ffffff 5%, #ffffff 100%);
+background-color:#ffffff;
+border-radius:10px;
+border:1px black;
+display:block;
+cursor:pointer;
+color:black;
+font-family:Arial;
+font-size:17px;
+font-weight:bold;
+/*padding:17px 76px;*/
+text-decoration:none;
+text-shadow:0px 1px 0px #ffffff;
+}
+.group:hover {
+background:linear-gradient(to bottom, #ffffff 5%, #ffffff 100%);
+background-color:#ffffff;
+}
+.group:active {
+position:relative;
+top:1px;
 }
