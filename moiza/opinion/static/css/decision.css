@@ -1,0 +1,18 @@
+.content_select {
+    width: 100%;
+	background-color:#ffffff;
+	border-radius:3.5px;
+	border:0.5px solid #707070;
+	display:inline-block;
+	cursor:pointer;
+	color:#000000;
+	font-size: 17.5px;
+    font-family: 'AppleNeoM';
+	padding: 6px 10px;
+    margin: 3.5px 0px;
+}
+
+.content_select:hover, .content_select.purple { 
+	background-color: #f0edff;
+ }
+  
