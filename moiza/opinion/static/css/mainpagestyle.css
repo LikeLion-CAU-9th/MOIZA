@@ -225,7 +225,7 @@ body {
 	cursor:pointer;
 	color:#7150e7;
 	font-family:Arial;
-	font-size:15px;
+	font-size:17px;
 	font-weight:bold;
 	padding:17px 76px;
 	text-decoration:none;
@@ -241,5 +241,5 @@ body {
 }
 
 .width{
-    width:100%;
+    width:160px;
 }
