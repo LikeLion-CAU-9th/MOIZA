@@ -1,125 +1,4 @@
 
-html {
-  margin: 0;
-}
-
-body {
-  margin: 0;
-}
-
-.desktop-layer {
-  display: none;
-  width: 100%;
-  height: 72vh;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background: url('../images/background.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.desktop-content {
-  display: none;
-  position: absolute;
-  top: 20%;
-  left: 14%;
-}
-
-.desktop-logo-title {
-  margin-left: 20px;
-  color: #7150E7;
-  font-size: 45px;
-  font-family: 'AppleNeoB';
-}
-
-.desktop-sub-title {
-  font-family: 'BMjua';
-  font-size: 64px;
-}
-
-.desktop-content-footer {
-  font-family: 'AppleNeoM';
-  font-size: 22px;
-}
-
-.purple-text {
-  color: #7150E7;
-}
-
-.desktop-head-section {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: translate(0, -36%);
-  width: 100%;
-  height: 240px;
-  background: linear-gradient(105deg, #BD6ADF, #8D85DF);
-  border-radius: 30px;
-}
-
-.head-section-text {
-  font-family: 'AppleNeoB';
-  position: absolute;
-  left: 30px;
-  bottom: 30px;
-  font-size: 20px;
-  color: #efefef;
-}
-
-.container {
-  max-width: 700px;
-  display: inline-block;
-  height: 100vh;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  transform: translate(-50%, -50%);
-  /*z-index:2;*/
-}
-
-/* IPad Pro device width: 1024px */
-@media (min-width: 1100px) {
-  .desktop-layer {
-    display: block;
-  }
-
-  .desktop-content {
-    display: block;
-  }
-
-  .container {
-    max-width: 420px;
-    display: inline-block;
-    width: 80%;
-    height: 100vh;
-    position: absolute;
-    top: 50%;
-    left: 80%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-  }
-
-  .desktop-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width:80%;
-    transform: translate(-50%, -50%);
-  }
-
-  .mobile-head-section {
-    display: none;
-  }
-
-  .desktop-head-section {
-    display: block !important;
-    max-width: 570px;
-    z-index: 10;
-  }
-}
 /*여기부터 세부 css*/
 /*.all
 {
@@ -150,9 +29,9 @@ body {
   font-size: 20px;
   color: #efefef;
 }
-  input {
+.idea{
     width: 100%;
-    height: 40px;
+    
     padding: 10px 10px;
     font-size: 20px;
     border:1px;
@@ -163,51 +42,52 @@ body {
       position:relative;
       z-index: -1;
   }
+  
+.text_one{
+  width:100%;
+  margin: 30.5px 59.2px 5px 17.5px;
+  object-fit: contain;
+  font-family: 'AppleNeoB';
+  font-size: 18.5px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.35;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000;
+  position:absolute;
+}
+.text_two{
+  width:100%;
+  margin: 25px 117.7px 5px 17.5px;
+  object-fit: contain;
+  font-family: 'AppleNeoB';
+  font-size: 18.5px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.35;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000;
 
-  .participate {
-    margin-bottom:1%;
-      position:absolute;
-      width:27px;
-      right: 0;
-      bottom: 0;      
-      background-color:#ffffff;
-      border-radius:28px;
-      border:1px solid #8665c2;
-      display:inline-block;
-      cursor:pointer;
-      color:#7150e7;
-      font-family:Arial;
-      font-size:16.5px;      
-      padding:9.5px 27px;
-      text-decoration:none;
-      text-shadow:0px 1px 0px #ffffff;      
-      line-height: 20px;
-  }
-  .participate:hover {
-      background-color:#7150e7;
-  }
-  .participate:active {
-      position:absolute;
-      top:1px;
-  }
+}
 
- 
 
 .more {
-    z-index: 10;
-    margin-bottom:1%;
 	background-color:#ffffff;
-	border-radius:28px;
+	border-radius:25px;
 	border:1px solid #ffffff;
 	display:inline-block;
 	cursor:pointer;
-	color:#a4a4a4;
-	font-family:Arial;
-	font-size:16.5px;
-	/*padding:16px 31px;*/
+	color:#626262;
+	font-family:'AppleNeoM';
+	font-size:17px;
+	padding-right:24px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #ffffff;
-  float:right; 
+  
 }
 .more:hover {
 	background-color:#ffffff;
@@ -216,138 +96,11 @@ body {
 	position:relative;
 	top:1px;
 }
-
-   
-
-.newgroup {    
-    text-align:left;
-	box-shadow:inset 0px 1px 0px 0px #ffffff;
-	background:linear-gradient(to bottom, #ffffff 5%, #ffffff 100%);
-	background-color:#ffffff;
-	border-radius:10px;
-	border:1px dashed #7150e7;
-	display:block;
-	cursor:pointer;
-	color:#7150e7;
-	font-family:Arial;
-	font-size:17px;
-	font-weight:bold;
-	/*padding:17px 76px;*/
-	text-decoration:none;
-	text-shadow:0px 1px 0px #ffffff;
-}
-.newgroup:hover {
-	background:linear-gradient(to bottom, #ffffff 5%, #ffffff 100%);
-	background-color:#ffffff;
-}
-.newgroup:active {
-	position:relative;
-	top:1px;
-}
-
+ 
 .width{
     width:160px;
 }
 
-.group {    
-  text-align:left;
-box-shadow:inset 0px 1px 0px 0px #ffffff;
-background:linear-gradient(to bottom, #ffffff 5%, #ffffff 100%);
-background-color:#ffffff;
-border-radius:10px;
-border:1px black;
-display:block;
-cursor:pointer;
-color:black;
-font-family:Arial;
-font-size:17px;
-font-weight:bold;
-/*padding:17px 76px;*/
-text-decoration:none;
-text-shadow:0px 1px 0px #ffffff;
-}
-.group:hover {
-background:linear-gradient(to bottom, #ffffff 5%, #ffffff 100%);
-background-color:#ffffff;
-}
-.group:active {
-position:relative;
-top:1px;
-}
-
-.newgroup {    
-  text-align:left;
-box-shadow:inset 0px 1px 0px 0px #ffffff;
-background:linear-gradient(to bottom, #ffffff 5%, #ffffff 100%);
-background-color:#ffffff;
-border-radius:10px;
-border:1px dashed #7150e7;
-display:block;
-cursor:pointer;
-color:#7150e7;
-font-family:Arial;
-font-size:17px;
-font-weight:bold;
-/*padding:17px 76px;*/
-text-decoration:none;
-text-shadow:0px 1px 0px #ffffff;
-}
-.newgroup:hover {
-background:linear-gradient(to bottom, #ffffff 5%, #ffffff 100%);
-background-color:#ffffff;
-}
-.newgroup:active {
-position:relative;
-top:1px;
-}
-
-.box {    
-text-align:left;
-box-shadow:inset 0px 1px 0px 0px #ffffff;
-background:linear-gradient(to bottom, #ffffff 5%, #ffffff 100%);
-background-color:#ffffff;
-border-radius:10px;
-border:1px black;
-display:block;
-cursor:pointer;
-color:black;
-font-family:Arial;
-font-size:17px;
-font-weight:bold;
-/*padding:17px 76px;*/
-text-decoration:none;
-text-shadow:0px 1px 0px #ffffff;
-z-index:1;
-}
-.box:hover {
-background:linear-gradient(to bottom, #ffffff 5%, #ffffff 100%);
-background-color:#ffffff;
-}
-.box:active {
-position:relative;
-top:1px;
-}
-
-.suggest {
-	background-color:#7050e7;
-	border-radius:25px;
-	border:1px solid #7050e7;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:19px;
-	padding:22.5px 132px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #7050e7;
-}
-.suggest:hover {
-	background-color:#7050e7;
-}
-.suggest:active {
-	position:relative;
-	top:1px;
-}
 @font-face {
   font-family: 'AppleNeoB';
   src: url('../font/AppleSDGothicNeoB.ttf') format("truetype");

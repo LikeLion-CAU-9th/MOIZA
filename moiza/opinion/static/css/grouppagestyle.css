@@ -1,0 +1,90 @@
+
+/*여기부터 세부 css*/
+
+.head-section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(0, -30%);
+    width: 100%;
+    height: 240px;
+    background: linear-gradient(105deg, #BD6ADF, #8D85DF);
+    border-radius: 30px;
+  }
+  
+  .head-section div {
+    font-family: 'AppleNeoB';
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    font-size: 20px;
+    color: #efefef;
+  }
+   
+  .box {    
+  text-align:left;
+  box-shadow:inset 0px 1px 0px 0px #ffffff;
+  background:linear-gradient(to bottom, #ffffff 5%, #ffffff 100%);
+  background-color:#ffffff;
+  border-radius:10px;
+  border:1px black;
+  display:block;
+  cursor:pointer;
+  color:black;
+  font-family:Arial;
+  font-size:17px;
+  font-weight:bold;
+  /*padding:17px 76px;*/
+  text-decoration:none;
+  text-shadow:0px 1px 0px #ffffff;
+  z-index:1;
+  }
+  .box:hover {
+  background:linear-gradient(to bottom, #ffffff 5%, #ffffff 100%);
+  background-color:#ffffff;
+  }
+  .box:active {
+  position:relative;
+  top:1px;
+  }
+  
+  .suggest {
+      background-color:#7050e7;
+      border-radius:25px;
+      border:1px solid #7050e7;
+      display:inline-block;
+      cursor:pointer;
+      color:#ffffff;
+      font-family:Arial;
+      font-size:19px;
+      padding:22.5px 132px;
+      text-decoration:none;
+      text-shadow:0px 1px 0px #7050e7;
+  }
+  .suggest:hover {
+      background-color:#7050e7;
+  }
+  .suggest:active {
+      position:relative;
+      top:1px;
+  }
+
+  @font-face {
+    font-family: 'AppleNeoB';
+    src: url('../font/AppleSDGothicNeoB.ttf') format("truetype");
+  }
+  
+  @font-face {
+    font-family: 'AppleNeoL';
+    src: url('../font/AppleSDGothicNeoL.ttf') format("truetype");
+  }
+  
+  @font-face {
+    font-family: 'AppleNeoM';
+    src: url('../font/AppleSDGothicNeoM.ttf') format("truetype");
+  }
+  
+  @font-face {
+    font-family: 'BMjua';
+    src: url('../font/BMjua.ttf') format("truetype");
+  }
