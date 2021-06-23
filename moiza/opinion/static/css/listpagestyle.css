@@ -227,6 +227,19 @@
       position:relative;
       top:1px;
   }
+  .text{
+    margin: 25px 157.5px 5px 17.5px;
+    object-fit: contain;
+    font-family: 'AppleNeoB';
+    font-size: 18.5px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.35;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000000;
+  }
 
   @font-face {
     font-family: 'AppleNeoB';
