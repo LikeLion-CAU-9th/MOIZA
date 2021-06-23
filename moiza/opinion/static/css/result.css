@@ -7,6 +7,10 @@
   user-select: none;
 }
 
+html {
+  overflow: hidden;
+}
+
 .mobile-container {
   position: absolute;
   display: inline-block;
@@ -141,7 +145,7 @@
 }
 
 .sheet-up {
-  height: 40vh;
+  height: 70vh;
 }
 
 .bottom-sheet-container {
@@ -149,7 +153,23 @@
 }
 
 .container-up {
-  height: 30vh;
+  height: 60vh;
+}
+
+.opinion-container {
+  margin-top: 10px;
+}
+
+.opinion-list {
+  background-color: #fefefe;
+  margin: 14px 0;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px -3px 5px #00000029;
+}
+
+.hide {
+  display: none;
 }
 
 @media (max-width: 1100px) { /* Mobile */

@@ -16,13 +16,19 @@ const bottomSheetSwitch = () => {
 }
 
 const bottomChoice = (num) => {
-  const choice = document.querySelectorAll('.bottom-choice')
+  const choice = document.querySelectorAll('.bottom-choice');
   const select = choice[num];
   for(let i = 0; i < choice.length; i++) {
-    console.log(i);
     removeClass('.bottom-choice', i, 'selected');
+    removeClass('.opinion-container', i, 'hide');
   }
   select.className += " selected"
+  for(let i = 0; i < choice.length; i++) {
+    if(i === num) {
+      continue;
+    }
+    document.querySelectorAll('.opinion-container')[i].className += " hide";
+  }
 }
 
 const removeClass = (JSpath, index, className) => {
