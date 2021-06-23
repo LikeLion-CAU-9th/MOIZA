@@ -1,15 +1,3 @@
-@font-face{
-  font-family: 'BMJUA';
-  src:url(BMJUA_ttf)
-}
-@font-face{
-  font-family: 'AppleSDGothicNeoB';
-  src:url(AppleSDGothicNeoB)
-}
-@font-face{
-  font-family: 'AppleSDGothicNeoM';
-  src:url(AppleSDGothicNeoM)
-}
 
 html {
   margin: 0;
@@ -42,16 +30,16 @@ body {
   margin-left: 20px;
   color: #7150E7;
   font-size: 45px;
-  font-family: 'AppleSDGothicNeoB';
+  font-family: 'AppleNeoB';
 }
 
 .desktop-sub-title {
-  font-family: 'BMJUA';
+  font-family: 'BMjua';
   font-size: 64px;
 }
 
 .desktop-content-footer {
-  font-family: 'AppleSDGothicNeoM';
+  font-family: 'AppleNeoM';
   font-size: 22px;
 }
 
@@ -72,7 +60,7 @@ body {
 }
 
 .head-section-text {
-  font-family: 'AppleSDGothicNeoB';
+  font-family: 'AppleNeoB';
   position: absolute;
   left: 30px;
   bottom: 30px;
@@ -83,13 +71,13 @@ body {
 .container {
   max-width: 700px;
   display: inline-block;
-  width: 80%;
-  height: 50vh;
+  height: 100vh;
   position: absolute;
   top: 50%;
   left: 50%;
+  width: 100%;
   transform: translate(-50%, -50%);
-  z-index:2;
+  /*z-index:2;*/
 }
 
 /* IPad Pro device width: 1024px */
@@ -118,6 +106,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
+    width:80%;
     transform: translate(-50%, -50%);
   }
 
@@ -131,8 +120,8 @@ body {
     z-index: 10;
   }
 }
-
-.all
+/*여기부터 세부 css*/
+/*.all
 {
     display: inline-block;
     width:195px;
@@ -141,7 +130,7 @@ body {
     top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
+}*/
 .head-section {
   position: absolute;
   top: 0;
@@ -154,7 +143,7 @@ body {
 }
 
 .head-section div {
-  font-family: 'AppleSDGothicNeoB';
+  font-family: 'AppleNeoB';
   position: absolute;
   left: 30px;
   bottom: 30px;
@@ -358,4 +347,23 @@ top:1px;
 .suggest:active {
 	position:relative;
 	top:1px;
+}
+@font-face {
+  font-family: 'AppleNeoB';
+  src: url('../font/AppleSDGothicNeoB.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: 'AppleNeoL';
+  src: url('../font/AppleSDGothicNeoL.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: 'AppleNeoM';
+  src: url('../font/AppleSDGothicNeoM.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: 'BMjua';
+  src: url('../font/BMjua.ttf') format("truetype");
 }
