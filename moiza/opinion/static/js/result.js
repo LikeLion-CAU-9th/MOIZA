@@ -1,15 +1,18 @@
 const bottomSheetSwitch = () => {
   const sheet = document.querySelectorAll('.bottom-sheet')[0];
   const container = document.querySelectorAll('.bottom-sheet-container')[0];
-  let sheetHeight = sheet.style.height;
-  if(sheetHeight === '18vh') {
-    sheet.style.height = '40vh';
-    container.style.height = '30vh';
-    return 0;
+  let classList = sheet.classList;
+  for(let i = 0; i < classList.length; i++){
+    if(classList[i] === "sheet-up"){
+      removeClass('.bottom-sheet', 0, 'sheet-up');
+      removeClass('.bottom-sheet-container', 0, 'container-up');
+      return 0;
+    }
   }
-  sheet.style.height = '18vh';
-  container.style.height = '8vh';
-  return 0;
+  
+  sheet.className += " sheet-up";
+  container.className += " container-up";
+  return 1;
 }
 
 const bottomChoice = (num) => {

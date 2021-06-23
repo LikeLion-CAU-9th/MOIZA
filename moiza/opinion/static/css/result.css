@@ -1,3 +1,12 @@
+* {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 .mobile-container {
   position: absolute;
   display: inline-block;
@@ -111,7 +120,7 @@
   border-radius: 22px;
   text-align: center;
   line-height: 40px;
-  margin: 0 6px;
+  margin: 5px 6px;
   cursor: pointer;
   box-shadow: 0px -3px 5px #00000029;
   z-index: 10;
@@ -125,6 +134,22 @@
 .etc {
   width: 80px;
   height: 40px;
+}
+
+.bottom-sheet {
+  height: 18vh;
+}
+
+.sheet-up {
+  height: 40vh;
+}
+
+.bottom-sheet-container {
+  height: 8vh;
+}
+
+.container-up {
+  height: 30vh;
 }
 
 @media (max-width: 1100px) { /* Mobile */
@@ -144,5 +169,21 @@
 
   .choice-info > span:nth-child(2) {
     font-size: 12px;
+  }
+
+  .bottom-sheet {
+    height: 27vh;
+  }
+
+  .sheet-up {
+    height: 70vh;
+  }
+
+  .bottom-sheet-container {
+    height: 17vh;
+  }
+
+  .container-up {
+    height: 60vh;
   }
 }
