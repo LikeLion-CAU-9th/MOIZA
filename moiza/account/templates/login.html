@@ -2,59 +2,71 @@
 {% load static %}
 
 {% block headblock %}
+<script src="{% static 'js/splash.js'%}"></script>
 <script src="{% static 'js/login.js'%}"></script>
 <script src="{% static 'js/modal.js'%}"></script>
 <link rel="stylesheet" href="{% static 'css/login.css' %}">
+<link rel="stylesheet" href="{% static 'css/splash.css' %}">
 <title>모의자 - 로그인</title>
 {% endblock %}
 {% block content %}
 <section class="mobile-head-section">
   <div class="head-section-text">Log in</div>
 </section>
-<div class="container">
-    <div onclick="window.history.back()" style="cursor: pointer;"><img src="../static/images/arrow.svg"></div><br><br>
-    <section class="desktop-head-section">
-      <div class="head-section-text">Log in</div>
-    </section>
-    <div class="desktop-container">
-      <div class="form-container">
-        <div>
-          <input id="input_email" class="login-input" type="text" name="input_email" placeholder="아이디 입력">
-          <input id="input_pw" class="login-input" type="password" name="input_pw" placeholder="비밀번호 입력">
-          {% if msg_loginFail %}
-            <strong style="color: red;">{{msg_loginFail}}</strong>
-          {% endif %}
-          <input class="action-button" type="submit" value="로그인" onclick="loginAction()">
-        </div>
-      </div>
-      <div class="login-nav">
-        <div>
-          <a href="/signup">
-            회원가입
-          </a>
-        </div>
-        <br>
-        <div>
-          <a href="#">
-            계정을 잊어버리셨나요?
-          </a>
-        </div>
-        <!-- <ul>
-          <li>아이디 찾기</li>
-          <li>비밀번호 찾기</li>
-          <li>회원가입</li>
-        </ul> -->
-      </div>
-    </div>
 
-    
-  <div id="login-fail" class="modal-container">
-    <div class="modal-content">
-      <div style="margin-top: 28px; font-size: 20px;"><strong>로그인</strong></div>
-      <div style="margin-top: 28px; border-bottom: 1px solid #CFCFCF; padding-bottom: 28px;">아이디 혹은 비밀번호가 잘못되었습니다.</div>
-      <div style="margin-top: 16px; color: #7150E7; cursor: pointer;" onclick="modal_off('login-fail')">확인</div>
+<div class="container splash-container">
+  <div class="gradient-layer">
+    <div class="splash-content">
+      <img src="{% static 'images/logo.svg'%}"><br><br>
+      <div>모두의 의견을 자유롭게</div>
+      <div class="splash-title">모 의 <span style="letter-spacing: 0;">자</span></div>
     </div>
   </div>
+</div>
+<div class="container">
+  <section class="desktop-head-section">
+    <div onclick="window.history.back()" style="cursor: pointer;"><img src="../static/images/arrow.svg"></div><br><br>
+    <div class="head-section-text">Log in</div>
+  </section>
+  <div class="desktop-container">
+    <div class="form-container">
+      <div>
+        <input id="input_email" class="login-input" type="text" name="input_email" placeholder="아이디 입력">
+        <input id="input_pw" class="login-input" type="password" name="input_pw" placeholder="비밀번호 입력">
+        {% if msg_loginFail %}
+          <strong style="color: red;">{{msg_loginFail}}</strong>
+        {% endif %}
+        <input class="action-button" type="submit" value="로그인" onclick="loginAction()">
+      </div>
+    </div>
+    <div class="login-nav">
+      <div>
+        <a href="/signup">
+          회원가입
+        </a>
+      </div>
+      <br>
+      <div>
+        <a href="#">
+          계정을 잊어버리셨나요?
+        </a>
+      </div>
+      <!-- <ul>
+        <li>아이디 찾기</li>
+        <li>비밀번호 찾기</li>
+        <li>회원가입</li>
+      </ul> -->
+    </div>
+  </div>
+
+  
+<div id="login-fail" class="modal-container">
+  <div class="modal-content">
+    <div style="margin-top: 28px; font-size: 20px;"><strong>로그인</strong></div>
+    <div style="margin-top: 28px; border-bottom: 1px solid #CFCFCF; padding-bottom: 28px;">아이디 혹은 비밀번호가 잘못되었습니다.</div>
+    <div style="margin-top: 16px; color: #7150E7; cursor: pointer;" onclick="modal_off('login-fail')">확인</div>
+  </div>
+</div>
 
 </div>
 {% endblock %}
