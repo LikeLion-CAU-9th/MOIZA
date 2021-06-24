@@ -17,28 +17,31 @@ def success_view(request):
 
 def login_action(request):
   data = request.GET
-  login_success = is_login_available(request, data.get('id', False), data.get('pw', False))
+  login_success = is_login_available(request, data.get('email', False), data.get('pw', False))
   
   if login_success == False:
     return HttpResponse("False")
-  is_session_success = session_attach(request, data.get('input_id', False))
+  is_session_success = session_attach(request, data.get('input_email', False))
   if is_session_success == False:
     return HttpResponseBadRequest('Session is not attached!', status=500)
   return HttpResponse("True")
   
 
-def is_login_available(request, id, raw_pw):
+def is_login_available(request, email, raw_pw):
+  print("Email: ", email)
+  print("Pw: ", raw_pw)
   HashedPasswordObj =hashlib.sha1(raw_pw.encode('UTF-8'))
   HashedPassword = HashedPasswordObj.hexdigest()
-  queryset = user_info.objects.filter(user_id = id, user_pw = HashedPassword)
+  queryset = user_info.objects.filter(user_email = email, user_pw = HashedPassword)
+  print("Q Len: ", len(queryset))
   if len(queryset) == 1:
     return True
   return False
 
 
-def session_attach(request, user_id):
-  request.session['user_id'] = user_id
-  return ('user_id' in request.session)
+def session_attach(request, user_email):
+  request.session['user_email'] = user_email
+  return ('user_email' in request.session)
 
 
 def signup_action(request):
@@ -47,8 +50,8 @@ def signup_action(request):
   data = request.POST
   HashedPasswordObj =hashlib.sha1(data.get('user_pw', False).encode('UTF-8'))
   HashedPassword = HashedPasswordObj.hexdigest()
-  user_info.objects.create(user_id=data.get('user_id', False), user_pw=HashedPassword, user_email=data.get('user_email', False), user_name=data.get('user_name', False))
-  return render(request, 'login.html')
+  user_info.objects.create(user_email=data.get('user_email', False), user_pw=HashedPassword, user_name=data.get('user_name', False))
+  return redirect('login')
 
 
 def validate_mail(request):
