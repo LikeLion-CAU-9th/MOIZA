@@ -45,27 +45,17 @@ def signup_action(request):
   if request.method != "POST":
     return HttpResponseBadRequest('This view can not handle method {0}'.format(request.method), status=405)
   data = request.POST
-  if validate_id(request, data.get('user_id', False)) == False:
-    return render(request, 'signup.html')
-  if data.get('user_pw', False) != data.get('user_pwck', False):
-    return render(request, 'signup.html')
-  if validate_mail(request, data.get('user_email', False)) == False:
-    return render(request, 'signup.html')
   HashedPasswordObj =hashlib.sha1(data.get('user_pw', False).encode('UTF-8'))
   HashedPassword = HashedPasswordObj.hexdigest()
   user_info.objects.create(user_id=data.get('user_id', False), user_pw=HashedPassword, user_email=data.get('user_email', False), user_name=data.get('user_name', False))
   return render(request, 'login.html')
 
 
-def validate_id(request, id):
-  queryset = user_info.objects.filter(user_id = id)
-  if len(queryset) > 0:
-    return False
-  return True
-
-
-def validate_mail(request, email):
+def validate_mail(request):
+  email = request.GET['email']
   queryset = user_info.objects.filter(user_email = email)
+  print(queryset)
+  print(len(queryset))
   if len(queryset) > 0:
-    return False
-  return True
+    return HttpResponse('False')
+  return HttpResponse('True')

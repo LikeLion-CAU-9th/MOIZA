@@ -117,7 +117,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 300px;
+  max-width: 360px;
 }
 
 /* IPad Pro device width: 1024px */

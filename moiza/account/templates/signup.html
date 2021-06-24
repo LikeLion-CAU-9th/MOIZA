@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block headblock %}
+<script src="{% static 'js/signup.js'%}"></script>
 <link rel="stylesheet" href="{% static 'css/signup.css' %}">
 <title>모의자 - 회원가입</title>
 {% endblock %}
@@ -23,18 +24,25 @@
       </div>
       <div>
         <div class="signup-list">아이디(이메일)</div><br>
-        <input class="signup-input" type="text" name="user_id" placeholder="이메일 주소">
+        <div class="email-container">
+          <input id="email-input" class="signup-input" type="text" name="user_id" placeholder="이메일 주소">
+          <div class="email-check" onclick="emailCheck()">중복확인</div>
+        </div>
+        <div id="email-result-success">사용 가능한 이메일입니다.</div>
+        <div id="email-result-fail">이미 가입된 이메일입니다.</div>
       </div>
       <div>
         <div class="signup-list">비밀번호</div><br>
-        <input class="signup-input" type="password" name="user_pw">
+        <input id="pw1" class="signup-input" type="password" name="user_pw">
       </div>
       <div>
         <div class="signup-list">비밀번호 확인</div><br>
-        <input class="signup-input" type="password" name="user_pwck">
+        <input id="pw2" class="signup-input" type="password" name="user_pwck">
+        <div id="space-for-pwcheck"></div>
+        <div id="pw-result-fail">비밀번호가 일치하지 않습니다.</div>
       </div>
       <div class="submit-div">
-        <input type="submit" value="완료">
+        <input id="signup-action-btn" type="submit" value="완료">
       </div>
     </form>
   </div>
