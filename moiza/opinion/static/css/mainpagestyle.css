@@ -38,10 +38,7 @@
     border-radius:10px;
     box-shadow: 3px 3px gray;
   }
-  .ask{
-      position:relative;
-      z-index: -1;
-  }
+  
   
 .text_one{
   width:100%;
@@ -100,6 +97,25 @@
 .width{
     width:160px;
 }
+
+.shadow{
+  position:absolute;
+  z-index:10;
+  width: 195px;
+  height: 421.5px;
+  padding: 0 0 102px;
+  object-fit: contain;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.newgroupmodal{
+  position:relative;
+  z-index:20;
+  width: 139px;
+  height: 158.5px;
+  margin: 5.5px 1.4px 4.5px 28px;
+  object-fit: contain;
+}
+
 
 @font-face {
   font-family: 'AppleNeoB';

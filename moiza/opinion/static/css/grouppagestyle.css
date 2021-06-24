@@ -39,8 +39,26 @@
     color: #000000;
   
   }
- 
-
+ .line{
+  width: 139px;
+  height: 0;
+  margin: 58px 0.5px 0 0;
+  border: solid 0.5px #cfcfcf;
+ }
+.check{
+  width: 14.5px;
+  height: 10px;
+  margin: 50px 40.5px 4px 0;
+  font-family: 'AppleNeoB';
+  font-size: 18.5px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.35;
+  letter-spacing: normal;
+  text-align: left;
+  color: #7150e7;
+}
   @font-face {
     font-family: 'AppleNeoB';
     src: url('../font/AppleSDGothicNeoB.ttf') format("truetype");

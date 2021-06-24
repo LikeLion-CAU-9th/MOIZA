@@ -12,7 +12,7 @@
     
     <script language="JavaSript" src="modal.js"></script>
     <script language="JavaSript" src="mainpagejs.js"></script>
-
+    
 </head>
 
 <body>
@@ -38,36 +38,97 @@
 
 
     <div class="container">
-        <section class="desktop-head-section">
+        <section class="desktop-head-section" style="z-index: -1;">
             <div class="head-section-text">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../static/images/icon.svg">
                 <br><br>모두의 의견을 들어보세요.</div>
         </section>
         
-        <div class="desktop-container">
+        <div class="desktop-container" style="position:absolute;">
             
             <div>
                 <div class="text_one">논의에 참여해주세요!
                 <a href="#" class="more" style="float:right;">더보기<img src="../static/images/rightarrow.svg"></a>
             </div>
-                <br><br>
-                <div class="ask">
-                    <div>
-                        <img src="../static/images/box.svg" style="position:absolute;width:100%;padding-top:10px;">
-                        <img src="../static/images/participate.svg"style="float:right;padding-top:26.5px; position:relative;padding-right:21.5px;">
-                                               
-                    </div>
-                </div>
+                <br><br><br>
+                
+                    <img src="../static/images/box.svg" style="position:absolute;width:100%;">
+                    <img src="../static/images/participate.svg"
+                        style="float:right;padding-top:16.5px; position:relative;padding-right:21.5px;">
+        
+               
                 <br><br><br>
                 <div class="text_two">그룹</div>
                 <div class="width">
                     <img src="../static/images/plus.svg" style="position:absolute;padding-left:15px;padding-top:21.5px;">
-                    <img src="../static/images/newgroupbox.svg" style="position: relative;">
-                    <script></script>
+                    
+                    
+                        <script>
+                            function ViewLayer() {
+                                document.getElementById("Help1").style.display = 'inline';
+                            }
+                        </script>
+                        
+                        <img src="../static/images/newgroupbox.svg" style="cursor:hand;position: absolute;" onclick="javascript:ViewLayer();">
+                        
+                        <div id="Help1" style='position:relative; display:none;z-index:9999;'>  
+                            <img id="shadow" src="../static/images/shadow.svg" style="object-fit: contain;position:absolute;z-index:700;">
+                            <img id="newgroupmodal" src="../static/images/newgroupmodal.svg" style="object-fit: contain;position:relative; z-index:800;">
+                            
+
+                            <script> 
+                                function ViewLayer2(){
+                                  document.getElementById("Help2").style.display='inline';
+                                }
+                                </script>
+                                
+                                <img id="linkcopy" src="../static/images/linkcopy.svg" style="float:right;margin-top:-133px;margin-right:-98px;position:relative;cursor:hand;z-index:900;" onclick="javascript:ViewLayer2();">
+                                
+                                <div id="Help2" style='position:relative; display:none; z-index:9999;'>
+                                  <p style="color:#7150e7;font-size:12.5px;float:left;margin-left:27px;margin-top:-110px;">링크가 복사되었습니다.</p>
+                                </div>
+                            
+                                <script>
+
+                                    function newPage() {
+                                        window.location.href = "../grouppage"
+                                    }
+                                </script>
+                                
+                                <img id="check" src="../static/images/check.svg" style="float:right;margin-top:-68px;margin-right:-83px;position:relative;cursor:hand;z-index:900;" onclick="javascript:newPage();">
+                                
+                                <div id="Help3" style='position:relative; display:none; z-index:1000;'>
+                                
+                                </div>
+                                <img id="cancel" src="../static/images/cancel.svg" style="float:right;margin-top:-68px;margin-right:25px;position:relative;cursor:hand;z-index:900;">
+
+                                <script>
+                                    function rmv() {
+                                        ("#cancel").click(function () {
+                                            ("#shadow").remove();
+                                            ("#newgroupmodal").remove();
+                                            ("#linkcopy").remove();
+                                            ("#check").remove();
+                                            ("#cancel").remove();
+                                        }
+                                
+                                
+                                </script>
+                                
+                                <img id="cancel" src="../static/images/cancel.svg" style="float:right;margin-top:-68px;margin-right:25px;position:relative;cursor:hand;z-index:900;"onclick="javascript:rmv();" >
+
+                                <div id="Help3" style='position:relative; display:none; z-index:1000;'>
+                                
+                                </div>
+
+                                <form><input id="input" type ="text" name="groupname" placeholder="그룹명을 입력해주세요" style="z-index:1200;"></input></form></div> 
+
+
+                            
+                        </div>
                 </div>
-                <!--<div style="border:1px dotted #8665c2; border-radius:10px;padding:10px; color:#8665c2;">새 그룹 생성</div>
-        -->
-                <!--<a href="#" class="myButton"><div class="new_group">새그룹 생성</div></a>-->
+               
+
 
 
             </div>
