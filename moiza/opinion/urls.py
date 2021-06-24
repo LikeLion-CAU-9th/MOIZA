@@ -7,4 +7,5 @@ urlpatterns = [
   path('topic-complete/', views.topic_complete_view, name="topic-complete"),
   path('decision-complete/', views.decision_complete_view, name="decision-complete"),
   path('decision/', views.decision_view, name="decision"),
+  path('result/', views.result_view, name="result"),
 ]
