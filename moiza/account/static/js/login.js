@@ -1,4 +1,3 @@
-
 const loginAction = () => {
   const userId = document.querySelector('#input_id').value;
   const userPw = document.querySelector('#input_pw').value;
