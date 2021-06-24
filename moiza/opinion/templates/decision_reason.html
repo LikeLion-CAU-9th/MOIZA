@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reason of Decision</title>
     <link rel="stylesheet" href="../static/css/base.css">
-    <link rel="stylesheet" href="../static/css/suggestion.css"> 
-    <link rel="stylesheet" href="../static/css/decision.css">
+    <link rel="stylesheet" href="../static/css/decision_reason.css">
+    
     <script
     src="https://code.jquery.com/jquery-3.3.1.js"
     integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
@@ -15,7 +15,7 @@
 </head>
 
 <body>
-   <div class="desktop-layer"></div>
+  <div class="desktop-layer"></div>
   <div class="desktop-content">
     <div class="logo-container">
       <img class="logo-img" src="../static/images/logo.png"><span class="desktop-logo-title">모의자</span><br><br><br><br>
@@ -35,32 +35,22 @@
   </div>  
 
   <div class=container>
-      <form action="action" method="post">
-        
-      <div class=mob_container>
+    <div class=mob_container>
       <a href="#"><img src="../static/images/arrow.svg" ></a>
       <p style="text-align:center; " class="head_name" >의견을 선택한 이유가 무엇인가요?</p>
      
-      <a class="center_name">OO님의 생각을 들려주세요!</a>        
-       
-      <a class="content_select" >1번</a>
-      <a class="content_select" >2번</a>
-      <a class="content_select" >다른 의견이 있어요!</a>
-      <a class="content_select" >마음에 드는 의견이 없어요</a>
-
-     <p> <a href="#" class="myButton">완료</a> </p>
+      
+      <a class="center_name">OO님의 생각을 들려주세요!</a>  
+      <p> <textarea class="reason-content" placeholder="자유롭게 작성해주세요." style="resize: none;"></textarea></p>
+      
+     
+      <div class="submit-button">
+        <input type="submit" value="제출">
+      </div>
     </div>
-  </form>
+ 
+  </div>
 
-  </div>
-  </div>
-</div>
 </body>
-
-<script >
-$(".content_select").click(function () {
-   $(this).toggleClass("purple");
-});
-</script>
 
 </html>

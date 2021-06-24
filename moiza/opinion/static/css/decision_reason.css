@@ -1,0 +1,63 @@
+.mob_container {
+    max-width: 700px;
+    display: inline-block;
+    width: 80%;
+    height: 50vh;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.head_name {
+    font-family: 'AppleNeoB';
+    font-size: 19.5px;
+}
+
+
+.center_name {
+    font-family: 'AppleNeoM';
+    font-size: 18.5px;
+    
+}
+
+
+
+.reason-content {
+    font-family: 'AppleNeoL';
+    font-size : 17.5px;
+    width: 100%;
+    height: 210px;
+    border-radius: 3.5px;
+    box-shadow: 1.5px 1.5px 1.5px 0 rgba(0, 0, 0, 0.16);
+    border: solid 0.5px #ede8e8;
+    background-color: #ffffff;
+}
+
+/* .reason-content::placeholder {
+    width: 68.5px;
+    height: 9.5px;
+    font-family: 'AppleNeoL';
+    font-size: 7.5px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #919191;
+} */
+
+.submit-button input{
+    width: 100%;
+    background-color:#7150e7;
+    border-radius:42px;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-size: 18.5px;
+    font-family: 'AppleNeoM';
+    padding: 10px 10px;
+    margin: 20px 0px;
+    text-decoration:none;
+    text-align : center;
+}
