@@ -3,8 +3,10 @@ const emailCheck = () => {
   const validation = AjaxCall('../email-check/', {'email': inputEmail});
   if(validation) {
     document.querySelector('#email-result-success').style.display = 'block';
+    document.querySelector('#email-result-fail').style.display = 'none';
     return true;
   }
+  document.querySelector('#email-result-success').style.display = 'none';
   document.querySelector('#email-result-fail').style.display = 'block';
   return false;
 }

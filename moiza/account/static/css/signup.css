@@ -29,10 +29,6 @@
   border-bottom: 1pt solid #e5e4e8;
 }
 
-#email-input {
-  width: 64%;
-}
-
 .submit-div {
   text-align: center;
   margin-top: 50px !important;
@@ -56,9 +52,9 @@
   margin: 0 !important;
 }
 
-.email-container input {
-  width: 70%;
-  float: left;
+#email-input {
+  width: 100%;
+  /* float: left; */
 }
 
 .email-check {
