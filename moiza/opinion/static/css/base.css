@@ -104,17 +104,58 @@ body {
 }
 
 .modal-content {
-  width: 300px;
-  height: 180px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  background-color: #efefef;
-  border-radius: 16px;
+   width: 300px;
+   height: 180px;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   text-align: center;
+   background-color: #efefef;
+   border-radius: 16px;
 }
 
+.modal-head {
+  font-family: 'AppleNeoB';
+  font-size: 19.5px;
+  padding : 10px;
+  margin : 20px 32px 6px 15px;
+  height : 26px;
+  
+}
+.modal-center {
+  font-family: 'AppleNeoM';
+  font-size: 15.5px;
+  height : 61px;
+  border-bottom: solid 0.5px #cfcfcf;
+  
+}
+.modal-confirm {
+
+  font-family: 'AppleNeoB';
+  font-size: 17.5px;
+  height : 46px;
+  line-height: 46px;
+}
+
+.no{
+  border-right : solid 0.5px #cfcfcf;
+  width:50%; 
+  float:left; 
+  color: #7150E7; 
+  cursor: pointer;
+  height : 100%;
+  line-height : 46px;
+}
+.yes{
+  
+  width:45%;
+  float:right;
+  color: #7150E7;
+  cursor: pointer;
+  height : 100%;
+  line-height : 46px;
+}
 .desktop-container {
   width: 80%;
   position: absolute;
