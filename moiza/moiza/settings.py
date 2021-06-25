@@ -121,8 +121,13 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#staticfile들이 들어있는 경로
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'account/static')
+    os.path.join(BASE_DIR,'account','static'),
+    os.path.join(BASE_DIR,'opinion','static'),
 ]
 
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+#static file을 모을 디렉토리
+STATIC_ROOT = os.path.join(BASE_DIR,'static')
