@@ -120,6 +120,13 @@ body {
   max-width: 360px;
 }
 
+.back-move {
+  cursor: pointer;
+  position: absolute;
+  top: 54px;
+  left: 36px;
+}
+
 /* IPad Pro device width: 1024px */
 @media (min-width: 1100px) {
   .desktop-layer {
