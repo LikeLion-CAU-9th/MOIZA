@@ -28,7 +28,10 @@ const pwCorrect = () => {
   const singupBtn = document.querySelector('#signup-action-btn');
   pwcheckSpace.style.display = 'inline-block';
   failMessage.style.display = 'none';
-  singupBtn.style.pointerEvents = "";
+  if(emailCheck()) {
+    singupBtn.style.background = 'linear-gradient(105deg, #BD6ADF, #8D85DF)';
+    singupBtn.style.pointerEvents = '';
+  }
 }
 
 const pwNotCorrect = () => {
@@ -37,12 +40,14 @@ const pwNotCorrect = () => {
   const singupBtn = document.querySelector('#signup-action-btn');
   pwcheckSpace.style.display = 'none';
   failMessage.style.display = 'block';
+  singupBtn.style.background = '#DDDDDD';
   singupBtn.style.pointerEvents = "none";
 }
 
 const checkSubmitAllow = () => {
   const singupBtn = document.querySelector('#signup-action-btn');
   if(emailCheck() && passwordCheck()){
+    console.log("CORRECT!")
     singupBtn.style.background = 'linear-gradient(105deg, #BD6ADF, #8D85DF)';
     singupBtn.style.pointerEvents = '';
     return true
