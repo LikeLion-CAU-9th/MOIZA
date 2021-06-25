@@ -1,10 +1,11 @@
 import os, json
 from django.core.exceptions import ImproperlyConfigured
 from pathlib import Path
+import pymysql
+pymysql.install_as_MySQLdb()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
@@ -76,10 +77,16 @@ WSGI_APPLICATION = 'moiza.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'MOIZA_DB',
+        'HOST': get_secret("HOST"),
+        'PORT': get_secret("PORT"),
+        'USER': get_secret("USER"),
+        "PASSWORD": get_secret("PASSWORD")
     }
 }
 
@@ -122,8 +129,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#staticfile들이 들어있는 경로
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'account/static')
+    os.path.join(BASE_DIR,'account','static'),
+    os.path.join(BASE_DIR,'opinion','static'),
 ]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

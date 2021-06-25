@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="54" height="19" viewBox="0 0 54 19">
+    <g fill="none">
+        <path d="M9.5 0h35a9.5 9.5 0 0 1 0 19h-35a9.5 9.5 0 0 1 0-19z"/>
+        <path fill="#7150e7" d="M9.5 1C4.813 1 1 4.813 1 9.5 1 14.187 4.813 18 9.5 18h35c4.687 0 8.5-3.813 8.5-8.5C53 4.813 49.187 1 44.5 1h-35m0-1h35C49.747 0 54 4.253 54 9.5S49.747 19 44.5 19h-35C4.253 19 0 14.747 0 9.5S4.253 0 9.5 0z"/>
+    </g>
+    <text fill="#7150e7" font-family="AppleSDGothicNeoM00" font-size="13px" transform="translate(5 14)">
+        <tspan x="0" y="0">링크복사</tspan>
+    </text>
+</svg>
+

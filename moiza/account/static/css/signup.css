@@ -1,6 +1,7 @@
 .signup-form {
-  margin-top: 50px;
+  margin-top: 160px;
   min-width: 300px;
+  z-index: 12;
 }
 
 .signup-form div {
@@ -8,9 +9,9 @@
 }
 
 .signup-list {
-  font-family: 'AppleNeoB';
+  font-family: 'AppleNeoM';
   display: inline-block;
-  color: #404040;
+  color: #000000;
   font-size: 18px;
   width: 40%;
 }
@@ -20,30 +21,78 @@
 }
 
 .signup-input {
-  width: 50%;
+  width: 100%;
   font-size: 16px;
   padding: 0 4px;
-  height: 28px;
-  border: 1pt solid #A86BD7;
-}
-
-#email-input {
-  width: 64%;
+  height: 38px;
+  border: none;
+  margin-top: 10px;
+  border-bottom: 1pt solid #e5e4e8;
 }
 
 .submit-div {
   text-align: center;
-  margin-top: 70px !important;
+  margin-top: 50px !important;
 }
 
 .submit-div input {
   font-family: 'AppleNeoB';
   font-size: 1em;
   color: #efefef;
-  width: 40%;
+  width: 100%;
   height: 50px;
   border: none;
-  border-radius: 12px;
+  border-radius: 22px;
   cursor: pointer;
-  background: linear-gradient(105deg, #BD6ADF, #8D85DF);
+  background: #DDDDDD;
+}
+
+.email-container {
+  width: 100%;
+  min-height: 52px;
+  margin: 0 !important;
+}
+
+#email-input {
+  width: 100%;
+  /* float: left; */
+}
+
+.email-check {
+  width: 90px;
+  height: 36px;
+  line-height: 38px;
+  margin: 7px 0 !important;
+  text-align: center;
+  cursor: pointer;
+  float: right;
+  color: #7150E7;
+  border: 1px solid #7150E7;
+  border-radius: 16px;
+}
+
+#email-result-success {
+  display: none;
+  font-size: 14px;
+  color: royalblue;
+  font-family: 'AppleNeoL';
+}
+
+#email-result-fail {
+  display: none;
+  font-size: 14px;
+  color: #7150E7;
+  font-family: 'AppleNeoL';
+}
+
+#pw-result-fail {
+  display: none;
+  font-size: 14px;
+  color: #7150E7;
+  font-family: 'AppleNeoL';
+}
+
+#space-for-pwcheck {
+  display: inline-block;
+  height: 1px;
 }

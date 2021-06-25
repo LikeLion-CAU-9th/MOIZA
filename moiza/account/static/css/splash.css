@@ -1,0 +1,35 @@
+.splash-container {
+  z-index: 200;
+  width: 100%;
+  height: 100vh;
+  background-color: #ffffff;
+  transition: opacity 1.2s;
+}
+
+.gradient-layer {
+  background: linear-gradient(168deg,#A86BD7,#724FE724,#FFFFFF3B, #F1EEFC21, #515FCB8C, #7150E7E6);
+  width: 100%;
+  height: 100%;
+}
+
+.splash-content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: 'AppleNeoM';
+  font-size: 20px;
+  color: #707070;
+}
+
+.splash-content img {
+  width: 100px;
+}
+
+.splash-title {
+  color: #7150E7E6;
+  font-family: 'BMjua';
+  font-size: 2.4em;
+  letter-spacing: 10px;
+}
