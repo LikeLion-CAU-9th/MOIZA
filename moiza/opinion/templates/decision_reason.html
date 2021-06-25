@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reason of Decision</title>
+    <link rel="stylesheet" href="../static/css/base.css">
+    <link rel="stylesheet" href="../static/css/decision_reason.css">
+    
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+    <script src="{% static 'js/wordCount.js' %}"></script>
+    <script src="{% static 'js/modal.js' %}"></script>
+</head>
+
+<body>
+  <div class="desktop-layer"></div>
+  <div class="desktop-content">
+    <div class="logo-container">
+      <img class="logo-img" src="../static/images/logo.png"><span class="desktop-logo-title">모의자</span><br><br><br><br>
+    </div>
+    <div class="desktop-sub-title">
+      <span class="purple-text">모</span>두의 
+      <span class="purple-text">의</span>견을 
+      <span class="purple-text">자</span>유롭게
+    </div><br><br><br>
+    <div class="desktop-content-footer">
+      <div class="desktop-content-footer-title">
+        의사결정이 필요할 땐, <span class="purple-text">모의자</span>로 모이자!
+      </div><br>
+      회의부터 일상생활까지,<br>
+      다양한 의사결정을 모의자에서 해결해 보세요.
+    </div>
+  </div>  
+
+  <div class=container>
+    <div class=mob_container>
+      <a href="#" onclick="window.history.back()"><img src="../static/images/arrow.svg" ></a>
+      <p style="text-align:center; " class="head_name" >의견을 선택한 이유가 무엇인가요?</p>
+     
+      
+      <a class="center_name">OO님의 생각을 들려주세요!</a>  
+      <p> <textarea class="reason-content" id="reason-content" onkeydown="wordCount()"  placeholder="자유롭게 작성해주세요." style="resize: none;"></textarea></p>
+      
+     
+      <div class="submit-button" id="submit-button" onclick="modal_on('submit-check')">
+        <input type="submit" value="제출">
+      </div>
+    </div>
+
+    <div id="submit-check" class="modal-container">
+    <div class="modal-content">
+      <div class="modal-head">잠깐!</div>
+      <div class="modal-center">
+        의견을 제출하면 수정할 수 없어요.
+        <br>
+        정말로 제출하시겠어요?
+      </div>
+      <div class = "modal-confirm"> 
+        <div class = "no" onclick="modal_off('submit-check')">아니오</div>
+        <div class = "yes" onclick="modal_off('submit-check')">네</div>
+      </div>
+      
+    </div>
+  </div>
+    
+  </div>
+
+ 
+  </div>
+
+  
+</body>
+
+</html>
