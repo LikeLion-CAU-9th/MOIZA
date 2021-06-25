@@ -10,4 +10,5 @@ urlpatterns = [
   path('decision-reason/', views.decision_reason, name="decision-reason"),
   path('other-opinion/', views.other_opinion, name="other-opinion"),
   path('disagree-reason/', views.disagree_reason, name="disagree-reason"),
+  path('result/', views.result_view, name="result"),
 ]
