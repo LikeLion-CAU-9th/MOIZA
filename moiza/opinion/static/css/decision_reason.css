@@ -20,38 +20,21 @@
     
 }
 
-
-
 .reason-content {
-    font-family: 'AppleNeoL';
+    font-family: 'AppleNeoL'; 
     font-size : 17.5px;
-    width: 100%;
+    width: 90%;
     height: 210px;
     border-radius: 3.5px;
     box-shadow: 1.5px 1.5px 1.5px 0 rgba(0, 0, 0, 0.16);
     border: solid 0.5px #ede8e8;
     background-color: #ffffff;
-    
-
+    padding : 20px;
 }
-
-/* .reason-content::placeholder {
-    width: 68.5px;
-    height: 9.5px;
-    font-family: 'AppleNeoL';
-    font-size: 7.5px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    text-align: left;
-    color: #919191;
-} */
 
 .submit-button input{
     width: 100%;
-    background-color:#7150e7;
+    background-color:#dddddd;
     border-radius:42px;
     display:inline-block;
     cursor:pointer;
@@ -62,4 +45,6 @@
     margin: 20px 0px;
     text-decoration:none;
     text-align : center;
+    border : none;
+    pointer-events: none;
 }
