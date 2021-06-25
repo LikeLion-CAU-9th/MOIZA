@@ -36,69 +36,72 @@
 
 
     <div class="container">
-        <section class="desktop-head-section"  style="z-index: -1;">
+        <section class="desktop-head-section" style="z-index: -1;">
             <div class="head-section-text">
                 <a href="../mainpage"><img src="../static/images/arrow.svg"></a>
-                <br><br>그룹</div>
+                <br><br>그룹
+            </div>
         </section>
-        
+    
         <div class="desktop-container">
             <!-- 여기다 내용 코딩 고고 -->
             <a href="#"><img src="../static/images/suggestbox.svg" class="box"></a>
-            
+    
             <div class="text">논의 목록</div>
-            
+    
             <img src="../static/images/box.svg" style="position:absolute;width:100%;">
             <img src="../static/images/participate.svg"
                 style="float:right;padding-top:16.5px; position:relative;padding-right:21.5px;">
-            
-            
+    
+    
             <br><br><br>
-            
+    
             <img src="../static/images/box.svg" style="position:absolute;width:100%;">
-            
-            <script> 
-                function ViewLayer(){
-                  document.getElementById("Help1").style.display='inline';
-                }
-                </script>
-                <img src="../static/images/alreadyparticipate.svg"
-                style="cursor:hand;float:right;padding-top:16.5px; position:relative;padding-right:21.5px;" onclick="javascript:ViewLayer();">
-                
-                <div id="Help1" style='position:absolute; display:none; z-index:9999;'>
-                    <img id="shadow" src="../static/images/shadow.svg" style="object-fit: contain;position:absolute;z-index:-1;">
-
-                    <img src="../static/images/alreadymodal.svg" style="z-index:800;">
-                    <div class="line"style="width:280px;
-                    margin: -3px 0.5px 0 0;
-                    border: solid 0.5px #cfcfcf;position:relative"></div>
-                    <div class="check">확인</div>
-                </div>
-
-
-            
+    
+    
+            <img src="../static/images/alreadyparticipate.svg"
+                style="cursor:hand;float:right;padding-top:16.5px; position:relative;padding-right:21.5px;"
+                onclick="javascript:ViewLayer();">
+    
             <br><br><br>
             <div class="text">나의 발제</div>
-            
+    
             <img src="../static/images/box.svg" style="position:absolute;width:100%;">
-            <img src="../static/images/result.svg" style="float:right;padding-top:16.5px;position:relative;padding-right:21.5px;">
-            
-            
-            
-            
-            </div>
-            
-            
-            
-
-            
-
-
-        
+            <img src="../static/images/result.svg"
+                style="float:right;padding-top:16.5px;position:relative;padding-right:21.5px;">
+    
+    
+    
+    
         </div>
-
+    
+    </div>
+    <div id="Help1" style='position:absolute; display:none; z-index:9999;'>
+        <img id="shadow" src="../static/images/shadow.svg" style="object-fit: contain;position:relative;z-index:-1;float:left;margin-top:300px;margin-left:375px;">
+    
+        <img id="alreadymodal" src="../static/images/alreadymodal.svg" style="position:relative;float:left;margin-top:-850px;margin-left:868px;z-index:800;">
+        
+        <img id="ok" src="../static/images/ok.svg" style="position:relative;margin-top:430px;margin-left:175px;z-index:1000;"onclick="javascript:rmv();">
+    
+    </div>
     </div>
 
 </body>
 
 </html>
+
+<script>
+    function ViewLayer2() {
+        document.getElementById("Help2").style.display = 'inline';
+    }
+
+    function newPage() {
+        window.location.href = "../grouppage"
+    }
+    function rmv() {
+        document.getElementById("Help1").style.display = 'none';
+    }
+    function ViewLayer() {
+        document.getElementById("Help1").style.display = 'inline';
+    }
+</script>

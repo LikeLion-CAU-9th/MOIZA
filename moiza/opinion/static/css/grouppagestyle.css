@@ -20,7 +20,21 @@
     font-size: 20px;
     color: #efefef;
   }
-   
+   #shadow{
+    max-width: 700px;
+    display: inline-block;
+    height: 150vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    transform: translate(-50%, -50%);
+   }
+   #alreadymodal{
+    margin-left:15%;
+    margin-top:55%;
+    text-align:center;
+   }
   .box{
     margin-top:130px;
     z-index: 100;
@@ -38,6 +52,12 @@
     text-align: left;
     color: #000000;
   
+  }
+  
+  #alreadymodal{
+    margin-left:15%;
+  margin-top:55%;
+  text-align:center;
   }
  .line{
   width: 139px;
@@ -59,6 +79,7 @@
   text-align: left;
   color: #7150e7;
 }
+
   @font-face {
     font-family: 'AppleNeoB';
     src: url('../font/AppleSDGothicNeoB.ttf') format("truetype");
