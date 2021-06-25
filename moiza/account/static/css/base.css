@@ -43,7 +43,6 @@ body {
 }
 
 .purple-text {
-  font-family: 'BMjua';
   color: #7150E7;
 }
 
@@ -80,12 +79,7 @@ body {
 }
 
 .container {
-<<<<<<< HEAD
   max-width: 700px;
-=======
-  max-width: 480px;
-  box-shadow: 0px 6px 6px #00000029;
->>>>>>> 5df088d12288be1fa2cb7a646519a2c1a13cbd93
   display: inline-block;
   width: 100%;
   height: 100vh;
@@ -140,11 +134,8 @@ body {
   }
 
   .container {
-<<<<<<< HEAD
-    max-width: 600px;
-=======
     max-width: 480px;
->>>>>>> 5df088d12288be1fa2cb7a646519a2c1a13cbd93
+    box-shadow: 0px 6px 6px #00000029;
     display: inline-block;
     width: 80%;
     height: 100vh;

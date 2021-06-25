@@ -4,7 +4,7 @@
 ---
 
 ## 🖥 Prototype
-<a href="https://xd.adobe.com/view/180a8279-3a53-4bd2-b315-68533fe003f1-4d59/">LINK</a>
+<a href="https://xd.adobe.com/view/f6c95b3c-9155-4a84-bcf1-a35431bc0d64-a39a/">LINK</a>
 ---
 
 ## 💫 Contributors

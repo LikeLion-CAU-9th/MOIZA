@@ -1,0 +1,49 @@
+.signup-form {
+  margin-top: 50px;
+  min-width: 300px;
+}
+
+.signup-form div {
+  margin: 8px 0px;
+}
+
+.signup-list {
+  font-family: 'AppleNeoB';
+  display: inline-block;
+  color: #404040;
+  font-size: 18px;
+  width: 40%;
+}
+
+#email-list {
+  width: 26%;
+}
+
+.signup-input {
+  width: 50%;
+  font-size: 16px;
+  padding: 0 4px;
+  height: 28px;
+  border: 1pt solid #A86BD7;
+}
+
+#email-input {
+  width: 64%;
+}
+
+.submit-div {
+  text-align: center;
+  margin-top: 70px !important;
+}
+
+.submit-div input {
+  font-family: 'AppleNeoB';
+  font-size: 1em;
+  color: #efefef;
+  width: 40%;
+  height: 50px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  background: linear-gradient(105deg, #BD6ADF, #8D85DF);
+}
