@@ -61,15 +61,15 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 240px;
-  background: linear-gradient(149deg, rgba(168, 107, 215, .68), rgba(114, 79, 231, .0952), rgba(255, 255, 255, 0.1564));
+  height: 100vh;
+  background: linear-gradient(149deg, rgba(184, 131, 224, 0.6),rgba(141, 93, 223, .065),rgba(114, 79, 231, .065),  rgba(255, 255, 255, 0.1564));
 }
 
 .head-section-text {
   font-family: 'AppleNeoB';
   position: absolute;
   left: 50%;
-  bottom: 50px;
+  top: 120px;
   transform: translate(-50%);
   color: #7352e7;
   font-size: 30px;
