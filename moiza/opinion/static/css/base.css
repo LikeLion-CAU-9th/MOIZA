@@ -75,6 +75,12 @@ body {
   font-size: 30px;
 }
 
+.back-move {
+  cursor: pointer;
+  position: absolute;
+  top: 54px;
+  left: 36px;
+}
 
 .container {
   max-width: 480px;
@@ -161,6 +167,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   max-width: 300px;
+  z-index: 12;
 }
 
 /* IPad Pro device width: 1024px */
