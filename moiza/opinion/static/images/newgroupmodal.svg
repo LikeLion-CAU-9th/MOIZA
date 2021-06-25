@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="296" height="335" viewBox="0 0 296 335">
+    <defs>
+        <filter id="사각형_10" width="296" height="335" x="0" y="0" filterUnits="userSpaceOnUse">
+            <feOffset dx="5" dy="5"/>
+            <feGaussianBlur result="blur" stdDeviation="3"/>
+            <feFlood flood-opacity=".161"/>
+            <feComposite in2="blur" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <style>
+            .cls-3,.cls-5{fill:#303030}.cls-3{font-size:16px;font-family:AppleSDGothicNeoM00}.cls-4,.cls-8{fill:none}.cls-4{stroke:#cfcfcf}.cls-5{font-size:15px;font-family:AppleSDGothicNeoL00}.cls-11,.cls-12{stroke:none}.cls-12{fill:#7150e7}
+        </style>
+    </defs>
+    <g id="그룹_18515" transform="translate(-52 -216)">
+        <g filter="url(#사각형_10)" transform="translate(52 216)">
+            <rect id="사각형_10-2" width="278" height="317" fill="#fff" rx="7" transform="translate(4 4)"/>
+        </g>
+        <text id="그룹_생성" fill="#303030" font-family="AppleSDGothicNeoB00" font-size="17px" transform="translate(80 271)">
+            <tspan x="0" y="0">그룹 생성</tspan>
+        </text>
+        <text id="그룹명" class="cls-3" transform="translate(80 332)">
+            <tspan x="0" y="0">그룹명</tspan>
+        </text>
+        <text id="그룹원_초대" class="cls-3" transform="translate(80 410)">
+            <tspan x="0" y="0">그룹원 초대</tspan>
+        </text>
+        <path id="패스_6" d="M581-329.658h230" class="cls-4" transform="translate(-501 696)"/>
+        <path id="패스_7" d="M581-329.658h230" class="cls-4" transform="translate(-501 774.316)"/>
+        <text id="그룹명을_입력해주세요." class="cls-5" transform="translate(80 361)">
+            <tspan x="0" y="0"></tspan>
+        </text>
+        <text id="url_주소" class="cls-5" transform="translate(80 439)">
+            <tspan x="0" y="0">http://moiza.com/1234</tspan>
+        </text>
+        <rect id="사각형_11" width="113" height="37" fill="#7150e7" rx="18.5" transform="translate(201 487)"/>
+        <g id="그룹_11" transform="translate(195.357 485)">
+            <text id="확인" fill="#fff" font-family="AppleSDGothicNeoM00" font-size="18px" transform="translate(46.643 26)">
+                <tspan x="0" y="0"></tspan>
+            </text>
+        </g>
+        <g id="그룹_18559">
+            <g id="패스_7714" class="cls-8">
+                <path d="M18.5 0h76a18.5 18.5 0 0 1 0 37h-76a18.5 18.5 0 0 1 0-37z" class="cls-11" transform="translate(77 487)"/>
+                <path d="M18.5 1C13.826 1 9.43 2.82 6.126 6.126 2.82 9.43 1 13.826 1 18.5s1.82 9.069 5.126 12.374C9.43 34.18 13.826 36 18.5 36h76c4.674 0 9.069-1.82 12.374-5.126C110.18 27.57 112 23.174 112 18.5s-1.82-9.069-5.126-12.374C103.57 2.82 99.174 1 94.5 1h-76m0-1h76C104.717 0 113 8.283 113 18.5S104.717 37 94.5 37h-76C8.283 37 0 28.717 0 18.5S8.283 0 18.5 0z" class="cls-12" transform="translate(77 487)"/>
+            </g>
+            <text id="취소" fill="#7150e7" font-family="AppleSDGothicNeoM00" font-size="18px" transform="translate(118 511)">
+                <tspan x="0" y="0"></tspan>
+            </text>
+        </g>
+        <g id="구성_요소_5_11" transform="translate(256 422)">
+            <g id="패스_7707" class="cls-8">
+                <path d="M9.5 0h35a9.5 9.5 0 0 1 0 19h-35a9.5 9.5 0 0 1 0-19z" class="cls-11"/>
+                <path d="M9.5 1C4.813 1 1 4.813 1 9.5 1 14.187 4.813 18 9.5 18h35c4.687 0 8.5-3.813 8.5-8.5C53 4.813 49.187 1 44.5 1h-35m0-1h35C49.747 0 54 4.253 54 9.5S49.747 19 44.5 19h-35C4.253 19 0 14.747 0 9.5S4.253 0 9.5 0z" class="cls-12"/>
+            </g>
+            <text id="링크복사" fill="#7150e7" font-family="AppleSDGothicNeoM00" font-size="13px" transform="translate(5 14)">
+                <tspan x="0" y="0"></tspan>
+            </text>
+        </g>
+    </g>
+</svg>

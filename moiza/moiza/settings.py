@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'account',
+    'opinion',
 ]
 
 MIDDLEWARE = [
@@ -133,6 +134,13 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #staticfile들이 들어있는 경로
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'account','static'),
+    os.path.join(BASE_DIR,'opinion','static'),
+]
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#staticfile들이 들어있는 경로
+STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'opinion','static'),
 ]
 

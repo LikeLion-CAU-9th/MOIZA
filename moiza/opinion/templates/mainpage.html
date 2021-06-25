@@ -1,12 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>mainpage</title>
+    <link rel="stylesheet" href="../static/css/same.css">
+    <link rel="stylesheet" href="../static/css/mainpagestyle.css">
+
+    <script language="JavaSript" src="modal.js"></script>
+    <script language="JavaSript" src="mainpagejs.js"></script>
+
 </head>
+
 <body>
-    메인페이지입니다
+    <div class="desktop-layer"></div>
+    <div class="desktop-content">
+        <div class="logo-container">
+            <img class="logo-img" src="../static/images/logo.svg"><span
+                class="desktop-logo-title">모의자</span><br><br><br><br>
+        </div>
+        <div class="desktop-sub-title">
+            <span class="purple-text">모</span>두의
+            <span class="purple-text">의</span>견을
+            <span class="purple-text">자</span>유롭게
+        </div><br><br><br>
+        <div class="desktop-content-footer">
+            <div class="desktop-content-footer-title">
+                의사결정이 필요할 땐, <span class="purple-text">모의자</span>로 모이자!
+            </div><br>
+            회의부터 일상생활까지,<br>
+            다양한 의사결정을 모의자에서 해결해 보세요.
+        </div>
+    </div>
+
+    <div class="container">
+        <section class="desktop-head-section" style="z-index: -1;">
+            <div class="head-section-text">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img
+                    src="../static/images/icon.svg">
+                <br><br>모두의 의견을 들어보세요.
+            </div>
+        </section>
+        
+        <div class="desktop-container" style="position:absolute;">
+
+            <div>
+                <div class="text_one">논의에 참여해주세요!
+                    <a href="#" class="more" style="float:right;">더보기<img src="../static/images/rightarrow.svg"></a>
+                </div>
+                <br><br><br>
+
+                <img src="../static/images/box.svg" style="position:absolute;width:100%;"onclick="javascript:ViewLayer();">
+                <img src="../static/images/participate.svg"
+                    style="float:right;padding-top:16.5px; position:relative;padding-right:21.5px;">
+
+
+                <br><br><br>
+                <div class="text_two">그룹</div>
+                <div class="width">
+                    <img src="../static/images/plus.svg"
+                        style="position:absolute;padding-left:15px;padding-top:21.5px;">
+
+
+                    <img src="../static/images/newgroupbox.svg" style="cursor:hand;position: absolute;"onclick="javascript:ViewLayer();">
+
+                    
+                </div>
+            </div>
+        </div>
+        <div id="Help1">
+            <img id="newgroupmodal" src="../static/images/newgroupmodal.svg"
+                style="object-fit: contain;position:relative; z-index:800;">
+        
+            <img id="linkcopy" src="../static/images/linkcopy.svg"
+                style="float:left;position:relative;margin-left:267px;margin-top:-133px;cursor:hand;z-index:100000;"
+                onclick="javascript:ViewLayer2();">
+            <form>
+                <input id="input" type="text" name="groupname" placeholder="그룹명을 입력해주세요"
+                    style="z-index:1300;border:none;float:left;position:relative;margin-left:89px;margin-top:-207px;"></input>
+            </form>
+            <div id="Help2" style='position:relative; display:none; z-index:9999;'>
+                <p style="color:#7150e7;font-size:12.5px;float:left;margin-left:89px;margin-top:-110px;">링크가
+                    복사되었습니다.</p>
+            </div>
+            <img id="check" src="../static/images/check.svg"
+                style="float:right;margin-top:-68px;margin-right:112px;position:relative;cursor:hand;z-index:900;"
+                onclick="javascript:newPage();">
+        
+            <div id="Help3" style='position:relative; display:none; z-index:1000;'></div>
+            <img id="cancel" src="../static/images/cancel.svg"
+                style="float:right;margin-top:-68px;margin-right:28px;position:relative;cursor:hand;z-index:900;"
+                onclick="javascript:rmv()">
+        
+            <div id="Help3" style='position:relative; display:none; z-index:1000;'>
+            </div>
+        
+        </div>
+        
+        </div>
+        
+        
+        </div>
+
 </body>
+
 </html>
+
+<script>
+    function ViewLayer2() {
+        document.getElementById("Help2").style.display = 'inline';
+    }
+
+    function newPage() {
+        window.location.href = "../grouppage";
+    }
+    function rmv() {
+        document.getElementById("Help1").style.display = 'none';
+    }
+    function ViewLayer() {
+        document.getElementById("Help1").style.display = 'inline';
+    }
+</script>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="54" height="19" viewBox="0 0 54 19">
+    <path fill="#7150e7" d="M9.5 0h35a9.5 9.5 0 0 1 0 19h-35a9.5 9.5 0 0 1 0-19z"/>
+    <text fill="#fff" font-family="AppleSDGothicNeoM00" font-size="13px" transform="translate(5 14)">
+        <tspan x="0" y="0">결과보기</tspan>
+    </text>
+</svg>
