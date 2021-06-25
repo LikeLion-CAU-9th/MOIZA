@@ -11,14 +11,14 @@
 .layer .content {
     display: inline-block;
     vertical-align: middle;
-    font-size: 19.5px;
+    font-size: 29.5px;
     font-family: 'AppleNeoB';
 }
 
 .layer .content2 {
     display: inline-block;
     vertical-align: middle;
-    font-size: 17.5px;
+    font-size: 22px;
     font-family: 'AppleNeoM';
 }
 
@@ -40,7 +40,7 @@
     font-size: 18.5px;
     font-family: 'AppleNeoM';
     padding: 10px 10px;
-    margin: 70px 0px 0;
+    margin: 50px 0px 0;
     text-decoration:none;
     text-align : center;
 }
