@@ -2,52 +2,48 @@
 {% load static %}
 
 {% block headblock %}
+<script src="{% static 'js/signup.js'%}"></script>
 <link rel="stylesheet" href="{% static 'css/signup.css' %}">
 <title>모의자 - 회원가입</title>
 {% endblock %}
 
 {% block content %}
 <section class="mobile-head-section">
-  <div class="head-section-text">모의자에 오신걸 환영합니다!</div>
+  <div class="head-section-text">Sign up</div>
 </section>
 <div class="container">
   <section class="desktop-head-section">
-    <div class="head-section-text">모의자에 오신걸 환영합니다!</div>
+    <div class="back-move" onclick="window.history.back()"><img src="../static/images/arrow.svg"></div><br><br>
+    <div class="head-section-text">Sign up</div>
   </section>
   <div class="desktop-container">
     <form class="signup-form" action="/signup-action/" method="POST">
       {% csrf_token %}
       <div>
-        <div class="signup-list">이름 : </div>
-        <input class="signup-input" type="text" name="user_name">
+        <div class="signup-list">이름</div><br>
+        <input class="signup-input" type="text" name="user_name" placeholder="실명을 입력하세요.">
       </div>
       <div>
-        <div class="signup-list">아이디 : </div>
-        <input class="signup-input" type="text" name="user_id">
-      </div>
-      {% if msg_id %}
-        <strong style="color: red;">{{msg_id}}</strong>
-      {% endif %}
-      <div>
-        <div class="signup-list">비밀번호 : </div>
-        <input class="signup-input" type="password" name="user_pw">
+        <div class="signup-list">아이디(이메일)</div><br>
+        <div class="email-container">
+          <input id="email-input" class="signup-input" type="text" name="user_email" placeholder="이메일 주소">
+          <!-- <div class="email-check" onclick="emailCheck()">중복확인</div> -->
+        </div>
+        <div id="email-result-success">사용 가능한 이메일입니다.</div>
+        <div id="email-result-fail">이미 가입된 이메일입니다.</div>
       </div>
       <div>
-        <div class="signup-list">비밀번호 확인 : </div>
-        <input class="signup-input" type="password" name="user_pwck">
+        <div class="signup-list">비밀번호</div><br>
+        <input id="pw1" class="signup-input" type="password" name="user_pw">
       </div>
-      {% if msg_pw %}
-        <strong style="color: red;">{{msg_pw}}</strong>
-      {% endif %}
       <div>
-        <div class="signup-list" id="email-list">E-mail : </div>
-        <input id="email-input" class="signup-input" type="email" name="user_email">
+        <div class="signup-list">비밀번호 확인</div><br>
+        <input id="pw2" class="signup-input" type="password" name="user_pwck">
+        <div id="space-for-pwcheck"></div>
+        <div id="pw-result-fail">비밀번호가 일치하지 않습니다.</div>
       </div>
-      {% if msg_mail %}
-        <strong style="color: red;">{{msg_mail}}</strong>
-      {% endif %}
       <div class="submit-div">
-        <input type="submit" value="가입하기">
+        <input id="signup-action-btn" type="submit" value="완료">
       </div>
     </form>
   </div>
