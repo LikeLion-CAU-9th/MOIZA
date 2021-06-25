@@ -43,7 +43,7 @@
   border: none;
   border-radius: 22px;
   cursor: pointer;
-  background: linear-gradient(105deg, #BD6ADF, #8D85DF);
+  background: #DDDDDD;
 }
 
 .email-container {

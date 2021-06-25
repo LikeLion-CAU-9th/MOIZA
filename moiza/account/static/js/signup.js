@@ -43,10 +43,12 @@ const pwNotCorrect = () => {
 const checkSubmitAllow = () => {
   const singupBtn = document.querySelector('#signup-action-btn');
   if(emailCheck() && passwordCheck()){
+    singupBtn.style.background = 'linear-gradient(105deg, #BD6ADF, #8D85DF)';
     singupBtn.style.pointerEvents = '';
     return true
   }
-  singupBtn.style.pointerEvents = 'none';
+    singupBtn.style.background = '#DDDDDD';
+    singupBtn.style.pointerEvents = 'none';
   return false;
 }
 
