@@ -1,4 +1,4 @@
-const AjaxCall = (url, method="GET", async=false, data) => {
+const AjaxCall = (url, data, method="GET", async=false) => {
   let returnValue = false;
   $.ajax({
     url: url,
