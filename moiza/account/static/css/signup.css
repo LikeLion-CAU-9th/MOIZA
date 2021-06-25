@@ -1,6 +1,7 @@
 .signup-form {
   margin-top: 160px;
   min-width: 300px;
+  z-index: 12;
 }
 
 .signup-form div {
