@@ -1,3 +1,7 @@
+* {
+  overflow: hidden !important;
+}
+
 html {
   margin: 0;
 }
