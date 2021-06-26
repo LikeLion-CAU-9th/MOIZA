@@ -2,9 +2,16 @@
   z-index: 200;
   background-color: #ffffff;
   transition: opacity 1.2s;
-  /* background: url('../images/splash.png');
-  background-size: cover;
-  background-repeat: no-repeat; */
+}
+
+.splash-container img {
+  width: 100%;
+  height: 100vh;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .gradient-layer {
