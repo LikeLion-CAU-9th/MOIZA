@@ -2,11 +2,9 @@
 {% load static %}
 
 {% block headblock %}
-<script src="{% static 'js/splash.js'%}"></script>
 <script src="{% static 'js/login.js'%}"></script>
 <script src="{% static 'js/modal.js'%}"></script>
 <link rel="stylesheet" href="{% static 'css/login.css' %}">
-<link rel="stylesheet" href="{% static 'css/splash.css' %}">
 <title>모의자 - 로그인</title>
 {% endblock %}
 {% block content %}
@@ -14,15 +12,6 @@
   <div class="head-section-text">Log in</div>
 </section>
 
-<div class="container splash-container">
-  <div class="gradient-layer">
-    <div class="splash-content">
-      <img src="{% static 'images/logo.svg'%}"><br><br>
-      <div>모두의 의견을 자유롭게</div>
-      <div class="splash-title">모 의 <span style="letter-spacing: 0;">자</span></div>
-    </div>
-  </div>
-</div>
 <div class="container">
   <section class="desktop-head-section">
     <div class="back-move" onclick="window.history.back()"><img src="../static/images/arrow.svg"></div><br><br>
