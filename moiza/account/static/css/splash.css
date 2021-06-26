@@ -1,9 +1,10 @@
 .splash-container {
   z-index: 200;
-  width: 100%;
-  height: 100vh;
   background-color: #ffffff;
   transition: opacity 1.2s;
+  /* background: url('../images/splash.png');
+  background-size: cover;
+  background-repeat: no-repeat; */
 }
 
 .gradient-layer {

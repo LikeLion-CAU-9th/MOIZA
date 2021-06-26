@@ -1,3 +1,7 @@
+* {
+  overflow: hidden !important;
+}
+
 html {
   margin: 0;
 }
@@ -6,7 +10,7 @@ body {
   margin: 0;
 }
 
-.desktop-layer {
+.desktop-layer { 
   display: none;
   width: 100%;
   height: 72vh;
