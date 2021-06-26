@@ -14,7 +14,7 @@
 
 <div class="container">
   <section class="desktop-head-section">
-    <div class="back-move" onclick="window.history.back()"><img src="../static/images/arrow.svg"></div><br><br>
+    <div class="back-move" onclick="window.history.back()"><img src="{% static 'images/back.svg' %}"></div><br><br>
     <div class="head-section-text">Log in</div>
   </section>
   <div class="desktop-container">
@@ -22,9 +22,6 @@
       <div>
         <input id="input_email" class="login-input" type="text" name="input_email" placeholder="아이디 입력">
         <input id="input_pw" class="login-input" type="password" name="input_pw" placeholder="비밀번호 입력">
-        {% if msg_loginFail %}
-          <strong style="color: red;">{{msg_loginFail}}</strong>
-        {% endif %}
         <input class="action-button" type="submit" value="로그인" onclick="loginAction()">
       </div>
     </div>

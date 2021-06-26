@@ -9,7 +9,7 @@
     <title>grouppage</title>
     <link rel="stylesheet" href="../static/css/same.css">
     <link rel="stylesheet" href="../static/css/grouppagestyle.css">
-    <script language="JavaSript" src="modal.js"></script>
+    <script language="JavaSript" src="../static/js/modal.js"></script>
 
 </head>
 
@@ -38,7 +38,7 @@
     <div class="container">
         <section class="desktop-head-section" style="z-index: -1;">
             <div class="head-section-text">
-                <a href="../mainpage"><img src="../static/images/arrow.svg"></a>
+                <a href="../mainpage"><img src="../static/images/whitearrow.svg"></a>
                 <br><br>그룹
             </div>
         </section>
@@ -50,37 +50,47 @@
             <div class="text">논의 목록</div>
     
             <img src="../static/images/box.svg" style="position:absolute;width:100%;">
+            <a href="#">
             <img src="../static/images/participate.svg"
                 style="float:right;padding-top:16.5px; position:relative;padding-right:21.5px;">
-    
+            </a>
     
             <br><br><br>
     
             <img src="../static/images/box.svg" style="position:absolute;width:100%;">
-    
-    
-            <img src="../static/images/alreadyparticipate.svg"
-                style="cursor:hand;float:right;padding-top:16.5px; position:relative;padding-right:21.5px;"
-                onclick="javascript:ViewLayer();">
-    
+            <a href="#">
+                <img src="../static/images/alreadyparticipate.svg" id="alreadyparticipate" onclick="modal_on('submit-check')">
+            </a>
+
             <br><br><br>
             <div class="text">나의 발제</div>
     
             <img src="../static/images/box.svg" style="position:absolute;width:100%;">
+            <a href="#">
             <img src="../static/images/result.svg"
                 style="float:right;padding-top:16.5px;position:relative;padding-right:21.5px;">
-    
-    
-    
+            </a>
     
         </div>
-        <div id="Help1" style='position:absolute; display:none; z-index:9999;'>
-    
-            <img id="alreadymodal" src="../static/images/alreadymodal.svg" style="object-fit: contain;position:relative;float:left;z-index:800;">
-            
-            <img id="ok" src="../static/images/ok.svg" style="position:relative;z-index:1000;"onclick="javascript:rmv();">
         
-        </div>
+        <div id="submit-check" class="modal-container">
+            
+            <div class="modal-content">
+                <div class="modal-head">참여 완료</div>
+                <div class="modal-center">
+                    이미 논의에 참여했어요!
+                    <br>
+                    다른 사람들의 결정을 기다려 주세요.
+                    <a href="#">
+                        <div class="check" onclick="modal_off('submit-check')">확인</div>
+                        </div>
+                    </a>
+            
+                </div>
+              
+            </div>
+
+
     </div>
     
     </div>
@@ -102,5 +112,18 @@
     }
     function ViewLayer() {
         document.getElementById("Help1").style.display = 'inline';
+
     }
+    const modal_on = (modalId) => {
+        const ModalSelector = "#" + modalId;
+        const ModalContainer = document.querySelector(ModalSelector);
+        ModalContainer.style.display = "inline-block";
+    }
+
+    const modal_off = (modalID) => {
+        const ModalSelector = "#" + modalID;
+        const ModalContainer = document.querySelector(ModalSelector);
+        ModalContainer.style.display = "none";
+    }
+
 </script>

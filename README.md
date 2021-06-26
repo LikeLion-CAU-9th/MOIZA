@@ -3,6 +3,12 @@
 * Each decision steps will be preserved until the end of the development.
 ---
 
+## 🔮 View
+<img width="250" alt="스크린샷 2021-06-26 오후 5 14 44" src="https://user-images.githubusercontent.com/39653584/123506982-03b26100-d6a2-11eb-9680-24260ee5f93c.png">
+
+
+---
+
 ## 🖥 Prototype
 <a href="https://xd.adobe.com/view/f6c95b3c-9155-4a84-bcf1-a35431bc0d64-a39a/">LINK</a>
 ---
