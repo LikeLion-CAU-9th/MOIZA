@@ -10,7 +10,7 @@
     <script >   
     function add_textbox(){
     document.getElementById("t_space").innerHTML +=
-    "<input placeholder='항목을 입력해주세요' type='text' name='tbox' ><br>";
+    "<input placeholder='항목을 입력해주세요' type='text' name='tbox'><br>";
     }
     </script>
 
@@ -43,13 +43,15 @@
      
       <a class="center_name">논의 주제</a> 
       <a><input placeholder="주제를 입력해주세요"></a>
+
       <a class="center_name">선택 항목</a>
       <input placeholder="항목을 입력해주세요">
       <input placeholder="항목을 입력해주세요">
       <div id="t_space"> </div>
         <a href="#" class="content_plus" onclick="add_textbox()" >⊕ 항목 추가</a>
       <hr> 
-      <a class="other_opinion" >다른 의견이 있어요!<img  id="img1" src="../static/images/color_check.svg" onclick="clickimg()" style="float: right; margin: 4.5px 0px;" ></a>
+      
+      <a class="other_opinion" onclick="clickimg()">다른 의견이 있어요!<img onclick="clickimg()" id="img1" src="../static/images/color_check.svg" style="float: right; margin: 4.5px 0px;" ></a>
       <script>
            function clickimg() {
         if (document.getElementById("img1").getAttribute('src')=='../static/images/color_check.svg')
@@ -62,7 +64,7 @@
         }
     }
       </script>
-      <a class="other_opinion" >마음에 드는 항목이 없어요.<img id="img2" src="../static/images/color_check.svg" onclick="clickimg2()" style="float: right; margin: 4.5px 0px;"></a>
+      <a class="other_opinion" onclick="clickimg2()" >마음에 드는 항목이 없어요.<img id="img2" src="../static/images/color_check.svg" onclick="clickimg2()" style="float: right; margin: 4.5px 0px;"></a>
       <script>
         function clickimg2() {
      if (document.getElementById("img2").getAttribute('src')=='../static/images/color_check.svg')
