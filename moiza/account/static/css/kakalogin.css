@@ -1,0 +1,47 @@
+.moiza-login{
+    font-family: 'AppleNeoM';
+    font-size: 10pt;
+    text-align: center;
+    color: #353535;
+    
+}
+
+.kakao-login-image{
+    margin-top : 20px;
+    text-align: center;
+}
+
+.kakao-login-image img {
+    max-width: 100%;
+}
+
+.move-account-login{
+    font-family: 'AppleNeoM';
+    font-size: 10pt;
+    color : #707070;
+    text-align: center;
+    margin-top : 35px;
+}
+
+.first-login{
+    font-family:'AppleNeoM';
+    font-size:10pt;
+    color : #000000;
+    text-align: center;
+    margin-top : 25px;
+    
+}
+.sign-up-link{
+    font-weight:bold;
+}
+
+.first-login a {
+    color: black;
+    text-decoration: none;
+}
+
+.move-account-login a{
+    color: #707070;
+    text-decoration: none;
+}
+
