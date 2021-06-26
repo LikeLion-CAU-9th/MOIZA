@@ -85,12 +85,20 @@
                     <div class="groupmember">그룹원 초대</div>
                     <br>
                     <p class="url">http://moiza.com/1234</p>
+                    
+                    <div class="backwhite"></div>
                     <a href="#">
-                        <img id="linkcopy" src="../static/images/linkcopy.svg" onclick="javascript:ViewLayer2();">
+                        <img id="linkcopy" src="../static/images/linkcopy.svg" style="
+                        float:left;
+                        position:relative;
+                        cursor:hand;
+                        margin-left:185px;
+                        margin-top:-20px;
+                        z-index:1000;  " onclick="javascript:ViewLayer2();">
                     </a>
-        
+                    <br>
                     <div id="Help2" style='position:relative; display:none; z-index:9999;'>
-                        <p style="color:#7150e7;font-size:12.5px;text-align:left;margin-left:17px;margin-top:-17px;">링크가
+                        <p style="color:#7150e7;z-index:200;position:relative;font-size:12.5px;text-align:left;margin-left:17px;margin-top:-17px;">링크가
                             복사되었습니다.</p>
                     </div>
                 <!--</div>-->
@@ -100,12 +108,12 @@
                 <!---->
         
                 <img id="check" src="../static/images/check.svg"
-                    style="float:right;margin-top:-40px;margin-right:15px;position:relative;cursor:hand;z-index:900;"
+                    style="float:right;margin-top:-45px;margin-right:15px;position:relative;cursor:hand;z-index:900;"
                     onclick="javascript:newPage();">
         
                 <div id="Help3" style='position:relative; display:none; z-index:1000;'></div>
                 <img id="cancel" src="../static/images/cancel.svg"
-                    style="float:right;margin-top:-40px;margin-right:130px;position:relative;cursor:hand;z-index:900;"
+                    style="float:right;margin-top:-45px;margin-right:130px;position:relative;cursor:hand;z-index:900;"
                     onclick="modal_off('submit-check')">
         
                 <div id="Help3" style='position:relative; display:none; z-index:1000;'>

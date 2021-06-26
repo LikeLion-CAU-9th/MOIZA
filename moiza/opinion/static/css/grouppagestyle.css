@@ -47,12 +47,17 @@
   line-height: 46px;
 }
 .check{
-  
+  font-family: 'AppleNeoB';
+  font-size: 17.5px;
+  height : 46px;
+  line-height: 88px;
+  color: #7150e7;
   width:50%;
-  color: #7150E7;
   cursor: pointer;
   height : 100%;
-  line-height : 46px;
+  line-height : 90px;
+  text-align:center;
+  padding-left:75px;
 }
 
 .head-section {
@@ -137,14 +142,7 @@
   margin: 58px 0.5px 0 0;
   border: solid 0.5px #cfcfcf;
  }
- .check {
-  font-family: 'AppleNeoB';
-  font-size: 17.5px;
-  height : 46px;
-  line-height: 88px;
-  color: #7150e7;
-  
-}
+ 
 a{
   text-decoration-line: none;
 }
