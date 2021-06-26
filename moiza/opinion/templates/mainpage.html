@@ -7,10 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mainpage</title>
     <link rel="stylesheet" href="../static/css/same.css">
-    <link rel="stylesheet" href="../static/css/mainpagestyle.css">
+    <link rel="stylesheet" href="../static/css/mainpagestyle.css">  
 
-    <script language="JavaSript" src="modal.js"></script>
-    <script language="JavaSript" src="mainpagejs.js"></script>
+    <script language="JavaSript" src="../static/js/modal.js"></script>
 
 </head>
 
@@ -36,7 +35,7 @@
     </div>
 
     <div class="container">
-        <section class="desktop-head-section" style="z-index: -1;">
+        <section class="desktop-head-section head-setion-jisoo" style="z-index: -1;">
             <div class="head-section-text">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img
                     src="../static/images/icon.svg">
@@ -48,7 +47,7 @@
 
             <div>
                 <div class="text_one">논의에 참여해주세요!
-                    <a href="#" class="more" style="float:right;">더보기<img src="../static/images/rightarrow.svg"></a>
+                    <a href="#" class="more" style="float:right;">더보기&nbsp;<img src="../static/images/rightarrow.svg"></a>
                 </div>
                 <br><br><br>
 
@@ -64,41 +63,58 @@
                         style="position:absolute;padding-left:15px;padding-top:21.5px;">
 
 
-                    <img src="../static/images/newgroupbox.svg" style="cursor:hand;position: absolute;"onclick="javascript:ViewLayer();">
+                    <img src="../static/images/newgroupbox.svg" class="submit-button" id="submit-button" style="cursor:hand;position: absolute;" onclick="modal_on('submit-check')">
+
 
                     
                 </div>
             </div>
         </div>
-        <div id="Help1">
-            <img id="newgroupmodal" src="../static/images/newgroupmodal.svg"
-                style="object-fit: contain;position:relative; z-index:800;">
+        <!--모달-->
+        <div id="submit-check" class="modal-container">
+            <div class="modal-content">
+                <div class="modal-head">그룹 생성</div>
         
-            <img id="linkcopy" src="../static/images/linkcopy.svg"
-                style="float:left;position:relative;margin-left:267px;margin-top:-133px;cursor:hand;z-index:100000;"
-                onclick="javascript:ViewLayer2();">
-            <form>
-                <input id="input" type="text" name="groupname" placeholder="그룹명을 입력해주세요"
-                    style="z-index:1300;border:none;float:left;position:relative;margin-left:89px;margin-top:-207px;"></input>
-            </form>
-            <div id="Help2" style='position:relative; display:none; z-index:9999;'>
-                <p style="color:#7150e7;font-size:12.5px;float:left;margin-left:89px;margin-top:-110px;">링크가
-                    복사되었습니다.</p>
+                <!--<div class="modal-center">-->
+                    <div class="groupname">그룹명</div>
+                    <br>
+                    <form>
+                        <input id="input" type="text" name="groupname" placeholder="그룹명을 입력해주세요"></input>
+                    </form>
+                    <br><br>
+                    <div class="groupmember">그룹원 초대</div>
+                    <br>
+                    <p class="url">http://moiza.com/1234</p>
+                    <a href="#">
+                        <img id="linkcopy" src="../static/images/linkcopy.svg" onclick="javascript:ViewLayer2();">
+                    </a>
+        
+                    <div id="Help2" style='position:relative; display:none; z-index:9999;'>
+                        <p style="color:#7150e7;font-size:12.5px;text-align:left;margin-left:17px;margin-top:-17px;">링크가
+                            복사되었습니다.</p>
+                    </div>
+                <!--</div>-->
+                <div class="modal-confirm">
+                </div>
+        
+                <!---->
+        
+                <img id="check" src="../static/images/check.svg"
+                    style="float:right;margin-top:-40px;margin-right:15px;position:relative;cursor:hand;z-index:900;"
+                    onclick="javascript:newPage();">
+        
+                <div id="Help3" style='position:relative; display:none; z-index:1000;'></div>
+                <img id="cancel" src="../static/images/cancel.svg"
+                    style="float:right;margin-top:-40px;margin-right:130px;position:relative;cursor:hand;z-index:900;"
+                    onclick="modal_off('submit-check')">
+        
+                <div id="Help3" style='position:relative; display:none; z-index:1000;'>
+                </div>
+                <!---->
+        
             </div>
-            <img id="check" src="../static/images/check.svg"
-                style="float:right;margin-top:-68px;margin-right:112px;position:relative;cursor:hand;z-index:900;"
-                onclick="javascript:newPage();">
-        
-            <div id="Help3" style='position:relative; display:none; z-index:1000;'></div>
-            <img id="cancel" src="../static/images/cancel.svg"
-                style="float:right;margin-top:-68px;margin-right:28px;position:relative;cursor:hand;z-index:900;"
-                onclick="javascript:rmv()">
-        
-            <div id="Help3" style='position:relative; display:none; z-index:1000;'>
-            </div>
-        
         </div>
-        
+        <!--모달끝-->
         </div>
         
         
@@ -114,7 +130,7 @@
     }
 
     function newPage() {
-        window.location.href = "../grouppage";
+        window.location.href = "../group-page";
     }
     function rmv() {
         document.getElementById("Help1").style.display = 'none';
@@ -122,4 +138,16 @@
     function ViewLayer() {
         document.getElementById("Help1").style.display = 'inline';
     }
+    const modal_on = (modalId) => {
+  const ModalSelector = "#" + modalId;
+  const ModalContainer = document.querySelector(ModalSelector);
+  ModalContainer.style.display = "inline-block";
+}
+
+const modal_off = (modalID) => {
+  const ModalSelector = "#" + modalID;
+  const ModalContainer = document.querySelector(ModalSelector);
+  ModalContainer.style.display = "none";
+}
+
 </script>

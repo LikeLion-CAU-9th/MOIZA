@@ -160,6 +160,14 @@ body {
   height : 100%;
   line-height : 46px;
 }
+.check{
+  
+  width:50%;
+  color: #7150E7;
+  cursor: pointer;
+  height : 100%;
+  line-height : 46px;
+}
 .desktop-container {
   width: 80%;
   position: absolute;
