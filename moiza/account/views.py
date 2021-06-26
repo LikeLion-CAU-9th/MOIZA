@@ -3,8 +3,13 @@ from django.shortcuts import render, redirect
 from .models import user_info
 import hashlib
 
+
 def login_view(request):
   return render(request, 'login.html')
+
+
+def kakao_login(request):
+  return render(request, 'kakalogin.html')
 
 
 def signup_view(request):
