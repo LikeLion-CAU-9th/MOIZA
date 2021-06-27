@@ -131,8 +131,8 @@ STATIC_URL = '/static/'
 
 #staticfile들이 들어있는 경로
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR,'account','static'),
     os.path.join(BASE_DIR,'opinion','static'),
+    os.path.join(BASE_DIR,'account','static'),
 ]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
