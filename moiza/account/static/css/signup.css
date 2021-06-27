@@ -78,10 +78,17 @@
   font-family: 'AppleNeoL';
 }
 
-#email-result-fail {
+#email-result-duplication {
   display: none;
   font-size: 14px;
   color: #7150E7;
+  font-family: 'AppleNeoL';
+}
+
+#email-result-format {
+  display: none;
+  font-size: 14px;
+  color: #e7508a;
   font-family: 'AppleNeoL';
 }
 
