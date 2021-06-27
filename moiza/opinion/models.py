@@ -10,10 +10,12 @@ class Suggestion(models.Model) :
         (PRIVATE, 'PRIVATE'),
         (MY, 'MY')
     ]
+    
+    group_seq = models.ForeignKey(on_delete = models.CASCADE, null=False)
     topic = models.CharField(max_length = 80, null=True, help_text="제목")
-    other_opinion = models.BooleanField(default=True)
-    no_opinion= models.BooleanField(default=True)
+    other_selection = models.BooleanField(default=True)
+    no_selection= models.BooleanField(default=True)
 
-class Opinion(models.Model):
+class Selection(models.Model):
     suggestion = models.ForeignKey(Suggestion, on_delete = models.CASCADE, null=False, related_name='suggestions')
-    opinion_contents = models.CharField(max_length=100)
+    selection_content = models.CharField(max_length=100)
