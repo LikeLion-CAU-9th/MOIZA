@@ -13,6 +13,29 @@ class Membership(models.Model):
   join_date = models.DateField(auto_now_add=True, verbose_name="create_date")
   auth = models.CharField(max_length=3, null=True, default=None)
 
+class Suggestion(models.Model) :
+    PUBLIC = 'public'
+    PRIVATE = 'private'
+    MY = 'my'
+
+    SHOW_TYPES = [
+        (PUBLIC, 'PUBLIC'),
+        (PRIVATE, 'PRIVATE'),
+        (MY, 'MY')
+    ]
+    
+    group_sequence = models.ForeignKey(Group_info, on_delete = models.CASCADE, null=False,related_name='group_seq2')
+    topic = models.CharField(max_length = 80, null=True, help_text="제목")
+    other_selection = models.BooleanField(default=True)
+    no_selection= models.BooleanField(default=True)
+
+class Selection(models.Model):
+    suggestion = models.ForeignKey(Suggestion, on_delete = models.CASCADE, null=False, related_name='suggestions')
+    selection_content = models.CharField(max_length=100)
+
 class Response(models.Model):
   response_seq = models.AutoField(primary_key=True)
-  writer = models.ForeignKey()
+  suggestion = models.ForeignKey(Suggestion, on_delete = models.CASCADE, null=False)
+  writer = models.ForeignKey(User_info, null=False, on_delete=models.CASCADE)
+  selection_seq = models.ForeignKey(Selection, on_delete = models.CASCADE, null=False)
+  content = models.TextField(null=False, help_text = "이유 및 의견")
