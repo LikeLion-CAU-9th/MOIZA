@@ -70,5 +70,5 @@ window.onload = () => {
   const singupBtn = document.querySelector('#signup-action-btn');
   singupBtn.style.pointerEvents = "none";
   document.querySelector('#pw2').addEventListener('keyup', passwordCheck, false);
-  document.querySelector('#email-input').addEventListener('focusout', checkSubmitAllow, false);
+  document.querySelector('#email-input').addEventListener('keyup', checkSubmitAllow, false);
 }
