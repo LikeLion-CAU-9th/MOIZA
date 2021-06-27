@@ -26,11 +26,13 @@ def decision_complete_view(request):
 def decision_view(request):
   return render(request, 'decision.html')
 
-def selection_write(request, pk):
-        selection = Selection()
-        selection.selection_contents = request.POST.get('content')
-        selection.save()
-        return redirect('/post/'+str(pk))
+def selection_write(request):
+  if request.method == "POST":
+    selection = Selection()
+    selection.suggestion = get_object_or_404(Suggestion)
+    selection.selection_contents = request.POST.get('content')
+    selection.save()
+    return redirect('/decision-complete/')
 
 def decision_reason(request):
   return render(request, 'decision_reason.html')

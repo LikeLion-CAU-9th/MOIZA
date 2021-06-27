@@ -1,7 +1,3 @@
-* {
-  overflow: hidden !important;
-}
-
 html {
   margin: 0;
 }
@@ -79,7 +75,7 @@ body {
 }
 
 .container {
-  max-width: 700px;
+  max-width: 480px;
   display: inline-block;
   width: 100%;
   height: 100vh;

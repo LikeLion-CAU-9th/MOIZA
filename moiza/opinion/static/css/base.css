@@ -83,17 +83,8 @@ body {
 }
 
 .container {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  max-width: 700px;
-=======
   max-width: 480px;
   box-shadow: 0px 6px 6px #00000029;
->>>>>>> 5df088d12288be1fa2cb7a646519a2c1a13cbd93
-=======
-  max-width: 480px;
-  box-shadow: 0px 6px 6px #00000029;
->>>>>>> 56e69b9fc77970643d8d0e4158daf67be123f27a
   display: inline-block;
   width: 100%;
   height: 100vh;
@@ -198,15 +189,7 @@ body {
   }
 
   .container {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    max-width: 600px;
-=======
     max-width: 480px;
->>>>>>> 5df088d12288be1fa2cb7a646519a2c1a13cbd93
-=======
-    max-width: 480px;
->>>>>>> 56e69b9fc77970643d8d0e4158daf67be123f27a
     display: inline-block;
     width: 80%;
     height: 100vh;
