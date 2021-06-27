@@ -1,13 +1,22 @@
 const emailCheck = () => {
   const inputEmail = document.querySelector('#email-input').value;
-  const validation = AjaxCall('../email-check/', {'email': inputEmail});
-  if(validation) {
+  const mailFormat = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  const format_validation = mailFormat.test(inputEmail.toLowerCase())
+  const dup_validation = AjaxCall('../email-check/', {'email': inputEmail});
+  if(dup_validation && format_validation) {
     document.querySelector('#email-result-success').style.display = 'block';
-    document.querySelector('#email-result-fail').style.display = 'none';
-    return true;
+    document.querySelector('#email-result-duplication').style.display = 'none';
+    document.querySelector('#email-result-format').style.display = 'none';
+    return true
+  } else if (dup_validation) {
+    document.querySelector('#email-result-success').style.display = 'none';
+    document.querySelector('#email-result-duplication').style.display = 'none';
+    document.querySelector('#email-result-format').style.display = 'block';
+  } else {
+    document.querySelector('#email-result-success').style.display = 'none';
+    document.querySelector('#email-result-duplication').style.display = 'block';
+    document.querySelector('#email-result-format').style.display = 'none';
   }
-  document.querySelector('#email-result-success').style.display = 'none';
-  document.querySelector('#email-result-fail').style.display = 'block';
   return false;
 }
 
