@@ -1,14 +1,30 @@
+.head-title{
+   width: 100%;
+   height: 100%;
+   margin-top: 10px;
+   font-family: 'AppleNeoB';
+   font-size: 17.5px;
+   line-height: 1.35;
+   text-align: center;
+   color: #000000;
+}
+
 .moiza-login{
-  font-family: 'AppleNeoM';
-  font-size: 10pt;
+  font-family: 'AppleNeoB';
+  font-size: 13pt;
   text-align: center;
   color: #353535;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-top: 32px;
+  padding-bottom: 7px;
   
 }
 
 .kakao-login-image{
   margin-top : 20px;
   text-align: center;
+  margin-bottom : 20px;
 }
 
 .kakao-login-image img {
@@ -17,18 +33,19 @@
 
 .move-account-login{
   font-family: 'AppleNeoM';
-  font-size: 10pt;
-  color : #707070;
+  font-size: 13pt;
+  color: #707070;
   text-align: center;
-  margin-top : 35px;
+  margin-top: 49px;
+  margin-bottom: 35px;
 }
 
 .first-login{
-  font-family:'AppleNeoM';
-  font-size:10pt;
-  color : #000000;
-  text-align: center;
-  margin-top : 25px;
+  font-family: 'AppleNeoM';
+  font-size: 13pt;
+  color: #000000;
+  margin-top: 112px;
+  margin-bottom: -26px;
   
 }
 .sign-up-link{
@@ -45,3 +62,11 @@
   text-decoration: none;
 }
 
+.kakao-container{
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 360px;
+}
