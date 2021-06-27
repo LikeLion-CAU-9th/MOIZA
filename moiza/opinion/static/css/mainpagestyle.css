@@ -1,0 +1,306 @@
+
+.modal-container {
+  display: none;
+  z-index: 20;
+  max-width: 700px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, .7);
+}
+
+.modal-content {
+   width: 260px;
+   height: 285px;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   text-align: center;
+   background-color: #ffffff;
+   border-radius: 16px;
+}
+
+.modal-head {
+  font-family: 'AppleNeoB';
+  font-size: 19.5px;
+  text-align:left;
+  padding-top: 30px;
+  padding-left:20px;
+  width:100%;
+  
+}
+.modal-center {
+  font-family: 'AppleNeoM';
+  font-size: 15.5px;
+  height : 61px;
+  width:100%;
+}
+.modal-confirm {
+
+  font-family: 'AppleNeoB';
+  font-size: 17.5px;
+  height : 46px;
+  line-height: 46px;
+}
+.check{
+  
+  width:50%;
+  color: #7150E7;
+  cursor: pointer;
+  height : 100%;
+  line-height : 46px;
+}
+
+
+.head-section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(0, -30%);
+  width: 100%;
+  height: 240px;
+  background: linear-gradient(105deg, #BD6ADF, #8D85DF);
+  border-radius: 30px;
+}
+
+.head-section div {
+  font-family: 'AppleNeoB';
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+  font-size: 20px;
+  color: #efefef;
+}
+.idea{
+    width: 100%;
+    
+    padding: 10px 10px;
+    font-size: 20px;
+    border:1px;
+    border-radius:10px;
+    box-shadow: 3px 3px gray;
+  }
+  
+  
+.text_one{
+  width:100%;
+  margin: 30.5px 59.2px 5px 17.5px;
+  object-fit: contain;
+  font-family: 'AppleNeoB';
+  font-size: 18.5px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.35;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000;
+  position:absolute;
+}
+.text_two{
+  width:100%;
+  margin: 25px 117.7px 5px 17.5px;
+  object-fit: contain;
+  font-family: 'AppleNeoB';
+  font-size: 18.5px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.35;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000;
+
+}
+
+.groupname{
+  font-family: 'AppleNeoM';
+  font-size: 17px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.35;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000;
+  padding-left:20px;
+  padding-top:30px;
+  width:100%;
+  position:relative;
+}
+.groupmember{
+  font-family: 'AppleNeoM';
+  font-size: 17px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.35;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000;
+  position:relative;
+  padding-left:20px;
+  margin-top:-25px;
+}
+.url{
+  font-family: 'AppleNeoL';
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.35;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000;
+  padding-left:20px;
+  margin-top:-20px;
+  width:100%;
+  position:relative;
+}
+.backwhite{
+  border-bottom:solid 0.5px #ede8e8;
+  font-family: 'AppleNeoL';
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.35;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+  padding-left:20px;
+  margin-top:-15px;
+  margin-left:20px;
+  width:70%;
+  position:relative;
+}
+.more {
+	background-color:#ffffff;
+	border-radius:25px;
+	border:1px solid #ffffff;
+	display:inline-block;
+	cursor:pointer;
+	color:#626262;
+	font-family:'AppleNeoM';
+	font-size:16.5px;
+	padding-right:40px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+  
+}
+.more:hover {
+	background-color:#ffffff;
+}
+.more:active {
+	position:relative;
+	top:1px;
+}
+ 
+.width{
+    width:160px;
+}
+
+.shadow{
+  position:absolute;
+  z-index:10;
+  width: 195px;
+  height: 421.5px;
+  padding: 0 0 102px;
+  object-fit: contain;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.newgroupmodal{
+  position:relative;
+  z-index:800;
+  width: 139px;
+  height: 158.5px;
+  margin: 5.5px 1.4px 4.5px 28px;
+  object-fit: contain;
+  
+}
+.modal-head-head{
+  font-family: 'AppleNeoB';
+  font-size: 19.5px;
+  padding : 10px;
+  margin : 0px 32px 6px 15px;
+  height : 26px;
+  
+}
+#newgroupmodal{
+  margin-left:15%;
+  margin-top:55%;
+  text-align:center;
+}
+#linkcopy{
+  float:left;
+  position:relative;
+  cursor:hand;
+  margin-left:185px;
+  margin-top:-35px;
+  z-index:1000;  
+}
+#check{
+  float:right;
+  margin-top:-68px;
+  margin-right:112px;
+  position:relative;
+  cursor:hand;
+  z-index:900;
+
+}
+#cancel{
+  float:right;
+  margin-top:-68px;
+  margin-right:28px;
+  position:relative;
+  cursor:hand;
+  z-index:900;
+
+}
+#input{
+  
+  z-index:300;
+  border:none;
+  float:left;
+  position:relative;
+  margin-left:20px;
+  margin-top:-17px;
+  border-bottom:solid 0.5px #ede8e8;
+}
+#linkcopy{
+  float:left;
+  position:relative;
+  margin-left:267px;
+  margin-top:-133px;
+  cursor:hand;
+  z-index:100000;
+
+}
+a{
+  text-decoration-line: none;
+}
+
+
+@font-face {
+  font-family: 'AppleNeoB';
+  src: url('../font/AppleSDGothicNeoB.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: 'AppleNeoL';
+  src: url('../font/AppleSDGothicNeoL.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: 'AppleNeoM';
+  src: url('../font/AppleSDGothicNeoM.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: 'BMjua';
+  src: url('../font/BMjua.ttf') format("truetype");
+}

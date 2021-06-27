@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block headblock %}
+<link rel="stylesheet" href="{% static 'css/kakaologin.css' %}">
+<link rel="stylesheet" href="{% static 'css/splash.css' %}">
+<link rel="stylesheet" href="{% static 'css/base.css' %}">
+<script src="{% static 'js/splash.js'%}"></script>
+<title>모의자 - 카카오 로그인</title>
+{% endblock %}
+{% block content %}
+<div class="container splash-container">
+  <img src="../static/images/splash.png">
+  <!-- <div class="gradient-layer">
+    <div class="splash-content">
+      <img src="{% static 'images/logo.svg'%}"><br><br>
+      <div>모두의 의견을 자유롭게</div>
+      <div class="splash-title">모 의 <span style="letter-spacing: 0;">자</span></div>
+    </div>
+  </div> -->
+</div>
+<div class="container">
+  <div class ="desktop-container">
+    <div class="head-title">의사결정이 필요할 땐, 여기로</div>
+    <div class="login-title">모의자</div>
+    <div class="moiza-login">회원가입 없이 간편하게 모일 수 있어요.</div>
+    <div class="kakao-login-image">
+      <img src="{% static 'images/kakao-login.svg' %}" alt="kakao login yellow logo">
+    </div>
+    <div class = "move-account-login">
+      <a href="/login">모의자 계정 로그인</a>
+    </div>
+    <div class = "first-login" style="text-align: center">
+      <span class = "text-first-login">혹시, 모의자가 처음이신가요?</span>
+      <span class="sign-up-link">
+          <a href="./signup/">회원가입</a>
+      </span>
+    </div>
+  </div>
+</div>
+{% endblock %}

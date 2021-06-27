@@ -1,10 +1,15 @@
 from django.http.response import HttpResponse, HttpResponseBadRequest
 from django.shortcuts import render, redirect
-from .models import user_info
+from .models import User_info
 import hashlib
+
 
 def login_view(request):
   return render(request, 'login.html')
+
+
+def kakao_login(request):
+  return render(request, 'kakalogin.html')
 
 
 def signup_view(request):
@@ -17,55 +22,48 @@ def success_view(request):
 
 def login_action(request):
   data = request.GET
-  login_success = is_login_available(request, data.get('id', False), data.get('pw', False))
+  login_success = is_login_available(request, data.get('email', False), data.get('pw', False))
   
   if login_success == False:
     return HttpResponse("False")
-  is_session_success = session_attach(request, data.get('input_id', False))
+  is_session_success = session_attach(request, data.get('input_email', False))
   if is_session_success == False:
     return HttpResponseBadRequest('Session is not attached!', status=500)
   return HttpResponse("True")
   
 
-def is_login_available(request, id, raw_pw):
+def is_login_available(request, email, raw_pw):
+  print("Email: ", email)
+  print("Pw: ", raw_pw)
   HashedPasswordObj =hashlib.sha1(raw_pw.encode('UTF-8'))
   HashedPassword = HashedPasswordObj.hexdigest()
-  queryset = user_info.objects.filter(user_id = id, user_pw = HashedPassword)
+  queryset = User_info.objects.filter(user_email = email, user_pw = HashedPassword)
+  print("Q Len: ", len(queryset))
   if len(queryset) == 1:
     return True
   return False
 
 
-def session_attach(request, user_id):
-  request.session['user_id'] = user_id
-  return ('user_id' in request.session)
+def session_attach(request, user_email):
+  request.session['user_email'] = user_email
+  return ('user_email' in request.session)
 
 
 def signup_action(request):
   if request.method != "POST":
     return HttpResponseBadRequest('This view can not handle method {0}'.format(request.method), status=405)
   data = request.POST
-  if validate_id(request, data.get('user_id', False)) == False:
-    return render(request, 'signup.html', {'msg_id': '이미 가입된 아이디입니다.'})
-  if data.get('user_pw', False) != data.get('user_pwck', False):
-    return render(request, 'signup.html', {'msg_pw': '비밀번호가 일치하지 않습니다.'})
-  if validate_mail(request, data.get('user_email', False)) == False:
-    return render(request, 'signup.html', {'msg_mail': '이미 가입된 이메일입니다.'})
   HashedPasswordObj =hashlib.sha1(data.get('user_pw', False).encode('UTF-8'))
   HashedPassword = HashedPasswordObj.hexdigest()
-  user_info.objects.create(user_id=data.get('user_id', False), user_pw=HashedPassword, user_email=data.get('user_email', False), user_name=data.get('user_name', False))
-  return render(request, 'login.html', {'msg': '회원가입 성공!'})
+  User_info.objects.create(user_email=data.get('user_email', False), user_pw=HashedPassword, user_name=data.get('user_name', False))
+  return redirect('login')
 
 
-def validate_id(request, id):
-  queryset = user_info.objects.filter(user_id = id)
+def validate_mail(request):
+  email = request.GET['email']
+  queryset = User_info.objects.filter(user_email = email)
+  print(queryset)
+  print(len(queryset))
   if len(queryset) > 0:
-    return False
-  return True
-
-
-def validate_mail(request, email):
-  queryset = user_info.objects.filter(user_email = email)
-  if len(queryset) > 0:
-    return False
-  return True
+    return HttpResponse('False')
+  return HttpResponse('True')

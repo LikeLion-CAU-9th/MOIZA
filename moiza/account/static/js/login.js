@@ -1,10 +1,12 @@
 const loginAction = () => {
-  const userId = document.querySelector('#input_id').value;
+  const userEmail = document.querySelector('#input_email').value;
   const userPw = document.querySelector('#input_pw').value;
-  result = AjaxCall('../login-action/', 'GET', false, {"id": userId, "pw": userPw});
+  result = AjaxCall('../login-action/', {"email": userEmail, "pw": userPw}, 'GET', false);
   
   if(result) {
-    location.href = "../success/";
+    location.href = "../mainpage/";
+  }else{
+    // Else로 처리 안하면 success로 넘어갈 때 모달 나타남
+    modal_on('login-fail');
   }
-  modal_on('login-fail');
 }

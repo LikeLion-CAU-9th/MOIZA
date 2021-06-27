@@ -4,6 +4,7 @@
   margin: 6px 0;
   height: 40px;
   border: 1pt solid #A86BD7;
+  border-radius: 8px;
 }
 
 .login-nav ul {

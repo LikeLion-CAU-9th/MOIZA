@@ -51,11 +51,8 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  transform: translate(0, -36%);
-  width: 100%;
-  height: 240px;
-  background: linear-gradient(105deg, #BD6ADF, #8D85DF);
-  border-radius: 30px;
+  width: 100%;height: 100vh;
+  background: linear-gradient(149deg, rgba(184, 131, 224, 0.6),rgba(141, 93, 223, .065),rgba(114, 79, 231, .065),  rgba(255, 255, 255, 0.1564));
 }
 
 .desktop-head-section {
@@ -63,29 +60,40 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  transform: translate(0, -36%);
   width: 100%;
-  height: 240px;
-  background: linear-gradient(105deg, #BD6ADF, #8D85DF);
-  border-radius: 30px;
+  height: 100vh;
+  background: linear-gradient(149deg, rgba(184, 131, 224, 0.6),rgba(141, 93, 223, .065),rgba(114, 79, 231, .065),  rgba(255, 255, 255, 0.1564));
 }
 
 .head-section-text {
   font-family: 'AppleNeoB';
   position: absolute;
-  left: 30px;
-  bottom: 30px;
-  font-size: 20px;
-  color: #efefef;
+  left: 50%;
+  top: 120px;
+  transform: translate(-50%);
+  color: #7352e7;
+  font-size: 30px;
+}
+
+.back-move {
+  cursor: pointer;
+  position: absolute;
+  top: 54px;
+  left: 36px;
 }
 
 .container {
+<<<<<<< HEAD
 <<<<<<< HEAD
   max-width: 700px;
 =======
   max-width: 480px;
   box-shadow: 0px 6px 6px #00000029;
 >>>>>>> 5df088d12288be1fa2cb7a646519a2c1a13cbd93
+=======
+  max-width: 480px;
+  box-shadow: 0px 6px 6px #00000029;
+>>>>>>> 56e69b9fc77970643d8d0e4158daf67be123f27a
   display: inline-block;
   width: 100%;
   height: 100vh;
@@ -109,17 +117,66 @@ body {
 }
 
 .modal-content {
-  width: 300px;
-  height: 180px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  background-color: #efefef;
-  border-radius: 16px;
+   width: 300px;
+   height: 180px;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   text-align: center;
+   background-color: #efefef;
+   border-radius: 16px;
 }
 
+.modal-head {
+  font-family: 'AppleNeoB';
+  font-size: 19.5px;
+  padding : 10px;
+  margin : 20px 32px 6px 15px;
+  height : 26px;
+  
+}
+.modal-center {
+  font-family: 'AppleNeoM';
+  font-size: 15.5px;
+  height : 61px;
+  border-bottom: solid 0.5px #cfcfcf;
+  
+}
+.modal-confirm {
+
+  font-family: 'AppleNeoB';
+  font-size: 17.5px;
+  height : 46px;
+  line-height: 46px;
+}
+
+.no{
+  border-right : solid 0.5px #cfcfcf;
+  width:50%; 
+  float:left; 
+  color: #7150E7; 
+  cursor: pointer;
+  height : 100%;
+  line-height : 46px;
+}
+.yes{
+  
+  width:45%;
+  float:right;
+  color: #7150E7;
+  cursor: pointer;
+  height : 100%;
+  line-height : 46px;
+}
+.check{
+  
+  width:50%;
+  color: #7150E7;
+  cursor: pointer;
+  height : 100%;
+  line-height : 46px;
+}
 .desktop-container {
   width: 80%;
   position: absolute;
@@ -127,6 +184,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   max-width: 300px;
+  z-index: 12;
 }
 
 /* IPad Pro device width: 1024px */
@@ -141,10 +199,14 @@ body {
 
   .container {
 <<<<<<< HEAD
+<<<<<<< HEAD
     max-width: 600px;
 =======
     max-width: 480px;
 >>>>>>> 5df088d12288be1fa2cb7a646519a2c1a13cbd93
+=======
+    max-width: 480px;
+>>>>>>> 56e69b9fc77970643d8d0e4158daf67be123f27a
     display: inline-block;
     width: 80%;
     height: 100vh;
@@ -197,7 +259,7 @@ body {
   width: 100%;
   height: 46px;
   border: none;
-  border-radius: 2px;
+  border-radius: 22px;
 }
 
 
