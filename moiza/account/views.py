@@ -1,6 +1,6 @@
 from django.http.response import HttpResponse, HttpResponseBadRequest
 from django.shortcuts import render, redirect
-from .models import user_info
+from .models import User_info
 import hashlib
 
 
@@ -37,7 +37,7 @@ def is_login_available(request, email, raw_pw):
   print("Pw: ", raw_pw)
   HashedPasswordObj =hashlib.sha1(raw_pw.encode('UTF-8'))
   HashedPassword = HashedPasswordObj.hexdigest()
-  queryset = user_info.objects.filter(user_email = email, user_pw = HashedPassword)
+  queryset = User_info.objects.filter(user_email = email, user_pw = HashedPassword)
   print("Q Len: ", len(queryset))
   if len(queryset) == 1:
     return True
@@ -55,13 +55,13 @@ def signup_action(request):
   data = request.POST
   HashedPasswordObj =hashlib.sha1(data.get('user_pw', False).encode('UTF-8'))
   HashedPassword = HashedPasswordObj.hexdigest()
-  user_info.objects.create(user_email=data.get('user_email', False), user_pw=HashedPassword, user_name=data.get('user_name', False))
+  User_info.objects.create(user_email=data.get('user_email', False), user_pw=HashedPassword, user_name=data.get('user_name', False))
   return redirect('login')
 
 
 def validate_mail(request):
   email = request.GET['email']
-  queryset = user_info.objects.filter(user_email = email)
+  queryset = User_info.objects.filter(user_email = email)
   print(queryset)
   print(len(queryset))
   if len(queryset) > 0:
