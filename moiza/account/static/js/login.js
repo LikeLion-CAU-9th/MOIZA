@@ -1,7 +1,7 @@
 const loginAction = () => {
   const userEmail = document.querySelector('#input_email').value;
   const userPw = document.querySelector('#input_pw').value;
-  result = AjaxCall('../login-action/', {"email": userEmail, "pw": userPw}, 'GET', false);
+  result = AjaxCall('../login-check/', {"email": userEmail, "pw": userPw}, 'GET', false);
   
   if(result) {
     location.href = "../mainpage/";

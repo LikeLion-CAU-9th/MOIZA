@@ -5,22 +5,27 @@ import hashlib
 
 
 def login_view(request):
+  session_existence = authorization(request)
+  if session_existence:
+    return redirect('mainpage')
   return render(request, 'login.html')
 
 
 def kakao_login(request):
+  session_existence = authorization(request)
+  if session_existence:
+    return redirect('mainpage')
   return render(request, 'kakalogin.html')
 
 
 def signup_view(request):
+  session_existence = authorization(request)
+  if session_existence:
+    return redirect('mainpage')
   return render(request, 'signup.html')
 
 
-def success_view(request):
-  return render(request, 'success.html')
-
-
-def login_action(request):
+def is_login_success(request):
   data = request.GET
   login_success = is_login_available(request, data.get('email', False), data.get('pw', False))
   
@@ -67,3 +72,7 @@ def validate_mail(request):
   if len(queryset) > 0:
     return HttpResponse('False')
   return HttpResponse('True')
+
+
+def authorization(request):
+  return ('user_email' in request.session)
