@@ -24,14 +24,14 @@ class Suggestion(models.Model) :
         (MY, 'MY')
     ]
     
-    group_sequence = models.ForeignKey(Group_info, on_delete = models.CASCADE, null=False,related_name='group_seq2')
+    group_sequence = models.ForeignKey(Group_info, on_delete = models.CASCADE, null=False,related_name='group_seq2', default="-1")
     topic = models.CharField(max_length = 80, null=True, help_text="제목")
     other_selection = models.BooleanField(default=True)
     no_selection= models.BooleanField(default=True)
 
 class Selection(models.Model):
-    suggestion = models.ForeignKey(Suggestion, on_delete = models.CASCADE, null=False, related_name='suggestions')
-    selection_content = models.CharField(max_length=100)
+  suggestion = models.ForeignKey(Suggestion, on_delete = models.CASCADE, null=False, related_name='suggestions')
+  selection_content = models.CharField(max_length=100)
 
 class Response(models.Model):
   response_seq = models.AutoField(primary_key=True)
