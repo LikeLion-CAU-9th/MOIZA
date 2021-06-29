@@ -1,25 +1,20 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suggestion Page</title>
+    <title>Decision page</title>
     <link rel="stylesheet" href="../static/css/base.css">
-    <link rel="stylesheet" href="../static/css/suggestion.css">
-    <script >   
-    function add_textbox(){
-    document.getElementById("t_space").innerHTML +=
-    "<input placeholder='항목을 입력해주세요' type='text' name='tbox' ><br>";
-    }
-    </script>
-
+    <link rel="stylesheet" href="../static/css/suggestion.css"> 
+  <link rel="stylesheet" href="../static/css/decision.css">
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
 </head>
-<body>
 
+<body>
   <div class="desktop-layer"></div>
   <div class="desktop-content">
     <div class="logo-container">
@@ -39,55 +34,27 @@
     </div>
   </div>
 
-  <div class=container>      
-    <div class=mob_container>
-    <a href="#" ><img src="../static/images/arrow.svg" onclick="window.history.back()"></a>
-    <p style="text-align:center;" class="head_name" >무엇을 논의해 볼까요? </p>
+    <div class=container>     
+      <div class=mob_container>
+      <a href="#"><img src="../static/images/arrow.svg" onclick="window.history.back()"></a>
+      <p style="text-align:center; " class="head_name" >OO님의 의견을 선택해주세요!</p>
      
-    <form method="POST" action="{% url 'opinion-write' %}">
-      {% csrf_token %}
-      <a class="center_name">논의 주제</a> 
-      <a><input type = "text" id = "content" placeholder="주제를 입력해주세요"></a>
-      
+      <a class="center_name">제발되라 쫌!!!!!!!!!{{ suggestion.topic }}</a>        
+       
+      <a class="content_select" id="1" >1번</a>
+      <a class="content_select" id= "2">2번</a>
+      <a class="content_select" id ="3">다른 의견이 있어요!</a>
+      <a class="content_select" id="4">마음에 드는 의견이 없어요</a>
 
-      <a class="center_name">선택 항목</a>
-      <input placeholder="항목을 입력해주세요">
-      <input placeholder="항목을 입력해주세요">
-      <div id="t_space"> </div>
-        <a href="#" class="content_plus" onclick="add_textbox()" >⊕ 항목 추가</a>
-      <hr> 
-      <a class="other_opinion" >다른 의견이 있어요!<img  id="img1" src="../static/images/color_check.svg" onclick="clickimg()" style="float: right; margin: 4.5px 0px;" ></a>
-      
-
-      <script>
-           function clickimg() {
-        if (document.getElementById("img1").getAttribute('src')=='../static/images/color_check.svg')
-        {
-            document.getElementById("img1").src = '../static/images/non_color_check.svg';
-        }
-        else if (document.getElementById("img1").getAttribute('src') == '../static/images/non_color_check.svg')
-        {
-            document.getElementById("img1").src = '../static/images/color_check.svg';
-        }
-    }
-      </script>
-      <a class="other_opinion" >마음에 드는 항목이 없어요.<img id="img2" src="../static/images/color_check.svg" onclick="clickimg2()" style="float: right; margin: 4.5px 0px;"></a>
-      <script>
-        function clickimg2() {
-     if (document.getElementById("img2").getAttribute('src')=='../static/images/color_check.svg')
-     {
-         document.getElementById("img2").src = '../static/images/non_color_check.svg';
-     }
-     else if (document.getElementById("img2").getAttribute('src') == '../static/images/non_color_check.svg')
-     {
-         document.getElementById("img2").src = '../static/images/color_check.svg';
-     }
- }
-   </script>
-     <p> <input class = "myButton" type = "submit" value="작성하기" > </p>
-     </form>
+     <p> <a href="#" class="myButton">완료</a> </p>
     </div>
   </div>
- 
 </body>
+
+<script >
+$(".content_select").click(function () {
+$(this).toggleClass("purple");
+});
+</script>
+
 </html>
