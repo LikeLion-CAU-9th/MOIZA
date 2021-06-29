@@ -16,6 +16,7 @@ def mainpage_view(request):
 def grouppage_view(request, group_seq):
   # authorize_action(request)
   session_existence = authorization(request)
+  request.session['group_seq'] = group_seq
   if not session_existence:
     return redirect('login')
   return render(request, 'grouppage.html')
@@ -133,6 +134,40 @@ def create_group(request):
   membership.save()
   return HttpResponse('True')
 
+
+def create_suggestion(request):
+  session_existence = authorization(request)
+  if not session_existence:
+    return HttpResponse('False')
+  dataset = request.GET
+  title = dataset.get('title')
+  options = []
+  index = 0
+  while True:
+    selection_key = 'selection' + str(index)
+    if selection_key in dataset:
+      options.append(dataset[selection_key])
+      index += 1
+    else:
+      break
+  
+  # Create Suggestion
+  suggestion = Suggestion()
+  suggestion.group_sequence = Group_info.objects.get(group_seq = request.session['group_seq'])
+  suggestion.topic = title
+  suggestion.other_selection = True
+  suggestion.no_selection = True
+  suggestion.owner_seq = User_info.objects.get(user_email = get_session_email(request)).user_seq
+  suggestion.save()
+  
+  # Create option matched to upper created suggestion
+  for index in range(0, len(options)):
+    selection = Selection()
+    selection.suggestion = suggestion
+    selection.selection_content = options[index]
+    selection.save()
+  return HttpResponse('True')
+  
 
 def opinion_write(request):
   pass

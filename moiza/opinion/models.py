@@ -28,6 +28,7 @@ class Suggestion(models.Model) :
     topic = models.CharField(max_length = 80, null=True, help_text="제목")
     other_selection = models.BooleanField(default=True)
     no_selection= models.BooleanField(default=True)
+    owner_seq = models.IntegerField(null=True, default=0)
 
 class Selection(models.Model):
   suggestion = models.ForeignKey(Suggestion, on_delete = models.CASCADE, null=False, related_name='suggestions')
