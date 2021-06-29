@@ -9,6 +9,7 @@
     <title>grouppage</title>
     <link rel="stylesheet" href="../static/css/same.css">
     <link rel="stylesheet" href="../static/css/grouppagestyle.css">
+    <link rel="stylesheet" href="../static/css/group-kwon.css">
     <script language="JavaSript" src="../static/js/modal.js"></script>
 
 </head>
@@ -48,28 +49,25 @@
             <a href="../suggestion"><img src="../static/images/suggestbox.svg" class="box"></a>
     
             <div class="text">논의 목록</div>
-    
-            <img src="../static/images/box.svg" style="position:absolute;width:100%;">
-            <a href="../decision">
-            <img src="../static/images/participate.svg"
-                style="float:right;padding-top:16.5px; position:relative;padding-right:21.5px;">
-            </a>
-    
-            <br><br><br>
-    
-            <img src="../static/images/box.svg" style="position:absolute;width:100%;">
-            <a href="#">
-                <img src="../static/images/alreadyparticipate.svg" id="alreadyparticipate" onclick="modal_on('submit-check')">
-            </a>
+            
+            {% for suggestion in group_suggestion %}
+            <div class="suggestion">
+                <a style="text-decoration: none; color: black;" href="../decision/{{suggestion.id}}">
+                    {{suggestion.topic}}
+                </a>
+            </div>
+            {% endfor %}
 
-            <br><br><br>
+            <br><br>
             <div class="text">나의 발제</div>
-    
-            <img src="../static/images/box.svg" style="position:absolute;width:100%;">
-            <a href="../result">
-            <img src="../static/images/result.svg"
-                style="float:right;padding-top:16.5px;position:relative;padding-right:21.5px;">
-            </a>
+
+            {% for suggestion in user_suggestion %}
+            <div class="suggestion">
+                <a style="text-decoration: none; color: black;" href="../decision/{{suggestion.id}}">
+                    {{suggestion.topic}}
+                </a>
+            </div>
+            {% endfor %}
     
         </div>
         

@@ -19,7 +19,12 @@ def grouppage_view(request, group_seq):
   request.session['group_seq'] = group_seq
   if not session_existence:
     return redirect('login')
-  return render(request, 'grouppage.html')
+  group_suggestion = get_group_suggestion(request)
+  user_suggestion = get_user_suggestion(request)
+  data = {}
+  data['group_suggestion'] = group_suggestion
+  data['user_suggestion'] = user_suggestion
+  return render(request, 'grouppage.html', data)
 
 
 def listpage_view(request):
@@ -54,7 +59,7 @@ def decision_complete_view(request):
   return render(request, 'decision_complete.html')
 
 
-def decision_view(request):
+def decision_view(request, suggestion_seq):
   # authorize_action(request)
   session_existence = authorization(request)
   if not session_existence:
@@ -198,3 +203,19 @@ def get_group_list(request):
   for ele in membership_qs:
     group_list.append(ele.group)
   return group_list
+
+
+def get_group_suggestion(request):
+  group_seq = request.session['group_seq']
+  user_email = get_session_email(request)
+  user = User_info.objects.get(user_email = user_email)
+  suggestion_list = Suggestion.objects.filter(group_sequence=group_seq).exclude(owner_seq=user.user_seq)
+  return suggestion_list
+
+
+def get_user_suggestion(request):
+  group_seq = request.session['group_seq']
+  user_email = get_session_email(request)
+  user = User_info.objects.get(user_email = user_email)
+  suggestion_list = Suggestion.objects.filter(group_sequence=group_seq, owner_seq=user.user_seq)
+  return suggestion_list
