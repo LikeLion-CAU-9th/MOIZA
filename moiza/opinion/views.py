@@ -24,7 +24,28 @@ def grouppage_view(request, group_seq):
   data = {}
   data['group_suggestion'] = group_suggestion
   data['user_suggestion'] = user_suggestion
+  data['is_g_answered'] = []
+  data['is_u_answered'] = []
+  data['is_g_all_answered'] = []
+  data['is_u_all_answered'] = []
+  
+  for suggestion in group_suggestion:
+    if is_answered(request, suggestion.id):
+      data['is_g_answered'].append(suggestion.id)
+  for suggestion in user_suggestion:
+    if is_answered(request, suggestion.id):
+      data['is_u_answered'].append(suggestion.id)
   return render(request, 'grouppage.html', data)
+
+
+def is_answered(request, suggestion_seq):
+  user_email = request.session['user_email']
+  user_seq = User_info.objects.get(user_email=user_email).user_seq
+  try:
+    Response.objects.get(writer_id=user_seq, suggestion_id=suggestion_seq)
+  except:
+    return False
+  return True
 
 
 def listpage_view(request):

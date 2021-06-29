@@ -63,7 +63,11 @@
 
             {% for suggestion in user_suggestion %}
             <div class="suggestion">
-                <a style="text-decoration: none; color: black;" href="../decision/{{suggestion.id}}">
+                {% if suggestion.id in is_u_answered %}
+                    <a style="text-decoration: none; color: black;" href="javascript:modal_on('submit-check')">
+                {% else %}
+                    <a style="text-decoration: none; color: black;" href="../decision/{{suggestion.id}}">
+                {% endif %}       
                     {{suggestion.topic}}
                 </a>
             </div>
