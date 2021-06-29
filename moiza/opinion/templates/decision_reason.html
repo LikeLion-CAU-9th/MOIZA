@@ -15,6 +15,8 @@
     crossorigin="anonymous"></script>
     <script src="{% static 'js/wordCount.js' %}"></script>
     <script src="{% static 'js/modal.js' %}"></script>
+    <script src="{% static 'js/Ajax.js' %}"></script>
+    <script src="{% static 'js/decision.js' %}"></script>
 </head>
 
 <body>
@@ -43,7 +45,7 @@
       <p style="text-align:center; " class="head_name" >의견을 선택한 이유가 무엇인가요?</p>
      
       
-      <a class="center_name">OO님의 생각을 들려주세요!</a>  
+      <a class="center_name">{{name}}님의 생각을 들려주세요!</a>  
       <p> <textarea class="reason-content" id="reason-content" onkeyup="wordCount()"  placeholder="자유롭게 작성해주세요." style="resize: none;"></textarea></p>
       
      
@@ -62,7 +64,7 @@
       </div>
       <div class = "modal-confirm"> 
         <div class = "no" onclick="modal_off('submit-check')">아니오</div>
-        <div class = "yes" onclick="modal_off('submit-check')">네</div>
+        <div class = "yes" onclick="decisionSubmit()">네</div>
       </div>
       
     </div>

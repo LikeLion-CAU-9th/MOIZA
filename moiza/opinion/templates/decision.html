@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,11 +8,13 @@
     <title>Decision page</title>
     <link rel="stylesheet" href="../static/css/base.css">
     <link rel="stylesheet" href="../static/css/suggestion.css"> 
-  <link rel="stylesheet" href="../static/css/decision.css">
+    <link rel="stylesheet" href="../static/css/decision.css">
   <script
   src="https://code.jquery.com/jquery-3.3.1.js"
   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
   crossorigin="anonymous"></script>
+  <script src="{% static 'js/Ajax.js' %}"></script>
+  <script src="{% static 'js/decision.js' %}"></script>
 </head>
 
 <body>
@@ -37,24 +40,31 @@
     <div class=container>     
       <div class=mob_container>
       <a href="#"><img src="../static/images/arrow.svg" onclick="window.history.back()"></a>
-      <p style="text-align:center; " class="head_name" >OO님의 의견을 선택해주세요!</p>
+      <p style="text-align:center; " class="head_name" >{{name}}님의 의견을 선택해주세요!</p>
      
-      <a class="center_name">제발되라 쫌!!!!!!!!!{{ suggestion.topic }}</a>        
+      <a class="center_name">{{ suggestion.topic }}</a>        
        
-      <a class="content_select" id="1" >1번</a>
-      <a class="content_select" id= "2">2번</a>
-      <a class="content_select" id ="3">다른 의견이 있어요!</a>
-      <a class="content_select" id="4">마음에 드는 의견이 없어요</a>
+      {% for option in options %}
+        <a class="content_select" id={{option.id}}>{{option.selection_content}}</a>
+      {% endfor %}
+      {% if suggestion.other_selection %}
+        <a class="content_select" id ="3">다른 의견이 있어요!</a>
+      {% endif %}
+      {% if suggestion.no_selection %}
+        <a class="content_select" id="4">마음에 드는 의견이 없어요</a>
+      {% endif %}
 
-     <p> <a href="#" class="myButton">완료</a> </p>
+    <br><br><div class="myButton" onclick="preserveDecision()">완료</div>
     </div>
   </div>
 </body>
 
 <script >
-$(".content_select").click(function () {
-$(this).toggleClass("purple");
-});
+  $(".content_select").click(function () {
+    let options = document.querySelectorAll('.content_select');
+    $(this).toggleClass("purple");
+    $(this).toggleClass("selected");
+  });
 </script>
 
 </html>

@@ -7,7 +7,7 @@ const createGroup = () => {
   const result = AjaxCall('../create-group/', {'name': groupName});
   if(result){
     alert("성공적으로 그룹을 생성하였습니다.");
-    window.location.href = "../group-page";
+    window.location.href = "../mainpage/";
   } else{
     alert("그룹 생성에 실패하였습니다.");
   }
