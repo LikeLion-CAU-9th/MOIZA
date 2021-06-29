@@ -88,7 +88,8 @@
   
 .text_one{
   width:100%;
-  margin: 30.5px 59.2px 5px 17.5px;
+  /* margin: 30.5px 59.2px 5px 17.5px; */
+  margin: 10px 0px;
   object-fit: contain;
   font-family: 'AppleNeoB';
   font-size: 18.5px;
@@ -103,7 +104,8 @@
 }
 .text_two{
   width:100%;
-  margin: 25px 117.7px 5px 17.5px;
+  /* margin: 25px 117.7px 5px 17.5px; */
+  margin: 20px 0;
   object-fit: contain;
   font-family: 'AppleNeoB';
   font-size: 18.5px;

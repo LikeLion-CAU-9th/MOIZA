@@ -122,7 +122,6 @@ def create_group(request):
   name = dataset.get('name')
   group = Group_info()
   group.name = name
-  print("Em:", email)
   group.owner = User_info.objects.get(user_email = email)
   group.save()
   return HttpResponse('True')

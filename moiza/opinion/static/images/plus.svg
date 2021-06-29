@@ -1,17 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
-    <defs>
-        <style>
-            .cls-2{fill:none;stroke:#7150e7;stroke-linecap:round}
-        </style>
-    </defs>
-    <g id="그룹_6" transform="translate(-283 -364.351)">
-        <g id="타원_3" fill="none" stroke="#7150e7" transform="translate(283 364.351)">
-            <circle cx="7" cy="7" r="7" stroke="none"/>
-            <circle cx="7" cy="7" r="6.5"/>
-        </g>
-        <g id="그룹_5" transform="translate(286.456 367.473)">
-            <path id="패스_4" d="M788.369-317.5h7.422" class="cls-2" transform="translate(-788.369 321.211)"/>
-            <path id="패스_5" d="M0 0h7.422" class="cls-2" transform="rotate(90 1.858 1.858)"/>
-        </g>
-    </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"><defs><style>.a,.b,.d{fill:none;}.a,.b{stroke:#7150e7;}.b{stroke-linecap:round;}.c{stroke:none;}</style></defs><g transform="translate(-283 -364.351)"><g class="a" transform="translate(283 364.351)"><circle class="c" cx="7" cy="7" r="7"/><circle class="d" cx="7" cy="7" r="6.5"/></g><g transform="translate(286.456 367.473)"><path class="b" d="M788.369-317.5h7.422" transform="translate(-788.369 321.211)"/><path class="b" d="M0,0H7.422" transform="translate(3.716 0) rotate(90)"/></g></g></svg>

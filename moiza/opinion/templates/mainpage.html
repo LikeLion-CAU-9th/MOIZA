@@ -10,6 +10,7 @@
     <title>mainpage</title>
     <link rel="stylesheet" href="../static/css/same.css">
     <link rel="stylesheet" href="../static/css/mainpagestyle.css">  
+    <link rel="stylesheet" href="{% static 'css/main-kwon.css' %}">  
     <script src="{% static 'js/jquery.js' %}"></script>
     <script src="{% static 'js/Ajax.js' %}"></script>
     <script src="{% static 'js/logout.js' %}"></script>
@@ -38,60 +39,6 @@
     </div>
 
     <div class="container">
-        <section class="desktop-head-section head-setion-jisoo" style="z-index: -1;">
-            <div class="head-section-text" style="text-align: right; width: 80%;">
-                <img onclick="logOut()" src="../static/images/icon.svg">
-                <br><br>
-                <div style="text-align: left;">모두의 의견을 들어보세요.</div>
-            </div>
-        </section>
-        
-        <div class="desktop-container" style="position:absolute;">
-<br><br>
-            <div>
-                <div class="text_one">논의에 참여해주세요!
-                    <a href="../list-page" class="more" style="float:right;">더보기&nbsp;<img src="../static/images/rightarrow.svg"></a>
-                </div>
-                <br><br><br>
-
-                <img src="../static/images/box.svg" style="position:absolute;width:100%;"onclick="javascript:ViewLayer();">
-                <a href="../suggestion">
-                <img src="../static/images/participate.svg"
-                    style="float:right;padding-top:16.5px; position:relative;padding-right:21.5px;">
-                </a>
-
-                <br><br><br>
-                <div class="text_two">그룹</div>
-                <div class="width">
-                    <img src="../static/images/plus.svg"
-                        style="position:absolute;padding-left:15px;padding-top:21.5px;">
-
-                    <a href="#">
-                    <img src="../static/images/newgroupbox.svg" class="submit-button" id="submit-button" style="cursor:hand;position: absolute;" onclick="modal_on('submit-check')">
-                    </a>
-
-                    
-                </div>
-                <br><br><br>
-
-                <div class="look_detail" style="cursor:pointer;
-                color:#626262;
-                font-family:'AppleNeoM';
-                font-size:16.5px;
-                padding-right:20px;
-                text-decoration:none;
-                text-shadow:0px 1px 0px #ffffff;
-              float:right;
-              position:relative;
-              z-index:200;
-              margin-top:20px;">자세히보기&nbsp;
-                    <img src="../static/images/rightarrow.svg" style="z-index:200">
-                </div>                
-                <img src="../static/images/box.svg" style="position:absolute;width:100%;z-index:100">
-
-            </div>
-        </div>
-        <!--모달-->
         <div id="submit-check" class="modal-container">
             <div class="modal-content">
                 <div class="modal-head">그룹 생성</div>
@@ -145,7 +92,41 @@
         
             </div>
         </div>
-        <!--모달끝-->
+        <section class="desktop-head-section head-setion-jisoo" style="z-index: -1;">
+            <div class="head-section-text" style="text-align: right; width: 80%;">
+                <img onclick="logOut()" src="../static/images/icon.svg">
+                <br><br>
+                <div style="text-align: left;">모두의 의견을 들어보세요.</div>
+            </div>
+        </section>
+        
+        <div class="desktop-container" style="position:absolute;">
+<br><br>
+            <div>
+                <div class="text_one">논의에 참여해주세요!
+                    <a href="../list-page" class="more" style="float:right;">더보기&nbsp;<img src="../static/images/rightarrow.svg"></a>
+                </div>
+                <br><br><br>
+
+                <img src="../static/images/box.svg" style="position:absolute;width:100%;"onclick="javascript:ViewLayer();">
+                <a href="../suggestion">
+                <img src="../static/images/participate.svg"
+                    style="float:right;padding-top:16.5px; position:relative;padding-right:21.5px;">
+                </a>
+
+                <br><br><br>
+                <div class="text_two">그룹</div>
+                    <div class="new-group" onclick="modal_on('submit-check')">
+                        <img src="{% static 'images/plus.svg' %}">
+                        새 그룹 생성
+                    </div>
+                </div>
+
+                <div class="group-list">
+                    d
+                </div>
+            </div>
+        </div>
         </div>
         
         
