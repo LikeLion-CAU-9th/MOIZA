@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,9 +10,9 @@
     <title>mainpage</title>
     <link rel="stylesheet" href="../static/css/same.css">
     <link rel="stylesheet" href="../static/css/mainpagestyle.css">  
-
-    <script language="JavaSript" src="../static/js/modal.js"></script>
-
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/Ajax.js' %}"></script>
+    <script src="{% static 'js/logout.js' %}"></script>
 </head>
 
 <body>
@@ -36,10 +38,10 @@
 
     <div class="container">
         <section class="desktop-head-section head-setion-jisoo" style="z-index: -1;">
-            <div class="head-section-text">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img
-                    src="../static/images/icon.svg">
-                <br><br>모두의 의견을 들어보세요.
+            <div class="head-section-text" style="text-align: right; width: 80%;">
+                <img onclick="logOut()" src="../static/images/icon.svg">
+                <br><br>
+                <div style="text-align: left;">모두의 의견을 들어보세요.</div>
             </div>
         </section>
         

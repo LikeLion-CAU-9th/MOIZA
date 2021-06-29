@@ -44,7 +44,7 @@
     <a href="#" ><img src="../static/images/arrow.svg" onclick="window.history.back()"></a>
     <p style="text-align:center;" class="head_name" >무엇을 논의해 볼까요? </p>
      
-    <form method="POST" action="{% url 'opinion_write' %}">
+    <form method="POST" action="{% url 'opinion-write' %}">
       {% csrf_token %}
       <a class="center_name">논의 주제</a> 
       <a><input type = "text" id = "content" placeholder="주제를 입력해주세요"></a>

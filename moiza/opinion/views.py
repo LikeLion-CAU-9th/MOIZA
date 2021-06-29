@@ -1,3 +1,4 @@
+from django.http.response import HttpResponse
 from django.shortcuts import get_object_or_404, render,redirect
 from opinion.models import Suggestion, Selection
 
@@ -101,6 +102,17 @@ def result_view(request):
   if not session_existence:
     return redirect('login')
   return render(request, 'result.html')
+
+
+def logout_action(request):
+  session_existence = authorization(request)
+  if session_existence:
+    del request.session['user_email']
+    return HttpResponse('True')
+  return HttpResponse('False')
+
+def opinion_write(request):
+  pass
 
 
 def authorization(request):
