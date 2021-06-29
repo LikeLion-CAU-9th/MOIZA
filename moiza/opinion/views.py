@@ -32,9 +32,13 @@ def grouppage_view(request, group_seq):
   for suggestion in group_suggestion:
     if is_answered(request, suggestion.id):
       data['is_g_answered'].append(suggestion.id)
+    if is_all_answered(request, suggestion.id):
+      data['is_g_all_answered'].append(suggestion.id)
   for suggestion in user_suggestion:
     if is_answered(request, suggestion.id):
       data['is_u_answered'].append(suggestion.id)
+    if is_all_answered(request, suggestion.id):
+      data['is_u_all_answered'].append(suggestion.id)
   return render(request, 'grouppage.html', data)
 
 
@@ -46,6 +50,15 @@ def is_answered(request, suggestion_seq):
   except:
     return False
   return True
+
+
+def is_all_answered(request, suggestion_seq):
+  group_seq = request.session['group_seq']
+  member_num = len(Membership.objects.filter(group_id=group_seq))
+  response_num = len(Response.objects.filter(suggestion_id=suggestion_seq))
+  if member_num <= response_num:
+    return True
+  return False
 
 
 def listpage_view(request):
