@@ -15,4 +15,5 @@ urlpatterns = [
   path('group-page/', views.grouppage_view, name="group-page"),
   path('list-page/', views.listpage_view, name="list-page"),
   path('logout-action/', views.logout_action, name="logout-action"),
+  path('create-group/', views.create_group, name="create-group"),
 ]

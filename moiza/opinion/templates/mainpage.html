@@ -13,6 +13,7 @@
     <script src="{% static 'js/jquery.js' %}"></script>
     <script src="{% static 'js/Ajax.js' %}"></script>
     <script src="{% static 'js/logout.js' %}"></script>
+    <script src="{% static 'js/mainpage.js' %}"></script>
 </head>
 
 <body>
@@ -99,7 +100,7 @@
                     <div class="groupname">그룹명</div>
                     <br>
                     <form>
-                        <input id="input" type="text" name="groupname" placeholder="그룹명을 입력해주세요"></input>
+                        <input id="input" class="groupName" type="text" name="groupname" placeholder="그룹명을 입력해주세요"></input>
                     </form>
                     <br><br>
                     <div class="groupmember">그룹원 초대</div>
@@ -129,7 +130,7 @@
                 <a href="#">
                 <img id="check" src="../static/images/check.svg"
                     style="float:right;margin-top:-45px;margin-right:15px;position:relative;cursor:hand;z-index:900;"
-                    onclick="javascript:newPage();">
+                    onclick="createGroup();">
                 </a>
                 <a href="#">
                 <div id="Help3" style='position:relative; display:none; z-index:1000;'></div>
@@ -159,25 +160,24 @@
         document.getElementById("Help2").style.display = 'inline';
     }
 
-    function newPage() {
-        window.location.href = "../group-page";
-    }
     function rmv() {
         document.getElementById("Help1").style.display = 'none';
     }
+
     function ViewLayer() {
         document.getElementById("Help1").style.display = 'inline';
     }
-    const modal_on = (modalId) => {
-  const ModalSelector = "#" + modalId;
-  const ModalContainer = document.querySelector(ModalSelector);
-  ModalContainer.style.display = "inline-block";
-}
 
-const modal_off = (modalID) => {
-  const ModalSelector = "#" + modalID;
-  const ModalContainer = document.querySelector(ModalSelector);
-  ModalContainer.style.display = "none";
-}
+        const modal_on = (modalId) => {
+        const ModalSelector = "#" + modalId;
+        const ModalContainer = document.querySelector(ModalSelector);
+        ModalContainer.style.display = "inline-block";
+    }
+
+    const modal_off = (modalID) => {
+    const ModalSelector = "#" + modalID;
+    const ModalContainer = document.querySelector(ModalSelector);
+    ModalContainer.style.display = "none";
+    }
 
 </script>

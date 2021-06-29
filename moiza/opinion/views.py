@@ -1,6 +1,7 @@
 from django.http.response import HttpResponse
 from django.shortcuts import get_object_or_404, render,redirect
-from opinion.models import Suggestion, Selection
+from account.models import User_info
+from opinion.models import Suggestion, Selection, Group_info
 
 # Create your views here.
 def mainpage_view(request):
@@ -111,12 +112,34 @@ def logout_action(request):
     return HttpResponse('True')
   return HttpResponse('False')
 
+
+def create_group(request):
+  session_existence = authorization(request)
+  if not session_existence:
+    return HttpResponse('False')
+  email = get_session_email(request)
+  dataset = request.GET
+  name = dataset.get('name')
+  group = Group_info()
+  group.name = name
+  print("Em:", email)
+  group.owner = User_info.objects.get(user_email = email)
+  group.save()
+  return HttpResponse('True')
+
+
 def opinion_write(request):
   pass
 
 
 def authorization(request):
   return ('user_email' in request.session)
+
+
+def get_session_email(request):
+  print("SESS EMAIL:",request.session['user_email']) 
+  if authorization(request):
+    return request.session['user_email']
 
 
 def authorize_action(request):

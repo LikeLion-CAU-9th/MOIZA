@@ -27,11 +27,11 @@ def signup_view(request):
 
 def is_login_success(request):
   data = request.GET
-  login_success = is_login_available(request, data.get('email', False), data.get('pw', False))
-  
+  email = data.get('email', False)
+  login_success = is_login_available(request, email, data.get('pw', False))
   if login_success == False:
     return HttpResponse("False")
-  is_session_success = session_attach(request, data.get('input_email', False))
+  is_session_success = session_attach(request, email)
   if is_session_success == False:
     return HttpResponseBadRequest('Session is not attached!', status=500)
   return HttpResponse("True")
