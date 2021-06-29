@@ -121,10 +121,13 @@
                         새 그룹 생성
                     </div>
                 </div>
-
-                <div class="group-list">
-                    d
-                </div>
+                {% for group in group_list %}
+                <a style="text-decoration: none; color: black;" href="../group-page/{{group.group_seq}}">
+                    <div class="group-list">
+                        {{group.name}}
+                    </div>
+                </a>
+                {% endfor %}
             </div>
         </div>
         </div>

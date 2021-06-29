@@ -1,7 +1,7 @@
 from django.http.response import HttpResponse
 from django.shortcuts import get_object_or_404, render,redirect
 from account.models import User_info
-from opinion.models import Suggestion, Selection, Group_info
+from opinion.models import Suggestion, Selection, Group_info, Membership
 
 # Create your views here.
 def mainpage_view(request):
@@ -9,10 +9,11 @@ def mainpage_view(request):
   session_existence = authorization(request)
   if not session_existence:
     return redirect('login')
-  return render(request, 'mainpage.html')
+  group_list = get_group_list(request)
+  return render(request, 'mainpage.html', {"group_list": group_list})
 
 
-def grouppage_view(request):
+def grouppage_view(request, group_seq):
   # authorize_action(request)
   session_existence = authorization(request)
   if not session_existence:
@@ -124,6 +125,12 @@ def create_group(request):
   group.name = name
   group.owner = User_info.objects.get(user_email = email)
   group.save()
+  
+  membership = Membership()
+  membership.group = group
+  membership.user = User_info.objects.get(user_email = email)
+  membership.auth = "S"
+  membership.save()
   return HttpResponse('True')
 
 
@@ -136,8 +143,8 @@ def authorization(request):
 
 
 def get_session_email(request):
-  print("SESS EMAIL:",request.session['user_email']) 
   if authorization(request):
+    print("SESS EMAIL:",request.session['user_email']) 
     return request.session['user_email']
 
 
@@ -146,3 +153,13 @@ def authorize_action(request):
   print("sess", session_existence)
   if not session_existence:
     return redirect('login')
+  
+  
+def get_group_list(request):
+  user_email = get_session_email(request)
+  user = User_info.objects.get(user_email = user_email)
+  membership_qs = Membership.objects.filter(user = user)
+  group_list = []
+  for ele in membership_qs:
+    group_list.append(ele.group)
+  return group_list
