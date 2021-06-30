@@ -16,6 +16,7 @@ urlpatterns = [
   path('group-page/<int:group_seq>', views.grouppage_view, name="group-page"),
   path('list-page/', views.listpage_view, name="list-page"),
   path('generate-url/', views.get_hashed_url, name="gen-url"),
+  path('participate/', views.participate, name="participate"),
   path('logout-action/', views.logout_action, name="logout-action"),
   path('create-group/', views.create_group, name="create-group"),
   path('create-suggestion/', views.create_suggestion, name="create-suggestion"),

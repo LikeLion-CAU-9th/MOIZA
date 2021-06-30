@@ -205,6 +205,22 @@ def get_hashed_url(request):
   return HttpResponse(HashedURL)
 
 
+def participate(request):
+  url = request.GET['url']
+  cursor = connection.cursor()
+  raw_query = "SELECT * FROM opinion_group_url WHERE url = '" + url + "'";
+  cursor.execute(raw_query)
+  row = cursor.fetchone()
+  print("-------",row[0])
+  group = Group_info.objects.get(group_seq=row[0])
+  user = User_info.objects.get(user_email = get_session_email(request))
+  membership = Membership()
+  membership.group = group
+  membership.user = user
+  membership.auth = 'B'
+  membership.save()
+  return HttpResponse('True')
+
 def create_group(request):
   session_existence = authorization(request)
   if not session_existence:
@@ -227,7 +243,6 @@ def create_group(request):
   
   cursor = connection.cursor()
   raw_query = "INSERT INTO opinion_group_url VALUES(" + str(group.group_seq) + ", '" + dataset.get('url') + "')"
-  print(raw_query)
   cursor.execute(raw_query)
   return HttpResponse('True')
 
