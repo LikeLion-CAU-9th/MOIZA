@@ -50,25 +50,12 @@
                         <input id="input" class="groupName" type="text" name="groupname" placeholder="그룹명을 입력해주세요"></input>
                     </form>
                     <br><br>
-                    <div class="groupmember">그룹원 초대</div>
+                    <div class="groupmember">그룹원 초대 링크</div>
                     <br>
-                    <p class="url">http://moiza.com/1234</p>
+                    <div class="url"></div><br>
                     
                     <div class="backwhite"></div>
-                    <a href="#">
-                        <img id="linkcopy" src="../static/images/linkcopy.svg" style="
-                        float:left;
-                        position:relative;
-                        cursor:hand;
-                        margin-left:185px;
-                        margin-top:-20px;
-                        z-index:1000;  " onclick="javascript:ViewLayer2();">
-                    </a>
-                    <br>
-                    <div id="Help2" style='position:relative; display:none; z-index:9999;'>
-                        <p style="color:#7150e7;z-index:200;position:relative;font-size:12.5px;text-align:left;margin-left:17px;margin-top:-17px;">링크가
-                            복사되었습니다.</p>
-                    </div>
+                    
                 <!--</div>-->
                 <div class="modal-confirm">
                 </div>
@@ -93,7 +80,7 @@
             </div>
         </div>
         <section class="desktop-head-section head-setion-jisoo" style="z-index: -1;">
-            <div class="head-section-text" style="text-align: right; width: 80%;">
+            <div class="head-section-text" style="text-align: right; width: 84%; cursor: pointer;">
                 <img onclick="logOut()" src="../static/images/icon.svg">
                 <br><br>
                 <div style="text-align: left;">모두의 의견을 들어보세요.</div>
@@ -158,12 +145,12 @@
         document.getElementById("Help1").style.display = 'inline';
     }
 
-        const modal_on = (modalId) => {
+    const modal_on = (modalId) => {
+        get_hashed_url()
         const ModalSelector = "#" + modalId;
         const ModalContainer = document.querySelector(ModalSelector);
         ModalContainer.style.display = "inline-block";
     }
-
     const modal_off = (modalID) => {
     const ModalSelector = "#" + modalID;
     const ModalContainer = document.querySelector(ModalSelector);

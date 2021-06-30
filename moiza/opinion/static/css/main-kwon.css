@@ -34,3 +34,9 @@
   padding-left: 20px;
   cursor: pointer;
 }
+
+.url {
+  width: calc(100% - 100px);
+  overflow: scroll;
+  padding: 0 30px;
+}

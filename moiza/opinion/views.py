@@ -1,9 +1,11 @@
-from django.http.response import HttpResponse
+from django.http.response import HttpResponse, HttpResponseGone
 from django.shortcuts import get_object_or_404, render,redirect
 from account.models import User_info
-from opinion.models import Suggestion, Selection, Group_info, Membership, Response
+from opinion.models import Suggestion, Selection, Group_info, Membership, Response, Group_url
+import hashlib, time
+from django.db import connection
 
-# Create your views here.
+
 def mainpage_view(request):
   # authorize_action(request)
   session_existence = authorization(request)
@@ -189,12 +191,28 @@ def logout_action(request):
   return HttpResponse('False')
 
 
+def get_hashed_url(request):
+  session_existence = authorization(request)
+  if not session_existence:
+    return HttpResponse('False')
+  email = get_session_email(request)
+  timestamp = time.time()
+  hashing_target = email + str(timestamp)
+  hashURLObj = hashlib.sha1(hashing_target.encode('UTF-8'))
+  HashedURL = hashURLObj.hexdigest()
+  HashedURL = "http://moiza.com/" + HashedURL
+  request.session['HashedURL'] = HashedURL
+  return HttpResponse(HashedURL)
+
+
 def create_group(request):
   session_existence = authorization(request)
   if not session_existence:
     return HttpResponse('False')
   email = get_session_email(request)
   dataset = request.GET
+  if request.session['HashedURL'] != dataset.get('url'):
+    return HttpResponse('False')
   name = dataset.get('name')
   group = Group_info()
   group.name = name
@@ -206,6 +224,11 @@ def create_group(request):
   membership.user = User_info.objects.get(user_email = email)
   membership.auth = "S"
   membership.save()
+  
+  cursor = connection.cursor()
+  raw_query = "INSERT INTO opinion_group_url VALUES(" + str(group.group_seq) + ", '" + dataset.get('url') + "')"
+  print(raw_query)
+  cursor.execute(raw_query)
   return HttpResponse('True')
 
 
