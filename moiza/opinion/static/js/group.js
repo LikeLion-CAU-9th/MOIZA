@@ -1,7 +1,3 @@
-window.onload = () => {
-  openBoard();
-}
-
 const spreadBoard = (style) => {
   style.width = "100%";
   style.maxWidth = "100%";
@@ -19,7 +15,6 @@ const openBoard = () => {
     target = true;
     for(let k = 0; k <elem_dash.length; k++) {
       if(elem[i] == elem_dash[k]){
-        console.log("in")
         target = false;
       }
     }

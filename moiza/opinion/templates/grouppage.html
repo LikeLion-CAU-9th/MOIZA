@@ -42,17 +42,99 @@
         <div class="dashBoard">
             <section class="dash-head"></section>
             <section class="dash-body">
-                <div class="board-elem identification">
-                    <div>
-                        <span class="say-hello">Congratulation, 영권!</span><br><br>
-                        <span style="font-family: AppleNeoM; font-size: 1em;">당신은 모의자 그룹의 <span style="font-family: AppleNeoB;">열정 멤버</span>입니다.</span>
-                        <img class="medal" src="{% static 'images/gold.png' %}">
-                    </div><br><br><br>
-                    <div class="activation">
-                        <img src="{% static 'images/thunder.png' %}">
-                        78
-                    </div><br><br>
-                    <div class="activation-detail">View Detail</div>
+                <div class="layer">
+                    <div class="board-elem identification">
+                        <div>
+                            <span class="say-hello">Congratulation, 영권!</span><br><br>
+                            <span style="font-family: AppleNeoM; font-size: 1em;">당신은 MOIZA의 <span style="font-family: AppleNeoB;">👑열정 멤버</span>입니다.</span>
+                            <img class="medal" src="{% static 'images/gold.png' %}">
+                        </div><br><br><br>
+                        <div class="activation">
+                            <img src="{% static 'images/thunder.png' %}">
+                            78 V
+                        </div><br><br>
+                        <div class="activation-detail">View Detail</div>
+                    </div>
+                    <div class="board-elem group-info">
+                        <div class="group-info-title">Group Information</div>
+                        <div class="group-info-content">
+                            <div class="group-info-elem">
+                                <img src="{% static 'images/member.png' %}">
+                                25 members
+                            </div>
+                            <div class="group-info-elem">
+                                <img src="{% static 'images/current.png' %}">
+                                3 ongoing posts
+                            </div>
+                            <div class="group-info-elem">
+                                <img src="{% static 'images/total.png' %}">
+                                48 total posts
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layer" style="margin-top: 30px;">
+                    <div class="board-elem latest-suggestion">
+                        <div class="title">Latest Topic Response Rate</div>
+                        <div class="circle-gage">
+                            75%
+                        </div>
+                    </div>
+                    <div class="board-elem flow-chart">
+                        <div class="title">Activation flow</div>
+                        <img src="{% static 'images/graph.png' %}">
+                    </div>
+                    <div class="board-elem suggestion-list">
+                        <div class="title">MOIZA's Choices</div><br>
+                        <div class="list-head">
+                            <div class="part part1">Topic</div>
+                            <div class="part part2">Generator</div>
+                            <div class="part part3">Deadline</div>
+                            <div class="part part4">Status</div>
+                        </div>
+                        <div style="display: inline-block; width: 100%; height: 3px; background-color: black;"></div>
+                        <div class="list-elem">
+                            <div class="part part1">멋사 아이디어톤 팀명</div>
+                            <div class="part part2">영권</div>
+                            <div class="part part3">2021-07-04</div>
+                            <div class="part part4"><div class="status-line green-line"></div></div>
+                        </div>
+                        <hr>
+                        <div class="list-elem">
+                            <div class="part part1">아이디어톤 주제</div>
+                            <div class="part part2">선영</div>
+                            <div class="part part3">2021-07-02</div>
+                            <div class="part part4"><div class="status-line orange-line"></div></div>
+                        </div>
+                        <hr>
+                        <div class="list-elem">
+                            <div class="part part1">멋사 해커톤 구현 프레임워크</div>
+                            <div class="part part2">찬규</div>
+                            <div class="part part3">2021-07-31</div>
+                            <div class="part part4"><div class="status-line green-line"></div></div>
+                        </div>
+                        <hr>
+                        <div class="list-elem">
+                            <div class="part part1">멋사 2학기 활동 분야</div>
+                            <div class="part part2">민지</div>
+                            <div class="part part3">2021-07-10</div>
+                            <div class="part part4"><div class="status-line red-line"></div></div>
+                        </div>
+                        <hr>
+                        <div class="list-elem">
+                            <div class="part part1">멋사 해커톤 구현 분업 방향성</div>
+                            <div class="part part2">하린</div>
+                            <div class="part part3">2021-07-14</div>
+                            <div class="part part4"><div class="status-line orange-line"></div></div>
+                        </div>
+                        <hr>
+                        <div class="list-elem">
+                            <div class="part part1">멋사 해커톤 리팩터링 방식</div>
+                            <div class="part part2">지수</div>
+                            <div class="part part3">2021-08-10</div>
+                            <div class="part part4"><div class="status-line green-line"></div></div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>
