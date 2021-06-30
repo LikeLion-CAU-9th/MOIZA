@@ -85,7 +85,7 @@ def topic_complete_view(request):
   session_existence = authorization(request)
   if not session_existence:
     return redirect('login')
-  return render(request, 'topic_complete.html')
+  return render(request, 'topic_complete.html', {'suggest_seq': request.session['suggestion_seq']})
 
 
 def decision_complete_view(request):
@@ -211,7 +211,6 @@ def participate(request):
   raw_query = "SELECT * FROM opinion_group_url WHERE url = '" + url + "'";
   cursor.execute(raw_query)
   row = cursor.fetchone()
-  print("-------",row[0])
   group = Group_info.objects.get(group_seq=row[0])
   user = User_info.objects.get(user_email = get_session_email(request))
   membership = Membership()
@@ -271,6 +270,7 @@ def create_suggestion(request):
   suggestion.no_selection = True
   suggestion.owner_seq = User_info.objects.get(user_email = get_session_email(request)).user_seq
   suggestion.save()
+  request.session['suggestion_seq'] = suggestion.id
   
   # Create option matched to upper created suggestion
   for index in range(0, len(options)):
