@@ -10,7 +10,8 @@ def mainpage_view(request):
   if not session_existence:
     return redirect('login')
   group_list = get_group_list(request)
-  return render(request, 'mainpage.html', {"group_list": group_list})
+  not_responded = get_not_responded_suggestion(request)
+  return render(request, 'mainpage.html', {"group_list": group_list, 'not_responded': not_responded})
 
 
 def grouppage_view(request, group_seq):
@@ -274,6 +275,21 @@ def get_group_list(request):
   for ele in membership_qs:
     group_list.append(ele.group)
   return group_list
+
+
+def get_not_responded_suggestion(request):
+  user_email = get_session_email(request)
+  user = User_info.objects.get(user_email = user_email)
+  group_list = get_group_list(request)
+  suggestion_list = []
+  for group in group_list:
+    suggest_qs = Suggestion.objects.filter(group_sequence_id=group.group_seq)
+    for suggest in suggest_qs:
+      try:
+        Response.objects.get(suggestion_id=suggest.id, writer_id=user.user_seq)
+      except:
+        suggestion_list.append(suggest)
+  return suggestion_list  
 
 
 def get_group_suggestion(request):

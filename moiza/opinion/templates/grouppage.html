@@ -48,8 +48,9 @@
             <!-- 여기다 내용 코딩 고고 -->
             <a href="../suggestion"><img src="../static/images/suggestbox.svg" class="box"></a>
     
-            <div class="text">논의 목록</div>
-            
+            {% if group_suggestion|length > 0 %}
+                <div class="text">논의 목록</div>
+            {% endif %}
             {% for suggestion in group_suggestion %}
             <div class="suggestion">
                 {% if suggestion.id in is_g_all_answered %}
@@ -64,9 +65,10 @@
             </div>
             {% endfor %}
 
-            <br><br>
-            <div class="text">나의 발제</div>
-
+            {% if user_suggestion|length > 0 %}
+                <br><br>
+                <div class="text">나의 발제</div>
+            {% endif %}
             {% for suggestion in user_suggestion %}
             <div class="suggestion">
                 {% if suggestion.id in is_u_all_answered %}

@@ -101,20 +101,26 @@
         </section>
         
         <div class="desktop-container" style="position:absolute;">
-<br><br>
+        <br><br>
             <div>
+                {% if not_responded|length > 0 %}
                 <div class="text_one">논의에 참여해주세요!
                     <a href="../list-page" class="more" style="float:right;">더보기&nbsp;<img src="../static/images/rightarrow.svg"></a>
                 </div>
                 <br><br><br>
-
-                <img src="../static/images/box.svg" style="position:absolute;width:100%;"onclick="javascript:ViewLayer();">
-                <a href="../suggestion">
-                <img src="../static/images/participate.svg"
-                    style="float:right;padding-top:16.5px; position:relative;padding-right:21.5px;">
-                </a>
-
+                {% else %}
+                <div class="text_one" style="top: -50px;">참여하지 않은 논의가 없습니다.<hr></div>
                 <br><br><br>
+                {% endif %}
+                
+                {% for suggest in not_responded %}
+                <a style="text-decoration: none; color: black;" href="../decision/{{suggest.id}}">
+                    <div class="not-responded-list">
+                        {{suggest.topic}}
+                    </div>
+                </a>
+                {% endfor %}
+
                 <div class="text_two">그룹</div>
                     <div class="new-group" onclick="modal_on('submit-check')">
                         <img src="{% static 'images/plus.svg' %}">
