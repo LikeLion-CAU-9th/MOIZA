@@ -29,7 +29,7 @@ body {
   margin-left: 20px;
   color: #7150E7;
   font-size: 45px;
-  font-family: 'AppleNeoB';
+  font-family: 'BMjua';
 }
 
 .desktop-sub-title {
@@ -44,6 +44,11 @@ body {
 
 .purple-text {
   color: #7150E7;
+}
+
+.logo-img {
+  float: left;
+  height: 45px;
 }
 
 .mobile-head-section {

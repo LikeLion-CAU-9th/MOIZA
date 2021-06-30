@@ -25,12 +25,21 @@ html {
     top: 20%;
     left: 14%;
   }
+
+  .logo-img {
+    float: left;
+    height: 45px;
+  }
   
+  .purple-text {
+    font-family: 'BMjua';
+  }
+
   .desktop-logo-title {
     margin-left: 20px;
     color: #7150E7;
     font-size: 45px;
-    font-family: 'AppleNeoB';
+    font-family: 'BMjua';
   }
   
   .desktop-sub-title {
