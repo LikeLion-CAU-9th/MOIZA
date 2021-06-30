@@ -1,0 +1,71 @@
+.dashBoard {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  background-color: #eeeeee;
+}
+
+.dash-head {
+  width: 100%;
+  height: 180px;
+  background: rgb(63,94,251);
+  background: radial-gradient(circle, rgba(63,94,251,0.7) 0%, rgba(252,70,207,0.7) 100%);
+}
+
+.dash-body {
+  width: 100%;
+  position: absolute;
+  top: 90px;
+}
+
+.board-elem {
+  background-color: white;
+  box-shadow: 4px 4px 4px rgba(88, 85, 85, 0.2);
+  margin: 20px;
+  border-radius: 4px;
+  padding: 20px;
+  font-family: 'BMjua';
+}
+
+.identification {
+  max-width: 400px;
+  width: 25%;
+  height: 300px;
+}
+
+.say-hello {
+  font-size: 1.6em;
+}
+
+.medal {
+  width: 180px;
+  float: right;
+  right: -10px;
+}
+
+.activation {
+  width: calc(100% - 180px); /* - medal width */
+  text-align: center;
+  font-size: 3em;
+  height: 70px;
+  line-height: 70px;
+}
+
+.activation img {
+  float: left;
+  width: 70px;
+  border-radius: 50%;
+}
+
+.activation-detail {
+  display: inline-block;
+  width: 140px;
+  height: 60px;
+  border-radius: 12px;
+  cursor: pointer;
+  line-height: 60px;
+  color: #efefef;
+  background-color: #9166e6;
+  padding: 0;
+  text-align: center;
+}

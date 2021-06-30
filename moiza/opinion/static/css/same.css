@@ -139,7 +139,7 @@ html {
     }
   
     .desktop-head-section {
-      display: block !important;
+      display: block;
       max-width: 570px;
       z-index: 10;
     }
