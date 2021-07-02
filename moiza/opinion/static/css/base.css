@@ -25,11 +25,16 @@ body {
   left: 14%;
 }
 
+.logo-img {
+  float: left;
+  height: 45px;
+}
+
 .desktop-logo-title {
   margin-left: 20px;
   color: #7150E7;
   font-size: 45px;
-  font-family: 'AppleNeoB';
+  font-family: 'BMjua';
 }
 
 .desktop-sub-title {
@@ -38,8 +43,13 @@ body {
 }
 
 .desktop-content-footer {
-  font-family: 'AppleNeoM';
+  font-family: 'AppleNeoB';
   font-size: 22px;
+  
+}
+.desktop-content-footer2{
+  font-family:'AppleNeoM';
+  font-size:20px;
 }
 
 .purple-text {
@@ -189,7 +199,7 @@ body {
   }
 
   .container {
-    max-width: 480px;
+    max-width: 420px;
     display: inline-block;
     width: 80%;
     height: 100vh;

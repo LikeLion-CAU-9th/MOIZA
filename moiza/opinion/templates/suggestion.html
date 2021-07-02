@@ -1,4 +1,4 @@
-
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,10 +8,13 @@
     <title>Suggestion Page</title>
     <link rel="stylesheet" href="../static/css/base.css">
     <link rel="stylesheet" href="../static/css/suggestion.css">
-    <script >   
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/Ajax.js' %}"></script>
+    <script src="{% static 'js/suggestion.js' %}"></script>
+    <script>   
     function add_textbox(){
     document.getElementById("t_space").innerHTML +=
-    "<input placeholder='항목을 입력해주세요' type='text' name='tbox' ><br>";
+    "<input class='options' placeholder='항목을 입력해주세요' type='text' name='tbox' ><br>";
     }
     </script>
 
@@ -49,8 +52,8 @@
     </form>
 
       <a class="center_name">선택 항목</a>
-      <input placeholder="항목을 입력해주세요">
-      <input placeholder="항목을 입력해주세요">
+      <input class="options" placeholder="항목을 입력해주세요">
+      <input class="options" placeholder="항목을 입력해주세요">
       <div id="t_space"> </div>
         <a href="#" class="content_plus" onclick="add_textbox()" >⊕ 항목 추가</a>
       <hr> 
@@ -82,8 +85,7 @@
      }
  }
    </script>
-     <p> <input class = "myButton" type = "submit" value="작성하기" > </p>
-     
+     <p> <input onclick="createSuggestion()" class = "myButton" type = "submit" value="작성하기" > </p>
     </div>
   </div>
  

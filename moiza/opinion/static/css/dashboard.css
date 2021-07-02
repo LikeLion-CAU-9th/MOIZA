@@ -1,0 +1,224 @@
+.dashBoard {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  background-color: #eeeeee;
+}
+
+.dashBoard * {
+  transition: all 3s;
+  /* opacity: 0; */
+}
+
+.dash-head {
+  width: 100%;
+  height: 180px;
+  background: rgb(63,94,251);
+  background: radial-gradient(circle, rgba(63,94,251,0.7) 0%, rgba(252,70,207,0.7) 100%);
+}
+
+.dash-body {
+  width: calc(100% - 160px );
+  padding: 0 80px;
+  position: absolute;
+  top: 90px;
+}
+
+.layer {
+  width: 100%;
+}
+
+.board-elem {
+  background-color: white;
+  box-shadow: 4px 4px 4px rgba(88, 85, 85, 0.2);
+  margin: 20px;
+  border-radius: 8px;
+  padding: 20px;
+  font-family: 'BMjua';
+  display: inline-block;
+}
+
+.identification {
+  max-width: 400px;
+  width: 25%;
+  height: 300px;
+  float: left;
+}
+
+.say-hello {
+  font-size: 1.6em;
+}
+
+.medal {
+  width: 180px;
+  float: right;
+  right: -10px;
+}
+
+.activation {
+  width: calc(100% - 180px); /* - medal width */
+  text-align: center;
+  font-size: 3em;
+  height: 70px;
+  line-height: 70px;
+}
+
+.activation img {
+  float: left;
+  width: 70px;
+  border-radius: 50%;
+}
+
+.activation-detail {
+  display: inline-block;
+  width: 140px;
+  height: 60px;
+  border-radius: 12px;
+  cursor: pointer;
+  line-height: 60px;
+  color: #efefef;
+  background-color: #9166e6;
+  padding: 0;
+  text-align: center;
+}
+
+.group-info {
+  width: 55%;
+  height: 300px;
+  margin-left: 10%;
+}
+
+.group-info-title {
+  font-size: 2em;
+}
+
+.group-info-content {
+  width: calc(100% - 50px);
+  padding: 0 25px;
+  margin-top: 80px;
+  text-align: center;
+}
+
+.group-info-elem {
+  display: inline-block;
+  width: 32%;
+  height: 100px;
+  line-height: 100px;
+  font-size: 28px;
+  text-align: left;
+}
+
+.group-info-elem img {
+  width: 100px;
+  height: 100px;
+  float: left;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.latest-suggestion {
+  width: 230px;
+  height: 230px;
+  float: left;
+}
+
+.latest-suggestion .title {
+  text-align: center;
+  font-size: 1.2em;
+  height: 40px;
+  line-height: 40px;
+}
+
+.circle-gage {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 3px solid orange;
+  font-size: 3em;
+  margin: 20px;
+  margin-top: 10px;
+  margin-left: 25px;
+  text-align: center;
+  line-height: 180px;
+}
+
+.flow-chart {
+  width: 230px;
+  height: 230px;
+  float: left;
+  margin-left: 50px;
+}
+
+.flow-chart .title {
+  height: 40px;
+  line-height: 40px;
+  font-size: 1.4em;
+  
+}
+
+.flow-chart img {
+  width: 230px;
+}
+
+.suggestion-list {
+  float: left;
+  width: calc(80% - 500px);
+  margin-left: 100px;
+}
+
+.suggestion-list .title {
+  height: 20px;
+  line-height: 40px;
+  font-size: 1.6em;
+  margin-left: 10px;
+}
+
+.list-head {
+  font-size: 1em;
+  text-align: center;
+}
+
+.list-elem {
+  height: 30px;
+  line-height: 30px;
+}
+
+.part {
+  display: inline-block;
+  text-align: center;
+}
+
+.part1 {
+  width: 30%;
+}
+
+.part2 {
+  width: 20%;
+}
+
+.part3 {
+  width: 33%;
+}
+
+.part4 {
+  width: 15%;
+}
+
+.status-line {
+  display: inline-block;
+  width: 50%;
+  height: 6px;
+  border-radius: 10px;
+}
+
+.red-line {
+  background-color: rgb(211, 71, 61);
+}
+
+.orange-line {
+  background-color: rgb(221, 128, 52);
+}
+
+.green-line {
+  background-color: rgb(52, 221, 128);
+}

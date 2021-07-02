@@ -4,10 +4,15 @@
 {% block headblock %}
 <script src="{% static 'js/login.js'%}"></script>
 <script src="{% static 'js/modal.js'%}"></script>
+<script src="{% static 'js/splash.js'%}"></script>
 <link rel="stylesheet" href="{% static 'css/login.css' %}">
+<link rel="stylesheet" href="{% static 'css/splash.css' %}">
 <title>모의자 - 로그인</title>
 {% endblock %}
 {% block content %}
+<div class="container splash-container">
+  <img src="../static/images/splash.png">
+</div>
 <section class="mobile-head-section">
   <div class="head-section-text">Log in</div>
 </section>

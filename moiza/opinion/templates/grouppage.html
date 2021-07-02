@@ -1,17 +1,225 @@
+{% extends 'base.html' %}
+{% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
+{% block headblock %}
+<title>grouppage</title>
+<link rel="stylesheet" href="../static/css/same.css">
+<link rel="stylesheet" href="../static/css/grouppagestyle.css">
+<link rel="stylesheet" href="../static/css/group-kwon.css">
+<link rel="stylesheet" href="../static/css/dashboard.css">
+<script language="JavaSript" src="../static/js/modal.js"></script>
+<script src="../static/js/group.js"></script>
+{% endblock %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>grouppage</title>
-    <link rel="stylesheet" href="../static/css/same.css">
-    <link rel="stylesheet" href="../static/css/grouppagestyle.css">
-    <script language="JavaSript" src="../static/js/modal.js"></script>
+{% block content %}
+<div class="container" style="box-shadow: 3px 3px 3px rgba(0, 0, 0, .25); transition: all 1s;">
+    <div class="dashBoard">
+        <section class="dash-head"></section>
+        <section class="dash-body">
+            <div class="layer">
+                <div class="board-elem identification">
+                    <div>
+                        <span class="say-hello">Congratulation, 영권!</span><br><br>
+                        <span style="font-family: AppleNeoM; font-size: 1em;">당신은 MOIZA의 <span style="font-family: AppleNeoB;">👑열정 멤버</span>입니다.</span>
+                        <img class="medal" src="{% static 'images/gold.png' %}">
+                    </div><br><br><br>
+                    <div class="activation">
+                        <img src="{% static 'images/thunder.png' %}">
+                        78 V
+                    </div><br><br>
+                    <div class="activation-detail">View Detail</div>
+                </div>
+                <div class="board-elem group-info">
+                    <div class="group-info-title">Group Information</div>
+                    <div class="group-info-content">
+                        <div class="group-info-elem">
+                            <img src="{% static 'images/member.png' %}">
+                            25 members
+                        </div>
+                        <div class="group-info-elem">
+                            <img src="{% static 'images/current.png' %}">
+                            3 ongoing posts
+                        </div>
+                        <div class="group-info-elem">
+                            <img src="{% static 'images/total.png' %}">
+                            48 total posts
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layer" style="margin-top: 30px;">
+                <div class="board-elem latest-suggestion">
+                    <div class="title">Latest Topic Response Rate</div>
+                    <div class="circle-gage">
+                        75%
+                    </div>
+                </div>
+                <div class="board-elem flow-chart">
+                    <div class="title">Activation flow</div>
+                    <img src="{% static 'images/graph.png' %}">
+                </div>
+                <div class="board-elem suggestion-list">
+                    <div class="title">MOIZA's Choices</div><br>
+                    <div class="list-head">
+                        <div class="part part1">Topic</div>
+                        <div class="part part2">Generator</div>
+                        <div class="part part3">Deadline</div>
+                        <div class="part part4">Status</div>
+                    </div>
+                    <div style="display: inline-block; width: 100%; height: 3px; background-color: black;"></div>
+                    <div class="list-elem">
+                        <div class="part part1">멋사 아이디어톤 팀명</div>
+                        <div class="part part2">영권</div>
+                        <div class="part part3">2021-07-04</div>
+                        <div class="part part4"><div class="status-line green-line"></div></div>
+                    </div>
+                    <hr>
+                    <div class="list-elem">
+                        <div class="part part1">아이디어톤 주제</div>
+                        <div class="part part2">선영</div>
+                        <div class="part part3">2021-07-02</div>
+                        <div class="part part4"><div class="status-line orange-line"></div></div>
+                    </div>
+                    <hr>
+                    <div class="list-elem">
+                        <div class="part part1">멋사 해커톤 구현 프레임워크</div>
+                        <div class="part part2">찬규</div>
+                        <div class="part part3">2021-07-31</div>
+                        <div class="part part4"><div class="status-line green-line"></div></div>
+                    </div>
+                    <hr>
+                    <div class="list-elem">
+                        <div class="part part1">멋사 2학기 활동 분야</div>
+                        <div class="part part2">민지</div>
+                        <div class="part part3">2021-07-10</div>
+                        <div class="part part4"><div class="status-line red-line"></div></div>
+                    </div>
+                    <hr>
+                    <div class="list-elem">
+                        <div class="part part1">멋사 해커톤 구현 분업 방향성</div>
+                        <div class="part part2">하린</div>
+                        <div class="part part3">2021-07-14</div>
+                        <div class="part part4"><div class="status-line orange-line"></div></div>
+                    </div>
+                    <hr>
+                    <div class="list-elem">
+                        <div class="part part1">멋사 해커톤 리팩터링 방식</div>
+                        <div class="part part2">지수</div>
+                        <div class="part part3">2021-08-10</div>
+                        <div class="part part4"><div class="status-line green-line"></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 
-</head>
+    <section class="desktop-head-section" style="z-index: -1;">
+        <div class="head-section-text">
+            <a href="../mainpage/"><img src="../static/images/whitearrow.svg"></a>
+            <br><br>
+            <span onclick="openBoard()">그룹</span>
+        </div>
+    </section>
+    <div style="text-align: center; position: absolute; top: 250px; left: 50%; transform: translate(-50%, -50%);">
+        <a href="../suggestion"><img src="../static/images/suggestbox.svg" class="box"></a>
+    </div>
+    
+    <div style="top: 50%; transform: translate(-50%, 0);" class="desktop-container">
+
+        {% if group_suggestion|length > 0 %}
+            <div class="text">논의 목록</div>
+        {% endif %}
+        {% for suggestion in group_suggestion %}
+        <div class="suggestion">
+            {% if suggestion.id in is_g_all_answered %}
+                <a style="text-decoration: none; color: black;" href="../result/">
+            {% elif suggestion.id in is_g_answered %}
+                <a style="text-decoration: none; color: black;" href="javascript:modal_on('submit-check')">
+            {% else %}
+                <a style="text-decoration: none; color: black;" href="../decision/{{suggestion.id}}">
+            {% endif %}       
+                {{suggestion.topic}}
+            </a>
+        </div>
+        {% endfor %}
+
+        {% if user_suggestion|length > 0 %}
+            <br><br>
+            <div class="text">나의 발제</div>
+        {% endif %}
+        {% for suggestion in user_suggestion %}
+        <div class="suggestion">
+            {% if suggestion.id in is_u_all_answered %}
+                <a style="text-decoration: none; color: black;" href="../result/">
+            {% elif suggestion.id in is_u_answered %}
+                <a style="text-decoration: none; color: black;" href="javascript:modal_on('submit-check')">
+            {% else %}
+                <a style="text-decoration: none; color: black;" href="../decision/{{suggestion.id}}">
+            {% endif %}       
+                {{suggestion.topic}}
+            </a>
+        </div>
+        {% endfor %}
+
+    </div>
+        
+    <div id="submit-check" class="modal-container">
+        
+        <div class="modal-content">
+            <div class="modal-head">참여 완료</div>
+            <div class="modal-center">
+                이미 논의에 참여했어요!
+                <br>
+                다른 사람들의 결정을 기다려 주세요.
+                <a href="#">
+                    <div class="check" onclick="modal_off('submit-check')">확인</div>
+                    </div>
+                </a>
+        
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<script>
+    function ViewLayer2() {
+        document.getElementById("Help2").style.display = 'inline';
+    }
+
+    function newPage() {
+        window.location.href = "../grouppage"
+    }
+    function rmv() {
+        document.getElementById("Help1").style.display = 'none';
+    }
+    function ViewLayer() {
+        document.getElementById("Help1").style.display = 'inline';
+
+    }
+    const modal_on = (modalId) => {
+        const ModalSelector = "#" + modalId;
+        const ModalContainer = document.querySelector(ModalSelector);
+        ModalContainer.style.display = "inline-block";
+    }
+
+    const modal_off = (modalID) => {
+        const ModalSelector = "#" + modalID;
+        const ModalContainer = document.querySelector(ModalSelector);
+        ModalContainer.style.display = "none";
+    }
+</script>
+{% endblock %}
+
+
+
+  
+
+ 
+
+
+
+
 
 <body>
     <div class="desktop-layer"></div>
@@ -35,41 +243,154 @@
     </div>
 
 
-    <div class="container">
+    <div class="container" style="box-shadow: 3px 3px 3px rgba(0, 0, 0, .25); transition: all 1s;">
+        <div class="dashBoard">
+            <section class="dash-head"></section>
+            <section class="dash-body">
+                <div class="layer">
+                    <div class="board-elem identification">
+                        <div>
+                            <span class="say-hello">Congratulation, 영권!</span><br><br>
+                            <span style="font-family: AppleNeoM; font-size: 1em;">당신은 MOIZA의 <span style="font-family: AppleNeoB;">👑열정 멤버</span>입니다.</span>
+                            <img class="medal" src="{% static 'images/gold.png' %}">
+                        </div><br><br><br>
+                        <div class="activation">
+                            <img src="{% static 'images/thunder.png' %}">
+                            78 V
+                        </div><br><br>
+                        <div class="activation-detail">View Detail</div>
+                    </div>
+                    <div class="board-elem group-info">
+                        <div class="group-info-title">Group Information</div>
+                        <div class="group-info-content">
+                            <div class="group-info-elem">
+                                <img src="{% static 'images/member.png' %}">
+                                25 members
+                            </div>
+                            <div class="group-info-elem">
+                                <img src="{% static 'images/current.png' %}">
+                                3 ongoing posts
+                            </div>
+                            <div class="group-info-elem">
+                                <img src="{% static 'images/total.png' %}">
+                                48 total posts
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layer" style="margin-top: 30px;">
+                    <div class="board-elem latest-suggestion">
+                        <div class="title">Latest Topic Response Rate</div>
+                        <div class="circle-gage">
+                            75%
+                        </div>
+                    </div>
+                    <div class="board-elem flow-chart">
+                        <div class="title">Activation flow</div>
+                        <img src="{% static 'images/graph.png' %}">
+                    </div>
+                    <div class="board-elem suggestion-list">
+                        <div class="title">MOIZA's Choices</div><br>
+                        <div class="list-head">
+                            <div class="part part1">Topic</div>
+                            <div class="part part2">Generator</div>
+                            <div class="part part3">Deadline</div>
+                            <div class="part part4">Status</div>
+                        </div>
+                        <div style="display: inline-block; width: 100%; height: 3px; background-color: black;"></div>
+                        <div class="list-elem">
+                            <div class="part part1">멋사 아이디어톤 팀명</div>
+                            <div class="part part2">영권</div>
+                            <div class="part part3">2021-07-04</div>
+                            <div class="part part4"><div class="status-line green-line"></div></div>
+                        </div>
+                        <hr>
+                        <div class="list-elem">
+                            <div class="part part1">아이디어톤 주제</div>
+                            <div class="part part2">선영</div>
+                            <div class="part part3">2021-07-02</div>
+                            <div class="part part4"><div class="status-line orange-line"></div></div>
+                        </div>
+                        <hr>
+                        <div class="list-elem">
+                            <div class="part part1">멋사 해커톤 구현 프레임워크</div>
+                            <div class="part part2">찬규</div>
+                            <div class="part part3">2021-07-31</div>
+                            <div class="part part4"><div class="status-line green-line"></div></div>
+                        </div>
+                        <hr>
+                        <div class="list-elem">
+                            <div class="part part1">멋사 2학기 활동 분야</div>
+                            <div class="part part2">민지</div>
+                            <div class="part part3">2021-07-10</div>
+                            <div class="part part4"><div class="status-line red-line"></div></div>
+                        </div>
+                        <hr>
+                        <div class="list-elem">
+                            <div class="part part1">멋사 해커톤 구현 분업 방향성</div>
+                            <div class="part part2">하린</div>
+                            <div class="part part3">2021-07-14</div>
+                            <div class="part part4"><div class="status-line orange-line"></div></div>
+                        </div>
+                        <hr>
+                        <div class="list-elem">
+                            <div class="part part1">멋사 해커톤 리팩터링 방식</div>
+                            <div class="part part2">지수</div>
+                            <div class="part part3">2021-08-10</div>
+                            <div class="part part4"><div class="status-line green-line"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
         <section class="desktop-head-section" style="z-index: -1;">
             <div class="head-section-text">
-                <a href="../mainpage"><img src="../static/images/whitearrow.svg"></a>
-                <br><br>그룹
+                <a href="../mainpage/"><img src="../static/images/whitearrow.svg"></a>
+                <br><br>
+                <span onclick="openBoard()">그룹</span>
             </div>
         </section>
-    
-        <div class="desktop-container">
-            <!-- 여기다 내용 코딩 고고 -->
+        <div style="text-align: center; position: absolute; top: 250px; left: 50%; transform: translate(-50%, -50%);">
             <a href="../suggestion"><img src="../static/images/suggestbox.svg" class="box"></a>
+        </div>
     
-            <div class="text">논의 목록</div>
+        <div style="top: 50%; transform: translate(-50%, 0);" class="desktop-container">
     
-            <img src="../static/images/box.svg" style="position:absolute;width:100%;">
-            <a href="../decision">
-            <img src="../static/images/participate.svg"
-                style="float:right;padding-top:16.5px; position:relative;padding-right:21.5px;">
-            </a>
-    
-            <br><br><br>
-    
-            <img src="../static/images/box.svg" style="position:absolute;width:100%;">
-            <a href="#">
-                <img src="../static/images/alreadyparticipate.svg" id="alreadyparticipate" onclick="modal_on('submit-check')">
-            </a>
+            {% if group_suggestion|length > 0 %}
+                <div class="text">논의 목록</div>
+            {% endif %}
+            {% for suggestion in group_suggestion %}
+            <div class="suggestion">
+                {% if suggestion.id in is_g_all_answered %}
+                    <a style="text-decoration: none; color: black;" href="../result/">
+                {% elif suggestion.id in is_g_answered %}
+                    <a style="text-decoration: none; color: black;" href="javascript:modal_on('submit-check')">
+                {% else %}
+                    <a style="text-decoration: none; color: black;" href="../decision/{{suggestion.id}}">
+                {% endif %}       
+                    {{suggestion.topic}}
+                </a>
+            </div>
+            {% endfor %}
 
-            <br><br><br>
-            <div class="text">나의 발제</div>
-    
-            <img src="../static/images/box.svg" style="position:absolute;width:100%;">
-            <a href="../result">
-            <img src="../static/images/result.svg"
-                style="float:right;padding-top:16.5px;position:relative;padding-right:21.5px;">
-            </a>
+            {% if user_suggestion|length > 0 %}
+                <br><br>
+                <div class="text">나의 발제</div>
+            {% endif %}
+            {% for suggestion in user_suggestion %}
+            <div class="suggestion">
+                {% if suggestion.id in is_u_all_answered %}
+                    <a style="text-decoration: none; color: black;" href="../result/">
+                {% elif suggestion.id in is_u_answered %}
+                    <a style="text-decoration: none; color: black;" href="javascript:modal_on('submit-check')">
+                {% else %}
+                    <a style="text-decoration: none; color: black;" href="../decision/{{suggestion.id}}">
+                {% endif %}       
+                    {{suggestion.topic}}
+                </a>
+            </div>
+            {% endfor %}
     
         </div>
         
@@ -89,14 +410,9 @@
                 </div>
               
             </div>
-
-
     </div>
-    
     </div>
-
 </body>
-
 </html>
 
 <script>
