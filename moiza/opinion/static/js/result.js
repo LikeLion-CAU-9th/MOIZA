@@ -61,22 +61,29 @@ const choiceClickHandler3 = () => {
   bottomChoice(3);
 }
 
+const choiceClickHandler4 = () => {
+  bottomChoice(4);
+}
+
 
 window.onload = () => {
   // Need to be refactor when the data is given
   let gage = document.querySelectorAll('.gage');
-  percent = (3*160)/7; // Need Saciling!!
+  percent = (1*160)/6; // Need Saciling!!
   gage[0].style.width = String(percent) + "%";
-  percent = (1*160)/7; // Need Saciling!!
+  percent = (2*160)/6; // Need Saciling!!
   gage[1].style.width = String(percent) + "%";
-  percent = (1*160)/7; // Need Saciling!!
+  percent = (1*160)/6; // Need Saciling!!
   gage[2].style.width = String(percent) + "%";
-  percent = (2*160)/7; // Need Saciling!!
+  percent = (1*160)/6; // Need Saciling!!
   gage[3].style.width = String(percent) + "%";
+  percent = (1*160)/6; // Need Saciling!!
+  gage[4].style.width = String(percent) + "%";
 
   let choice = document.querySelectorAll('.bottom-choice');
   choice[0].addEventListener("click", choiceClickHandler0, false);
   choice[1].addEventListener("click", choiceClickHandler1, false);
   choice[2].addEventListener("click", choiceClickHandler2, false);
   choice[3].addEventListener("click", choiceClickHandler3, false);
+  choice[4].addEventListener("click", choiceClickHandler4, false);
 }

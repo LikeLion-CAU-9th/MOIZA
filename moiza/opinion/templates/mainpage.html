@@ -1,42 +1,153 @@
+{% extends 'base.html' %}
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
+{% block headblock %}
+<title>mainpage</title>
+<link rel="stylesheet" href="../static/css/same.css">
+<link rel="stylesheet" href="../static/css/mainpagestyle.css">  
+<link rel="stylesheet" href="{% static 'css/main-kwon.css' %}">  
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/Ajax.js' %}"></script>
+<script src="{% static 'js/logout.js' %}"></script>
+<script src="{% static 'js/mainpage.js' %}"></script>
+{% endblock %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mainpage</title>
-    <link rel="stylesheet" href="../static/css/same.css">
-    <link rel="stylesheet" href="../static/css/mainpagestyle.css">  
-    <link rel="stylesheet" href="{% static 'css/main-kwon.css' %}">  
-    <script src="{% static 'js/jquery.js' %}"></script>
-    <script src="{% static 'js/Ajax.js' %}"></script>
-    <script src="{% static 'js/logout.js' %}"></script>
-    <script src="{% static 'js/mainpage.js' %}"></script>
-</head>
+{% block content %}
+<div class="container">
+    <div id="submit-check" class="modal-container">
+        <div class="modal-content">
+            <div class="modal-head">그룹 생성</div>
+    
+                <div class="groupname">그룹명</div>
+                <br>
+                <form>
+                    <input id="input" class="groupName" type="text" name="groupname" placeholder="그룹명을 입력해주세요"></input>
+                </form>
+                <br><br>
+                <div class="groupmember">그룹원 초대 링크</div>
+                <br>
+                <div class="url"></div><br>
+                
+                <div class="backwhite"></div>
+                
+            <div class="modal-confirm">
+            </div>
+    
+            <a href="#">
+            <img id="check" src="../static/images/check.svg"
+                style="float:right;margin-top:-45px;margin-right:15px;position:relative;cursor:hand;z-index:900;"
+                onclick="createGroup();">
+            </a>
+            <a href="#">
+            <div id="Help3" style='position:relative; display:none; z-index:1000;'></div>
+            <img id="cancel" src="../static/images/cancel.svg"
+                style="float:right;margin-top:-45px;margin-right:130px;position:relative;cursor:hand;z-index:900;"
+                onclick="modal_off('submit-check')">
+            </a>
 
-<body>
-    <div class="desktop-layer"></div>
-    <div class="desktop-content">
-        <div class="logo-container">
-            <img class="logo-img" src="../static/images/logo.svg"><span
-                class="desktop-logo-title">모의자</span><br><br><br><br>
-        </div>
-        <div class="desktop-sub-title">
-            <span class="purple-text">모</span>두의
-            <span class="purple-text">의</span>견을
-            <span class="purple-text">자</span>유롭게
-        </div><br><br><br>
-        <div class="desktop-content-footer">
-            <div class="desktop-content-footer-title">
-                의사결정이 필요할 땐, <span class="purple-text">모의자</span>로 모이자!
-            </div><br>
-            회의부터 일상생활까지,<br>
-            다양한 의사결정을 모의자에서 해결해 보세요.
+            <div id="Help3" style='position:relative; display:none; z-index:1000;'>
+            </div>
+    
         </div>
     </div>
+    <div id="group-participate" class="modal-container">
+        <div class="modal-content">
+            <div class="modal-head">그룹 참여</div><br><br><br>
+                <form>
+                    <input style="width: 86%;" id="input" class="group-url" type="text" name="group-url" placeholder="그룹 참여 링크를 입력하세요"></input>
+                </form>                    
+            <br>
+            <div onclick="modal_off('group-participate')">닫기</div>
+            <div onclick="participate()">참여</div>
+    
+    
+        </div>
+    </div>
+    <section class="desktop-head-section head-setion-jisoo" style="z-index: -1;">
+        <div class="head-section-text" style="text-align: right; width: 84%; cursor: pointer;">
+            <img onclick="logOut()" src="../static/images/icon.svg">
+            <br><br>
+            <div style="text-align: left;">모두의 의견을 들어보세요.</div>
+        </div>
+    </section>
+    
+    <div class="desktop-container" style="position:absolute;">
+    <br><br>
+        <div>
+            {% if not_responded|length > 0 %}
+            <div class="text_one">논의에 참여해주세요!
+                <a href="../list-page" class="more" style="float:right;">더보기&nbsp;<img src="../static/images/rightarrow.svg"></a>
+            </div>
+            <br><br><br>
+            {% else %}
+            <div class="text_one" style="top: 0;">참여하지 않은 논의가 없습니다.<hr></div>
+            <br><br><br>
+            {% endif %}
+            
+            {% for suggest in not_responded %}
+            <a style="text-decoration: none; color: black;" href="../decision/{{suggest.id}}">
+                <div class="not-responded-list">
+                    {{suggest.topic}}
+                </div>
+            </a>
+            {% endfor %}
+
+            <div class="text_two">그룹</div>
+                <div class="new-group" onclick="modal_on('submit-check')">
+                    <img src="{% static 'images/plus.svg' %}">
+                    새 그룹 생성
+                </div>
+            
+                <div style="margin-top: 0;" class="new-group" onclick="modal_on('group-participate')">
+                    <img src="{% static 'images/plus.svg' %}">
+                    그룹 참여하기
+                </div>
+            {% for group in group_list %}
+            <a style="text-decoration: none; color: black;" href="../group-page/{{group.group_seq}}">
+                <div class="group-list">
+                    {{group.name}}
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+</div>
+
+<script>
+    function ViewLayer2() {
+        document.getElementById("Help2").style.display = 'inline';
+    }
+
+    function rmv() {
+        document.getElementById("Help1").style.display = 'none';
+    }
+
+    function ViewLayer() {
+        document.getElementById("Help1").style.display = 'inline';
+    }
+
+    const modal_on = (modalId) => {
+        get_hashed_url()
+        const ModalSelector = "#" + modalId;
+        const ModalContainer = document.querySelector(ModalSelector);
+        ModalContainer.style.display = "inline-block";
+    }
+    const modal_off = (modalID) => {
+        const ModalSelector = "#" + modalID;
+        const ModalContainer = document.querySelector(ModalSelector);
+        ModalContainer.style.display = "none";
+    }
+</script>
+{% endblock %}
+
+
+
+  
+
+ 
+
+
+{% load static %}
+
 
     <div class="container">
         <div id="submit-check" class="modal-container">

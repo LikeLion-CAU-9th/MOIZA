@@ -253,6 +253,19 @@ body {
   height: 46px;
   border: none;
   border-radius: 22px;
+  position: relative;
+}
+
+.yellow-dot::before {
+  content: '\a';
+  white-space: pre;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background-color: #FFEF9A;
+  border-radius: 50%;;
+  text-align: center;
+  transform: translate(32.98px, -100%);
 }
 
 

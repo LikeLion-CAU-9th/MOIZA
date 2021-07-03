@@ -71,11 +71,14 @@ html {
   
   .head-section-text {
     font-family: 'AppleNeoB';
-    position: absolute;
-    left: 45px;
+    /* position: absolute;
+    left: 45px; */
     bottom: 30px;
     font-size: 20px;
     color: #efefef;
+    text-align: left;
+    width: 84%;
+    cursor: pointer;
   }
   
   .container {
