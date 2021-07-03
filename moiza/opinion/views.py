@@ -64,6 +64,10 @@ def is_all_answered(request, suggestion_seq):
   return False
 
 
+def group_participate(request, group_url):
+  pass
+
+
 def listpage_view(request):
   # authorize_action(request)
   session_existence = authorization(request)

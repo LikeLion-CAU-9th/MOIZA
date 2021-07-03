@@ -1,63 +1,41 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Decision page</title>
-    <link rel="stylesheet" href="../static/css/base.css">
-    <link rel="stylesheet" href="../static/css/suggestion.css"> 
-    <link rel="stylesheet" href="../static/css/decision.css">
+
+{% block headblock %}
+  <title>Decision page</title>
+  <link rel="stylesheet" href="../static/css/base.css">
+  <link rel="stylesheet" href="../static/css/suggestion.css"> 
+  <link rel="stylesheet" href="../static/css/decision.css">
   <script
   src="https://code.jquery.com/jquery-3.3.1.js"
   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
   crossorigin="anonymous"></script>
   <script src="{% static 'js/Ajax.js' %}"></script>
   <script src="{% static 'js/decision.js' %}"></script>
-</head>
+{% endblock %}
 
-<body>
-  <div class="desktop-layer"></div>
-  <div class="desktop-content">
-    <div class="logo-container">
-      <img class="logo-img" src="../static/images/logo.png"><span class="desktop-logo-title">모의자</span><br><br><br><br>
-    </div>
-    <div class="desktop-sub-title">
-      <span class="purple-text">모</span>두의 
-      <span class="purple-text">의</span>견을 
-      <span class="purple-text">자</span>유롭게
-    </div><br><br><br>
-    <div class="desktop-content-footer">
-      <div class="desktop-content-footer-title">
-        의사결정이 필요할 땐, <span class="purple-text">모의자</span>로 모이자!
-      </div><br>
-      회의부터 일상생활까지,<br>
-      다양한 의사결정을 모의자에서 해결해 보세요.
-    </div>
+{% block content %}
+<div class=container>     
+  <div class=mob_container>
+    <a href="#"><img src="../static/images/arrow.svg" onclick="window.history.back()"></a>
+    <p style="text-align:center; " class="head_name" >{{name}}님의 의견을 선택해주세요!</p>
+  
+    <a class="center_name">{{ suggestion.topic }}</a>        
+    
+    {% for option in options %}
+      <a class="content_select" id={{option.id}}>{{option.selection_content}}</a>
+    {% endfor %}
+    {% if suggestion.other_selection %}
+      <a class="content_select" id ="3">다른 의견이 있어요!</a>
+    {% endif %}
+    {% if suggestion.no_selection %}
+      <a class="content_select" id="4">마음에 드는 의견이 없어요</a>
+    {% endif %}
+
+    <br><br>
+    <div class="myButton" onclick="preserveDecision()">다음</div>
   </div>
-
-    <div class=container>     
-      <div class=mob_container>
-      <a href="#"><img src="../static/images/arrow.svg" onclick="window.history.back()"></a>
-      <p style="text-align:center; " class="head_name" >{{name}}님의 의견을 선택해주세요!</p>
-     
-      <a class="center_name">{{ suggestion.topic }}</a>        
-       
-      {% for option in options %}
-        <a class="content_select" id={{option.id}}>{{option.selection_content}}</a>
-      {% endfor %}
-      {% if suggestion.other_selection %}
-        <a class="content_select" id ="3">다른 의견이 있어요!</a>
-      {% endif %}
-      {% if suggestion.no_selection %}
-        <a class="content_select" id="4">마음에 드는 의견이 없어요</a>
-      {% endif %}
-
-    <br><br><div class="myButton" onclick="preserveDecision()">다음</div>
-    </div>
-  </div>
-</body>
+</div>
 
 <script >
   $(".content_select").click(function () {
@@ -67,4 +45,4 @@
   });
 </script>
 
-</html>
+{% endblock %}

@@ -43,8 +43,13 @@ body {
 }
 
 .desktop-content-footer {
-  font-family: 'AppleNeoM';
+  font-family: 'AppleNeoB';
   font-size: 22px;
+  
+}
+.desktop-content-footer2{
+  font-family:'AppleNeoM';
+  font-size:20px;
 }
 
 .purple-text {

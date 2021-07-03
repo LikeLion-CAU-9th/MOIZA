@@ -2,6 +2,7 @@ from . import views
 from django.urls import path
 
 urlpatterns = [
+  path('join/<str:group_url>', views.group_participate, name="group-participate"),
   path('mainpage/', views.mainpage_view, name="mainpage"),
   path('suggestion/', views.suggestion_view, name="suggestion"),
   path('topic-complete/', views.topic_complete_view, name="topic-complete"),

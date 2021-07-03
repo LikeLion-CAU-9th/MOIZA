@@ -1,169 +1,148 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>결과 확인</title>
-    <link rel="stylesheet" href="{% static 'css/base.css' %}">
-    <link rel="stylesheet" href="{% static 'css/result.css' %}">
-    <script src="{% static 'js/result.js' %}"></script>
-</head>
-<body>
 
-  <div class="desktop-layer"></div>
-  <div class="desktop-content">
-    <div class="logo-container">
-      <img class="logo-img" src="../static/images/logo.png"><span class="desktop-logo-title">모의자</span><br><br><br><br>
-    </div>
-    <div class="desktop-sub-title">
-      <span class="purple-text">모</span>두의 
-      <span class="purple-text">의</span>견을 
-      <span class="purple-text">자</span>유롭게
-    </div><br><br><br>
-    <div class="desktop-content-footer">
-      <div class="desktop-content-footer-title">
-        의사결정이 필요할 땐, <span class="purple-text">모의자</span>로 모이자!
-      </div><br>
-      회의부터 일상생활까지,<br>
-      다양한 의사결정을 모의자에서 해결해 보세요.
-    </div>
-  </div>
+{% block headblock %}
+<title>결과 확인</title>
+<link rel="stylesheet" href="{% static 'css/base.css' %}">
+<link rel="stylesheet" href="{% static 'css/result.css' %}">
+<script src="{% static 'js/result.js' %}"></script>
+{% endblock %}
 
-  <div class=container>
-    <div class="mobile-container">
-      <div onclick="window.history.back()" style="cursor: pointer;"><img src="../static/images/arrow.svg"></div><br><br>
-      <div class="title">논의 결과가 나왔어요!</div>
-      <div class="graph-container">
-        <div class="graph-title">어떤 아이디어로 진행할까요?</div>
-        <!-- Choice 1 -->
-        <div class="choice">
-          <div class="choice-info">
-            <span>1번</span>
-            <span>3명</span>
-          </div>
-          <div class="choice-bar">
-            <div class="gage"></div>
-          </div>
+{% block content %}
+<div class=container>
+  <div class="mobile-container">
+    <div onclick="window.history.back()" style="cursor: pointer;"><img src="../static/images/arrow.svg"></div><br><br>
+    <div class="title">논의 결과가 나왔어요!</div>
+    <div class="graph-container">
+      <div class="graph-title">어떤 아이디어로 진행할까요?</div>
+      <!-- Choice 1 -->
+      <div class="choice">
+        <div class="choice-info">
+          <span>1번</span>
+          <span>3명</span>
         </div>
-        <!-- Choice 2 -->
-        <div class="choice">
-          <div class="choice-info">
-            <span>2번</span>
-            <span>1명</span>
-          </div>
-          <div class="choice-bar">
-            <div class="gage"></div>
-          </div>
-        </div>
-        <!-- Choice Other -->
-        <div class="choice">
-          <div class="choice-info">
-            <span>다른 의견이 있어요!</span>
-            <span>1명</span>
-          </div>
-          <div class="choice-bar">
-            <div class="gage"></div>
-          </div>
-        </div>
-        <!-- Choice Nothing -->
-        <div class="choice">
-          <div class="choice-info">
-            <span>마음에 드는 의견이 없어요.</span>
-            <span>2명</span>
-          </div>
-          <div class="choice-bar">
-            <div class="gage"></div>
-          </div>
+        <div class="choice-bar">
+          <div class="gage"></div>
         </div>
       </div>
-      <br><br>
+      <!-- Choice 2 -->
+      <div class="choice">
+        <div class="choice-info">
+          <span>2번</span>
+          <span>1명</span>
+        </div>
+        <div class="choice-bar">
+          <div class="gage"></div>
+        </div>
+      </div>
+      <!-- Choice Other -->
+      <div class="choice">
+        <div class="choice-info">
+          <span>다른 의견이 있어요!</span>
+          <span>1명</span>
+        </div>
+        <div class="choice-bar">
+          <div class="gage"></div>
+        </div>
+      </div>
+      <!-- Choice Nothing -->
+      <div class="choice">
+        <div class="choice-info">
+          <span>마음에 드는 의견이 없어요.</span>
+          <span>2명</span>
+        </div>
+        <div class="choice-bar">
+          <div class="gage"></div>
+        </div>
+      </div>
     </div>
-    <div class="bottom-sheet">
-      <div style="text-align: center; height: 50px;" onclick="bottomSheetSwitch()"><div class="bottom-sheet-bar"></div></div><br><br>
-      <div class="bottom-sheet-container">
-        <div class="bottom-sheet-title">모두의 의견을 확인해보세요.</div>
-        <div>
-          <div class="bottom-choice selected">1번</div>
-          <div class="bottom-choice">2번</div>
-          <div class="bottom-choice etc">다른 의견</div>
-          <div class="bottom-choice etc">마음에...</div>
-        </div>
+    <br><br>
+  </div>
+  <div class="bottom-sheet">
+    <div style="text-align: center; height: 50px;" onclick="bottomSheetSwitch()"><div class="bottom-sheet-bar"></div></div><br><br>
+    <div class="bottom-sheet-container">
+      <div class="bottom-sheet-title">모두의 의견을 확인해보세요.</div>
+      <div>
+        <div class="bottom-choice selected">1번</div>
+        <div class="bottom-choice">2번</div>
+        <div class="bottom-choice etc">다른 의견</div>
+        <div class="bottom-choice etc">마음에...</div>
+      </div>
 
-        <!-- OP1 -->
-        <div class="opinion-container"> 
-          <div class="opinion-list">
-            이러이러한 이유로 1번을 골랐어요.<br>
-            2번도 좋지만 현실성이 없다고 생각해요.
-          </div> 
-          <div class="opinion-list">
-            이러이러한 이유로 1번을 골랐어요.<br>
-            2번도 좋지만 현실성이 없다고 생각해요.
-          </div> 
-          <div class="opinion-list">
-            이러이러한 이유로 1번을 골랐어요.<br>
-            2번도 좋지만 현실성이 없다고 생각해요.
-          </div> 
-          <div class="opinion-list">
-            이러이러한 이유로 1번을 골랐어요.<br>
-            2번도 좋지만 현실성이 없다고 생각해요.
-          </div>
+      <!-- OP1 -->
+      <div class="opinion-container"> 
+        <div class="opinion-list">
+          이러이러한 이유로 1번을 골랐어요.<br>
+          2번도 좋지만 현실성이 없다고 생각해요.
+        </div> 
+        <div class="opinion-list">
+          이러이러한 이유로 1번을 골랐어요.<br>
+          2번도 좋지만 현실성이 없다고 생각해요.
+        </div> 
+        <div class="opinion-list">
+          이러이러한 이유로 1번을 골랐어요.<br>
+          2번도 좋지만 현실성이 없다고 생각해요.
+        </div> 
+        <div class="opinion-list">
+          이러이러한 이유로 1번을 골랐어요.<br>
+          2번도 좋지만 현실성이 없다고 생각해요.
         </div>
+      </div>
 
-        <!-- OP2 -->
-        <div class="opinion-container hide"> 
-          <div class="opinion-list">
-            이러이러한 이유로 2번을 골랐어요.<br>
-            3번도 좋지만 현실성이 없다고 생각해요.
-          </div> 
-          <div class="opinion-list">
-            이러이러한 이유로 2번을 골랐어요.<br>
-            3번도 좋지만 현실성이 없다고 생각해요.
-          </div> 
-          <div class="opinion-list">
-            이러이러한 이유로 2번을 골랐어요.<br>
-            3번도 좋지만 현실성이 없다고 생각해요.
-          </div> 
-          <div class="opinion-list">
-            이러이러한 이유로 2번을 골랐어요.<br>
-            3번도 좋지만 현실성이 없다고 생각해요.
-          </div>
+      <!-- OP2 -->
+      <div class="opinion-container hide"> 
+        <div class="opinion-list">
+          이러이러한 이유로 2번을 골랐어요.<br>
+          3번도 좋지만 현실성이 없다고 생각해요.
+        </div> 
+        <div class="opinion-list">
+          이러이러한 이유로 2번을 골랐어요.<br>
+          3번도 좋지만 현실성이 없다고 생각해요.
+        </div> 
+        <div class="opinion-list">
+          이러이러한 이유로 2번을 골랐어요.<br>
+          3번도 좋지만 현실성이 없다고 생각해요.
+        </div> 
+        <div class="opinion-list">
+          이러이러한 이유로 2번을 골랐어요.<br>
+          3번도 좋지만 현실성이 없다고 생각해요.
         </div>
+      </div>
 
-        <!-- OP3 -->
-        <div class="opinion-container hide"> 
-          <div class="opinion-list">
-            저는 숫자 1,2,3을 싫어해서 다른 번호로 할래요!
-          </div> 
-          <div class="opinion-list">
-            저는 숫자 1,2,3을 싫어해서 다른 번호로 할래요!
-          </div> 
-          <div class="opinion-list">
-            저는 숫자 1,2,3을 싫어해서 다른 번호로 할래요!
-          </div> 
-          <div class="opinion-list">
-            저는 숫자 1,2,3을 싫어해서 다른 번호로 할래요!
-          </div>
+      <!-- OP3 -->
+      <div class="opinion-container hide"> 
+        <div class="opinion-list">
+          저는 숫자 1,2,3을 싫어해서 다른 번호로 할래요!
+        </div> 
+        <div class="opinion-list">
+          저는 숫자 1,2,3을 싫어해서 다른 번호로 할래요!
+        </div> 
+        <div class="opinion-list">
+          저는 숫자 1,2,3을 싫어해서 다른 번호로 할래요!
+        </div> 
+        <div class="opinion-list">
+          저는 숫자 1,2,3을 싫어해서 다른 번호로 할래요!
         </div>
+      </div>
 
-        <!-- OP4 -->
-        <div class="opinion-container hide"> 
-          <div class="opinion-list">
-            마음에 드는 의견이 없어요🤔<br>
-          </div> 
-          <div class="opinion-list">
-            마음에 드는 의견이 없어요🤔<br>
-          </div> 
-          <div class="opinion-list">
-            마음에 드는 의견이 없어요🤔<br>
-          </div> 
-          <div class="opinion-list">
-            마음에 드는 의견이 없어요🤔<br>
-          </div>
+      <!-- OP4 -->
+      <div class="opinion-container hide"> 
+        <div class="opinion-list">
+          마음에 드는 의견이 없어요🤔<br>
+        </div> 
+        <div class="opinion-list">
+          마음에 드는 의견이 없어요🤔<br>
+        </div> 
+        <div class="opinion-list">
+          마음에 드는 의견이 없어요🤔<br>
+        </div> 
+        <div class="opinion-list">
+          마음에 드는 의견이 없어요🤔<br>
         </div>
       </div>
     </div>
   </div>
-</body>
-</html>
+</div>
+{% endblock %}
+
+
