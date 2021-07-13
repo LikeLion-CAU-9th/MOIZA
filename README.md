@@ -34,6 +34,7 @@
 ![](https://img.shields.io/badge/HTML-5.3-orange)&nbsp;&nbsp;
 ![](https://img.shields.io/badge/CSS-blue)&nbsp;&nbsp;
 ![](https://img.shields.io/badge/JS-ES6-yellow)&nbsp;&nbsp;
+![](https://img.shields.io/badge/MySQL-8.0.23-blue)&nbsp;&nbsp;
 
 
 
