@@ -25,6 +25,7 @@
   </tr>
 </table>
 
+
 ---
 
 
@@ -48,3 +49,127 @@
 
 ## License
 [![License: MIT](https://img.shields.io/badge/License-MIT-skyblue.svg)](https://opensource.org/licenses/MIT)
+
+---
+
+## 🪄 Installation
+#### - Pre-Set(! You need to install MySQL for using this)
+```sh
+pip install pymysql
+pip install mysqlclient
+```
+
+(If you use Windows OS)
+: Just run MySQL-client
+
+(If you use Unix Family OS such as Linux or Mac)
+```sh
+sudo mysql -u root -p
+```
+
+---
+
+- Create Database and use it
+```sh
+CREATE DATABASE MOIZA_DB;
+USE MOIZA_DB;
+```
+
+- Create Tables
+```sh
+CREATE TABLE account_user_info
+(
+user_seq int auto_increment primary key,
+user_name longtext not null,
+user_pw longtext not null,
+user_email varchar(254) not null,
+register_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+```
+
+```sh
+CREATE TABLE opinion_group_info
+(
+group_seq int auto_increment primary key,
+name longtext not null,
+create_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+owner int not null,
+index(owner)
+);
+```
+
+```sh
+CREATE TABLE opinion_group_info
+(
+group_seq int auto_increment primary key,
+name longtext not null,
+create_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+owner int not null,
+index(owner)
+);
+```
+
+```sh
+CREATE TABLE opinion_group_url
+(
+group_seq int not null,
+url longtext not null
+);
+```
+
+```sh
+CREATE TABLE opinion_membership
+(
+id bigint auto_increment primary key,
+join_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+auth varchar(3),
+group_seq int not null,
+user_seq int not null,
+index(group_seq),
+index(user_seq)
+);
+```
+
+```sh
+CREATE TABLE opinion_response
+(
+response_seq int auto_increment primary key,
+content longtext not null,
+selection_seq_id bigint not null,
+suggestion_id bigint not null,
+writer_id int not null,
+index(selection_seq_id),
+index(suggestion_id),
+index(writer_id),
+);
+```
+
+```sh
+CREATE TABLE opinion_selection
+(
+id bigint auto_increment primary key,
+selection_content varchar(100) not null,
+suggestion_id bigint not null,
+index(suggestion_id)
+);
+```
+
+```sh
+CREATE TABLE opinion_suggestion
+(
+id bigint auto_increment primary key,
+topic varchar(80),
+other_selection tinyint(1) not null,
+no_selection tinyint(1) not null,
+group_sequence_id int not null,
+owner_seq int,
+index(group_sequence_id)
+);
+```
+
+#### - Download & Run
+```sh
+git clone https://github.com/youngkwon02/MOIZA.git
+cd MOIZA/moiza
+python manage.py runserver
+```
