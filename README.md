@@ -54,7 +54,7 @@
 ---
 
 ## 🪄 Installation
-#### - Pre-Set(! You need to install MySQL for using this)
+#### - Requirement (You need to install MySQL and related modules)
 ```sh
 pip install pymysql
 pip install mysqlclient
